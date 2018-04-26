@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Articles Categorie</title>
+		<SCRIPT SRC="javascripts/jquery-1.6.4.min.js" type="text/javascript"></SCRIPT>
+		<SCRIPT SRC="javascripts/jCarou.js" type="text/javascript"></SCRIPT>
+        <SCRIPT SRC="javascripts/fonction-spe.js" type="text/javascript"></SCRIPT>
+        <SCRIPT SRC="javascripts/jquery.scrollTo.min.js" type="text/javascript"></SCRIPT>
+		<SCRIPT SRC="javascripts/fonctions.js" type="text/javascript"></SCRIPT>
+		<link href="css.css" rel="stylesheet" type="text/css">
+        <!--//20% --- #33
+        //50% : #80
+        //75% : #C0
+        //100% (opaque) : #FF-->
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+	</head>
+    <body>
+    	<div id="share">
+        	<div class="facebook"><a href="#" title="facebook">&nbsp;</a></div>
+        	<div class="twitter"><a href="#" title="Twitter"><img src="images/ico_twitter.png" alt=""></a></div>
+        	<div class="foodreporter"><a href="#" title="Twitter"><img src="images/ico_foodreporter.png" alt=""></a></div>
+        </div>
+        <div id="global" class="gradient">
+            <div id="header">
+                <div class="header_content">
+                	<div class="halo"><img src="images/halo.png" alt=""></div>
+                    <div class="logo"><a href="./" title="L'Atelier Gourmet"><img src="images/logo.png" alt=""></a></div>
+                    <div class="slogan"><img src="images/slogan.jpg" alt=""></div>
+                    <div class="header_divers">
+                        <div class="menudivers"><a href="./" title="Accueil">Accueil</a><span>|</span><a href="client.htm" title="Mon compte">Mon compte</a><span>|</span><a href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Contactez-nous">Contactez-nous</a></div>
+                        <div class="bordure_verte"></div>
+                        <form class="recherche" action="rechercher.htm" method="post">
+                        	<table cellpadding="0" cellspacing="0">
+                                <tr>
+                                	<td width="31"><img src="images/loupe.png" alt=""></td>
+                                    <td><input class="inputrech" type="text" value="Recherche rapide" onclick="if($(this).val()=='Recherche rapide')$(this).val('');"></td>
+                                    <td><input type="image" src="images/btn_okrech.png"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="monpanier">
+                    	<div class="monpanier_txt">Mon panier</div>
+                        <div class="monpanier_details">2 article(s)<br><strong>129,00 &euro;</strong></div>
+                        <div class="monpanier_bouton"><a href="cde1.php" title="Voir mon panier"><img src="images/btn_go.png" alt=""></a></div>
+                    </div>
+                    <div class="onglets">
+                        <table cellpadding="0" cellspacing="0" align="left">
+                            <tr>
+                            	<td width="35" align="center" valign="top"><div class="cercle" style="background-color:#008282; border:solid 1px #008282"></div></td>
+                                <td class="ongletBit" valign="top">
+                                	<div class="menu" style="display:none">
+                                    	<input class="ongletBit_color" type="hidden" value="008282">
+                                    	<div class="menu_g"><div class="degrade" style="filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00008282', endColorstr='#008282',GradientType=1 )"></div><a href="#" title="#"><img src="images_bis/menu_ima.jpg" alt=""></a></div>
+                                    	<div class="menu_m" style="background-color:#008282">
+                                        	<div class="menuniv1_lib">Epicerie fine</div>
+                                            <input class="couleur_ssrayon" type="hidden" value="#074D4F">
+                                            <ul class="menuniv2">
+                                            	<li class="menuniv2_li"><a href="#" title="#">Huiles &amp; vinaigres</a></li>
+                                            	<li class="menuniv2_li">
+                                                	<a href="#" title="#">Sauces</a>
+                                                    <ul class="menuniv3" style="display:none; background-color:#074D4F">
+                                                    	<li class="menuniv3_li"><a href="#" title="#">Sauces salées</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Sauces sucrées</a></li>
+                                                    </ul>
+                                                </li>
+                                            	<li class="menuniv2_li">
+                                                	<a href="#" title="#">Apéritifs</a>
+                                                    <ul class="menuniv3" style="display:none; background-color:#074D4F">
+                                                    	<li class="menuniv3_li"><a href="#" title="#">Soho</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Sirop de citron</a></li>
+                                                    	<li class="menuniv3_li"><a href="#" title="#">Soho</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Sirop de citron</a></li>
+                                                    </ul>
+                                                </li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Poivre, sel &amp; épices</a></li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Plats</a></li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Confiseries</a></li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Sucre</a></li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Confitures</a></li>
+                                            	<li class="menuniv2_li">
+                                                	<a href="#" title="#">Gâteaux &amp; biscuits</a>
+                                                    <ul class="menuniv3" style="display:none; background-color:#074D4F">
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test1 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test2 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test9 ...</a></li>
+                                                        <li class="menuniv3_voirtout" style="display:none"><a href="#" title="Voir tout">&gt;&gt; Voir tout</a></li>
+                                                    </ul>
+                                                </li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Autres ...</a></li>
+                                            	<li class="menuniv2_voirtout" style="display:none"><a href="#" title="Voir tout">&gt;&gt; Voir tout</a></li>
+                                            </ul>
+                                        </div>
+                                    	<div class="menu_d" style="background-color:#008282">
+                                        	<div class="etiquette_selection"><a href="#" title="#"><img src="images/etiquette_selection.png" alt=""></a></div>
+                                            <table class="etiquetteprix_selection" cellpadding="0" cellspacing="0"><tr><td>124,00 &euro;</td></table>
+                                        	<div class="articlemenu_ima"><a href="#" title="#"><img src="images_bis/articlemenu_ima.jpg" alt=""></a></div>
+                                            <div class="articlemenu_lib"><a href="#" title="#">Confiture d'abricots</a></div>
+                                            <div class="articlemenu_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                            <div class="articlemenu_plus"><a href="$top[url]" title="En savoir plus"><img src="images/btn_ensavoirplus.jpg" alt=""></a></div>
+                                        </div>
+                                    </div>
+                                	<a class="ongletBit_lib" href="#" title="Les macarons">Epicerie<br>fine</a>
+                                </td>
+                            
+                            	<td width="35" align="center" valign="top"><div class="cercle" style="background-color:#A70050; border:solid 1px #A70050"></div></td>
+                                <td class="ongletBit" valign="top">
+                                	<div class="menu" style="display:none">
+                                    	<div class="menu_g"><div class="degrade" style="filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00A70050', endColorstr='#A70050',GradientType=1 )"></div><a href="#" title="#"><img src="images_bis/menu_ima.jpg" alt=""></a></div>
+                                    	<div class="menu_m" style="background-color:#A70050">
+                                        	<input class="ongletBit_color" type="hidden" value="A70050">
+                                        	<div class="menuniv1_lib">Les chocolats</div>
+                                            <input class="couleur_ssrayon" type="hidden" value="#710035">
+                                            <ul class="menuniv2">
+                                            	<li class="menuniv2_li"><a href="#" title="#">Chocolat au lait</a></li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Cacao</a></li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Chocolat noir</a></li>
+                                            	<li class="menuniv2_li">
+                                                	<a href="#" title="#">Noisettes au chocolat</a>
+                                                    <ul class="menuniv3" style="display:none; background-color:#710035">
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test1 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test2 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test3 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test4 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test5 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test6 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test7 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test8 ...</a></li>
+                                                        <li class="menuniv3_li"><a href="#" title="#">Test9 ...</a></li>
+                                                        <li class="menuniv3_voirtout" style="display:none"><a href="#" title="Voir tout">&gt;&gt; Voir tout</a></li>
+                                                    </ul>
+                                                </li>
+                                            	<li class="menuniv2_li"><a href="#" title="#">Autres ...</a></li>
+                                            	<li class="menuniv2_voirtout" style="display:none"><a href="#" title="Voir tout">&gt;&gt; Voir tout</a></li>
+                                            </ul>
+                                        </div>
+                                    	<div class="menu_d" style="background-color:#A70050">
+                                        	<div class="etiquette_selection"><a href="#" title="#"><img src="images/etiquette_selection.png" alt=""></a></div>
+                                            <table class="etiquetteprix_selection" cellpadding="0" cellspacing="0"><tr><td>124,00 &euro;<br><span class="selection_prixold">155,00 &euro;</span></td></table>
+                                        	<div class="articlemenu_ima"><a href="#" title="#"><img src="images_bis/articlemenu_ima.jpg" alt=""></a></div>
+                                            <div class="articlemenu_lib"><a href="#" title="#">Confiture d'abricots</a></div>
+                                            <div class="articlemenu_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                            <div class="articlemenu_plus"><a href="$top[url]" title="En savoir plus"><img src="images/btn_ensavoirplus.jpg" alt=""></a></div>
+                                        </div>
+                                    </div>
+                                	<a class="ongletBit_lib" href="#" title="Les macarons">Les<br>chocolats</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="navigation">
+                        <h2><a href="./" title="L'atelier Gourmet">L'atelier Gourmet</a></h2>
+                        &gt; <h2><a href="#" title="#">Epicerie fine</a></h2>
+                        &gt; <h2>Poivre</h2> &gt; <h1>Poivre blanc</h1> 
+                        &gt; échantillon
+                    </div>
+                </div>
+            </div>
+            <div id="conteneur">
+                <div id="contenupage">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    <input id="contenupage_categorie" type="hidden">
+                    <div class="gauche">
+                        <div class="categ_desc">
+                            <div class="categdesc_content" style="background-color:#009999">
+                                <h1 class="categ_lib">Poivre, sel &amp; épices<div class="fleche_droite" style="border-left:10px solid #009999;"></div></h1>
+                                <div class="categ_txt">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+                                    <p>Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+                                    <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. </p>
+                                </div>
+                            	<div class="categ_ima"><img src="images_bis/categ_ima.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="catalogue">
+                        	<div class="catalogue_entete">Le catalogue</div>
+                        	<!-- BEGIN CommunCatalogue -->
+                            	<script type="text/javascript">
+                                	$(document).ready(function(){
+										if($(".li1_folderBitOpen").length>0 && $(".li1_folderBitOpen").attr("type")!="#"){
+											$(".li1_folderBitOpen, .li1_folderBitOpen a").css("color",$(".li1_folderBitOpen").attr("type"));
+										}
+									});
+                                </script>
+                                <!-- BEGIN CommunCatalogueNiveau0 -->
+                                    <ul class="ul_niv0">
+                                        <!-- BEGIN CommunCatalogueNiveau0Bit -->
+                                        	<li class="li0_folderBitClose">
+                                                <div class="li0_lib"><div class="pucecat" style="border-left:10px solid #009999"></div><a title="$categorie[nomlien]" href="$categorie[url]">Les macarons</a></div>
+                                                <ul class="ul_niv1"></ul>
+                                            </li>
+                                        	<li class="li0_folderBitClose">
+                                                <div class="li0_lib"><div class="pucecat" style="border-left:10px solid #009999"></div><a title="$categorie[nomlien]" href="$categorie[url]">Les chocolats</a></div>
+                                                <ul class="ul_niv1"></ul>
+                                            </li>
+                                            <li class="li0_folderBitOpen">
+                                                <div class="li0_lib"><div class="pucecat" style="border-left:10px solid #009999"><div class="pucecat_ombre"></div></div><a title="$categorie[nomlien]" href="$categorie[url]">L'épicerie fine</a></div>
+                                                <!-- BEGIN CommunCatalogueNiveau1 -->
+                                                    <ul class="ul_niv1">
+                                                        <!-- BEGIN CommunCatalogueNiveau1Bit -->
+                                                            <li class="li1_folderBitOpen" type="#009999">
+                                                                <div class="li1_lib"><a title="$categorie[nomlien]" href="$categorie[url]"> Poivre, sel &amp; épices</a></div>
+                                                            </li>
+                                                            
+                                                            <li class="li1_folderBitClose">
+                                                                <div class="li1_lib"><a title="$categorie[nomlien]" href="$categorie[url]"> $categorie[$libelle]</a></div></li>
+                                                        <!-- END CommunCatalogueNiveau1Bit -->
+                                                    </ul>
+                                                <!-- END CommunCatalogueNiveau1 -->
+                                            </li>
+                                            
+                                            <li class="li0_folderBitClose">
+                                                <div class="li0_lib"><div class="pucecat" style="border-left:10px solid #009999"></div><a title="$categorie[nomlien]" href="$categorie[url]">les vins</a></div>
+                                                <ul class="ul_niv1"></ul>
+                                            </li>
+                                            <li class="li0_folderBitClose">
+                                                <div class="li0_lib"><div class="pucecat" style="border-left:10px solid #009999"></div><a title="$categorie[nomlien]" href="$categorie[url]">les coffrets cadeaux</a></div>
+                                                <ul class="ul_niv1"></ul>
+                                            </li>
+                                        <!-- END CommunCatalogueNiveau0Bit -->
+                                    </ul>
+                                <!-- END CommunCatalogueNiveau0 -->
+                            <!-- END CommunCatalogue -->
+
+                        
+                        </div>
+                        <div class="engagementqualite">
+                        	Tous nos produits sont fabriqués de <strong>manière
+                            artisanale</strong> à partir <strong>d'ingrédients locaux naturels</strong> &amp; sans
+                            arômes artificiels
+                        </div>
+                    </div>
+                    <div class="droite">
+                    	<!--
+                        <div class="sscateg">
+							<div class="sscateg_entete">Nos catégories</div>
+                            <div id="009999" class="sscateg_content">
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="sscategBit">
+                                	<div class="sscategBit_masque">
+                                    	<h2 class="sscategBit_lib"><a href="#" title="#">Huiles, vinaigres &amp; épices</a></h2>
+                                    </div>
+                                    <a href="#" title="#"><img src="images_bis/sscateg_ima.jpg" alt=""></a>
+                                </div>
+                            	<div class="clear"></div>
+                            </div>
+                            <div class="logo2" style="background-color:#009999"><a href="./" title="L'Atelier Gourmet"><img src="images/logo2.png" alt=""></a></div>
+                        </div>
+                        -->
+                        <div id="resultats"></div>
+                        <div class="selection">
+                        	<div class="pagination_h">
+                            	<table width="100%" cellpadding="0" cellspacing="0">
+                                	<tr>
+                                        <!-- BEGIN CategorieArticleParPage -->
+                                            <td width="110">Nombre d'articles :</td>
+                                            <td>
+                                                <form name="formuPerpage" action="#resultats" method="post">
+                                                    <select name="perpageSelect" onChange="Javascript:$(document).scrollTo('#resultats',800);document.formuPerpage.submit();">
+                                                        <!-- BEGIN CategorieArticleParPageBit -->
+                                                            <!--<option value="$value_option" $optionselected>$value_option</option>-->
+                                                            <option value="$value_option" $optionselected>9</option>
+                                                        <!-- END CategorieArticleParPageBit -->
+                                                    </select> 
+                                                </form>
+                                            </td>
+                                        <!-- END CategorieArticleParPage -->
+                                        <!-- BEGIN CategoriePageNav -->
+                                            <td width="485">
+                                                <table class="pagenav" cellpadding="0" cellspacing="0" align="right">
+                                                    <tr>
+                                                    	<td>Page : </td>
+                                                        <td>
+                                                            <!-- BEGIN CategoriePageNavPrecedent -->
+                                                                <a href="$lien#resultats" title="$multilangue[pageprecedente]" onclick="$(document).scrollTo('#resultats',800);"><img src="images/btn_pageprec.png" alt=""></a>
+                                                            <!-- END CategoriePageNavPrecedent -->
+                                                            <!-- BEGIN CategoriePageNavBitPrecedent -->
+                                                                <a href="$lien#resultats" title="$multilangue[page] $curpage" onclick="$(document).scrollTo('#resultats',800);">1</a>
+                                                            <!-- END CategoriePageNavBitPrecedent -->
+                                                            <!-- BEGIN CategoriePageNavBitEnCours -->
+                                                                <span class="encours">2</span>
+                                                            <!-- END CategoriePageNavBitEnCours -->
+                                                            <!-- BEGIN CategoriePageNavBitSuivant -->
+                                                                <a href="$lien#resultats" title="$multilangue[page] $curpage" onclick="$(document).scrollTo('#resultats',800);">3</a>
+                                                            <!-- END CategoriePageNavBitSuivant -->
+                                                            <!-- BEGIN CategoriePageNavSuivant -->
+                                                                <a href="$lien#resultats" title="$multilangue[pagesuivante]" onclick="$(document).scrollTo('#resultats',800);"><img src="images/btn_pagesuiv.png" alt=""></a>
+                                                            <!-- END CategoriePageNavSuivant -->
+                                                        </td>
+                                                  </tr>
+                                                </table>
+                                            </td>
+                                        <!-- END CategoriePageNav -->
+                                    </tr>
+                                </table>
+                            </div>
+                        	<div class="articleBit">
+                            	<div class="articleBit_content">
+                            		<div class="articleBit_ima"><a href="" title=""><img src="images_bis/articleBit_ima.jpg" alt=""></a></div>
+                                    <h3 class="articleBit_lib"><a href="" title="">Confiture d'abricots</a></h3>
+                                    <div class="articleBit_desc">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                    <form class="articleBit_bouton">
+                                        <input type="image" src="images/btn_ajoutpanier.png">
+                                    </form>
+                                </div>
+                                <div class="etiquettes"><a href="$top[url]" title=""><img src="images/etiquette_nouv.png" alt=""></a></div>
+                                <div class="etiquette_promo"><a href="$top[url]" title=""><img src="images/etiquette_promo.png" alt=""></a></div>
+                                <div class="etiquette_prix">
+                                	<div class="prixpromo">124,50 &euro;</div>
+                                    <div class="prixold">Au lieu de<p>130,50 &euro;</p></div>
+                                </div>
+                            </div>
+                        	<div class="articleBit">
+                            	<div class="articleBit_content">
+                            		<div class="articleBit_ima"><a href="" title=""><img src="images_bis/articleBit_ima.jpg" alt=""></a></div>
+                                    <h3 class="articleBit_lib"><a href="" title="">Confiture d'abricots</a></h3>
+                                    <div class="articleBit_desc">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                    <form class="articleBit_bouton">
+                                        <input type="image" src="images/btn_ajoutpanier.png">
+                                    </form>
+                                </div>
+                                <div class="etiquettes"><a href="$top[url]" title=""><img src="images/etiquette_cdc.png" alt=""></a></div>
+                                <div class="etiquette_prix">
+                                	<div class="prixpromo">124,50 &euro;</div>
+                                    <!--<div class="prixold">Au lieu de<p>130,50 &euro;</p></div>-->
+                                </div>
+                            </div>
+                        	<div class="articleBit">
+                            	<div class="articleBit_content">
+                            		<div class="articleBit_ima"><a href="" title=""><img src="images_bis/articleBit_ima2.jpg" alt=""></a></div>
+                                    <h3 class="articleBit_lib"><a href="" title="">Confiture d'abricots</a></h3>
+                                    <div class="articleBit_desc">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                    <form class="articleBit_bouton">
+                                        <input type="image" src="images/btn_ajoutpanier.png">
+                                    </form>
+                                </div>
+                                <div class="etiquettes"><a href="$top[url]" title=""><img src="images/etiquette_topvente.png" alt=""></a></div>
+                                <div class="etiquette_prix">
+                                	<div class="prixpromo">124,50 &euro;</div>
+                                    <!--<div class="prixold">Au lieu de<p>130,50 &euro;</p></div>-->
+                                </div>
+                            </div>
+                        	<div class="articleBit">
+                            	<div class="articleBit_content">
+                            		<div class="articleBit_ima"><a href="" title=""><img src="images_bis/articleBit_ima2.jpg" alt=""></a></div>
+                                    <h3 class="articleBit_lib"><a href="" title="">Confiture d'abricots</a></h3>
+                                    <div class="articleBit_desc">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                    <form class="articleBit_bouton">
+                                        <input type="image" src="images/btn_ajoutpanier.png">
+                                    </form>
+                                </div>
+                                <div class="etiquettes"><a href="$top[url]" title=""><img src="images/etiquette_topvente.png" alt=""></a></div>
+                                <div class="etiquette_prix">
+                                	<div class="prixpromo">124,50 &euro;</div>
+                                    <!--<div class="prixold">Au lieu de<p>130,50 &euro;</p></div>-->
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="pagination_b">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <!-- BEGIN CategorieArticleParPage -->
+                                            <td width="110">Nombre d'articles :</td>
+                                            <td>
+                                                <form name="formuPerpage" action="#resultats" method="post">
+                                                    <select name="perpageSelect" onChange="Javascript:$(document).scrollTo('#resultats',800);document.formuPerpage.submit();">
+                                                        <!-- BEGIN CategorieArticleParPageBit -->
+                                                            <!--<option value="$value_option" $optionselected>$value_option</option>-->
+                                                            <option value="$value_option" $optionselected>9</option>
+                                                        <!-- END CategorieArticleParPageBit -->
+                                                    </select> 
+                                                </form>
+                                            </td>
+                                        <!-- END CategorieArticleParPage -->
+                                        <!-- BEGIN CategoriePageNav -->
+                                            <td width="485">
+                                                <table class="pagenav" cellpadding="0" cellspacing="0" align="right">
+                                                    <tr>
+                                                        <td>Page : </td>
+                                                        <td>
+                                                            <!-- BEGIN CategoriePageNavPrecedent -->
+                                                                <a href="$lien#resultats" title="$multilangue[pageprecedente]" onclick="$(document).scrollTo('#resultats',800);"><img src="images/btn_pageprec.png" alt=""></a>
+                                                            <!-- END CategoriePageNavPrecedent -->
+                                                            <!-- BEGIN CategoriePageNavBitPrecedent -->
+                                                                <a href="$lien#resultats" title="$multilangue[page] $curpage" onclick="$(document).scrollTo('#resultats',800);">1</a>
+                                                            <!-- END CategoriePageNavBitPrecedent -->
+                                                            <!-- BEGIN CategoriePageNavBitEnCours -->
+                                                                <span class="encours">2</span>
+                                                            <!-- END CategoriePageNavBitEnCours -->
+                                                            <!-- BEGIN CategoriePageNavBitSuivant -->
+                                                                <a href="$lien#resultats" title="$multilangue[page] $curpage" onclick="$(document).scrollTo('#resultats',800);">3</a>
+                                                            <!-- END CategoriePageNavBitSuivant -->
+                                                            <!-- BEGIN CategoriePageNavSuivant -->
+                                                                <a href="$lien#resultats" title="$multilangue[pagesuivante]" onclick="$(document).scrollTo('#resultats',800);"><img src="images/btn_pagesuiv.png" alt=""></a>
+                                                            <!-- END CategoriePageNavSuivant -->
+                                                        </td>
+                                                  </tr>
+                                                </table>
+                                            </td>
+                                        <!-- END CategoriePageNav -->
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="recette">
+                            <div class="articleBit" style="margin:0">
+                                <div class="articleBit_content">
+                                    <div class="articleBit_ima"><a href="" title=""><img src="images_bis/articleBit_ima.jpg" alt=""></a></div>
+                                    <h3 class="articleBit_lib"><a href="" title="">Confiture d'abricots</a></h3>
+                                    <div class="articleBit_desc">orem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. </div>
+                                    <form class="articleBit_bouton">
+                                        <input type="image" src="images/btn_ajoutpanier.png">
+                                    </form>
+                                </div>
+                                <div class="etiquettes"><a href="$top[url]" title=""><img src="images/etiquette_cdc.png" alt=""></a></div>
+                                <div class="etiquette_prix">
+                                    <div class="prixpromo">124,50 &euro;</div>
+                                    <!--<div class="prixold">Au lieu de<p>130,50 &euro;</p></div>-->
+                                </div>
+                            </div>
+                            <div class="recette_d"><a href="" title="Recettes de la semaine"><img src="images_bis/recette_semaine.jpg" alt=""></a></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+            </div>
+            <div id="prefooter">
+            	<div class="prefoot">
+                	<a class="paiementsecurise" href="$regleurlrewriteTemp[institutionnel]-paiement-securise-#.htm" title="Paiement 100% sécurisé">Paiement<br>100% sécurisé</a>
+                	<a class="livraisonofferte" href="$regleurlrewriteTemp[institutionnel]-livraison-offerte-des-50-d-achats-#.htm" title="Livraison Offerte dès 50 &euro; d'achats">Livraison Offerte<br>dès 50 &euro; d'achats</a>
+                	<a class="livraisonrapide" href="$regleurlrewriteTemp[institutionnel]-livraison-rapide-48-h-#.htm" title="Livraison rapide 48h">Livraison<br>rapide 48h</a>
+                	<a class="produitsexclusifs" href="$regleurlrewriteTemp[institutionnel]-produits-exclusifs-#.htm" title="Produits exclusifs">Produits<br>exclusifs</a>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="foot">
+                	<div class="menuinstit">
+                    	<div class="menuinstit_entete">Espace infos</div>
+                        <ul class="menuinstit1">
+                        	<li><a href="plan_site.php" title="Plan du site">Plan du site</a></li>
+                        </ul>
+                        <ul class="menuinstit2">
+                        	<li><a href="#" title="La boutique">La boutique</a></li>
+                        	<li><a href="#" title="Nos conseils &amp; recettes">Nos conseils &amp; recettes</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                	<div class="contact">
+                    	<a href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Contact">
+                        	<em class="contact_tel">02 50 06 01 41</em>
+                            <em class="contact_txt">Nous sommes à votre écoute<br>du lundi au vendredi de 9h à 20h</em>
+                            <em class="contact_mail">&gt;&gt; Vous préférez nous écrire ?</em>
+                        </a>
+                    </div>
+                	<div class="banques"><a class="paiementsecurise" href="$regleurlrewriteTemp[institutionnel]-paiement-securise-#.htm" title="Paiement 100% sécurisé"><img src="images/banques.png" alt=""></a></div>
+                </div>
+                <div class="copyright">Copyright 2012 www.lateliergourmet.com - Site réalisé par la <a target="_blank" title="Solution e-commerce" href="http://www.arobases.fr">solution e-commerce Arobases</a></div>
+                <div class="referencement opensansRegular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</div>
+            </div>
+        </div>
+    </body>
+</html>

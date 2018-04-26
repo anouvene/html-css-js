@@ -1,0 +1,303 @@
+/*---------- @STYLES DE BASE ----------*/
+@charset "utf-8";
+/* Page */ 
+html {height:100%; font-size:100%; /* Évite un bug d'IE 6-7.*/ } 
+body {
+	height:100%; 
+	margin:0;
+	padding:0;
+	background-color:#1C150F;
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:12px;
+	line-height:1.2em; /*À adapter au design.*/ 
+	color:#fff;
+} 
+body.recommander {background:none}
+
+/* Titres */ 
+h1, h2, h3, h4, h5, h6 { 
+  margin:0; /* Rapproche le titre du texte.*/ 
+  line-height:normal; 
+  font-weight:normal; /* Valeur par défaut.*/ 
+  font-style:normal; 
+} 
+h1 {font-size:1em} 
+h2 {font-size:1em} 
+h3 {font-size:1em} 
+h4 {font-size:1em} 
+ 
+/* Listes */ 
+ul, ol { 
+  margin:0; 
+  padding:0; 
+  list-style-position:inside
+}
+
+/* Paragraphes */ 
+p {margin:0.3em 0; /*Marges plus faibles que par défaut.*/} 
+address {margin: .5em 0; font-style:normal} 
+blockquote{margin:0; padding:5px}
+
+/* Liens */ 
+a {text-decoration:none; color:#fff} 
+a:link, a:visited , a:hover, a:focus, a:active {text-decoration:none; outline:none}
+#conteneur a:hover {text-decoration:underline} 
+
+/*Pas de bordure autour des images dans les liens */ 
+a img {border:none} 
+ 
+/*Divers éléments de type en-ligne*/ 
+em {font-style: italic} 
+strong {font-weight:bold} 
+
+/*Formulaires*/ 
+form, fieldset {margin: 0; padding: 0; border: none} 
+input, button, select {vertical-align:middle; line-height:1em; outline:none; font-size:12px; font-family:opensans, Arial, Verdana, Helvetica, sans-serif; color:#1a1a1a}
+textarea{color:#1a1a1a; outline:none}
+
+/*Tableaux*/
+table{border:0}
+
+/*---------- @DIVERS ET UTILITAIRES ----------*/
+/*Police spéciale*/
+@font-face {
+    font-family:'opensans';
+    src: url('fonts/opensans.eot'); /*ie9*/
+    src: url('fonts/opensans.eot?#iefix') format('embedded-opentype'), /*ie6-ie8*/
+         url('fonts/opensans.woff') format('woff'), /*modern browsers*/
+         url('fonts/opensans.ttf') format('truetype'), /*safari, etc*/
+         url('fonts/opensans.svg#opensans') format('svg'); /*XML format sur les mobiles*/
+}
+
+@font-face {
+    font-family:'opensans_semibold';
+    src: url('fonts/opensans_semibold.eot');
+    src: url('fonts/opensans_semibold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans_semibold.woff') format('woff'),
+         url('fonts/opensans_semibold.ttf') format('truetype'),
+         url('fonts/opensans_semibold.svg#opensans_semibold') format('svg');
+}
+
+@font-face {
+    font-family:'c_box';
+    src: url('fonts/c_box.eot');
+    src: url('fonts/c_box.eot?#iefix') format('embedded-opentype'),
+         url('fonts/c_box.woff') format('woff'),
+         url('fonts/c_box.ttf') format('truetype'),
+         url('fonts/c_box.svg#c_box') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'ritasmith';
+    src: url('fonts/ritasmith.eot');
+    src: url('fonts/ritasmith.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ritasmith.woff') format('woff'),
+         url('fonts/ritasmith.ttf') format('truetype'),
+         url('fonts/ritasmith.svg#ritasmith') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'optimusprinceps';
+    src: url('fonts/optimusprinceps_semibold.eot');
+    src: url('fonts/optimusprinceps_semibold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/optimusprinceps_semibold.woff') format('woff'),
+         url('fonts/optimusprinceps_semibold.ttf') format('truetype'),
+         url('fonts/optimusprinceps_semibold.svg#optimusprinceps') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+/*utilisations fonts speciaux*/
+.opensans{font-family:opensans}
+.opensans_semibold{font-family:opensans_semibold}
+.c_box{font-family:c_box}
+.ritasmith{font-family:ritasmith}
+.optimusprinceps{font-family:optimusprinceps}
+
+/*Tailles pixels*/
+.size_10{font-size:10px}
+.size_11{font-size:11px}
+.size_12{font-size:12px}
+.size_13{font-size:13px}
+.size_14{font-size:14px}
+.size_15{font-size:15px}
+.size_16{font-size:16px}
+.size_20{font-size:20px}
+.size_26{font-size:26px}
+.size_28{font-size:28px}
+
+/** Sablier **/
+.ajax-loader {background:url('images/ajax-loader.gif') no-repeat center top; height:200px}
+
+/** JQUERY VALIDATE ET FORMULAIRES**/
+.input, .input_txt, .textarea, .textarea_txt, .txt_cnx, .textarea_commentaire{width:200px; padding:4px; background-color:#F1FAFF; border:solid 1px #ccc}
+.textarea, .textarea_txt{height:80px}
+.textarea_commentaire{height:160px}
+.champform input[type="text"], .champform textarea{width:240px; padding:4px; background-color:#F1FAFF; border:solid 1px #ccc}
+.champform textarea{height:80px; border:solid 1px #ccc}
+.textarea_produit{width:240px; padding:4px; border:solid 1px #ccc; font-weight:bold}
+
+label.errorForm {color:#9A57B6; display:none; font-size:11px}
+label {cursor:pointer}
+input.errorForm, select.errorForm, textarea.errorForm, .champform input.errorForm, .champform select.errorForm, .champform textarea.errorForm {border:solid 1px #FF3366}
+input.validForm, select.validForm, textarea.validForm, .champform input.validForm, .champform select.validForm, .champform textarea.validForm {border:1px solid #CD004F}
+
+/*Divers*/
+.clear{clear:both; height:1px}
+.etoile{color:#FF3366}
+.erreur{text-align:center; color:#FF3366; font-weight:bold}
+.stat{display:none}
+
+#contenupage .souligner, #contenupage .souligner:hover, .souligner, .souligner:hover{text-decoration:none}
+.cadre{width:70%; margin:0 auto 15px auto; padding:20px; border:solid 2px #E5E5E5; text-align:center}
+.popup_alerte{margin-top:20px; height:120px; background-color:#FFF; border:solid 1px #CCC; text-align:center; font-style:italic; font-size:14px; color:#9A57B6}
+.texteperso{padding:15px 0; font-style:italic; color:#666}
+.texteperso_panier{padding:15px 0; text-align:center; font-style:italic; font-weight:bold; color:#666}
+
+.td_alt1, .td_alt2{padding:10px}
+.alt1{background-color:#EAEAEA}
+.alt2{background-color:#FFF}
+.td_gras{text-align:right; font-weight:bold}
+
+/*Bordures*/
+.bordure{border:solid 2px #E5E5E5}
+	.bordure_h{border-top:solid 2px #E5E5E5}
+	.bordure_d{border-right:solid 2px #E5E5E5}
+	.bordure_b{border-bottom:solid 2px #E5E5E5}
+	.bordure_g{border-left:solid 2px #E5E5E5}
+	
+/*Arrondis 5px*/
+.arrondi5{-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px; border-radius:5px; position:relative; z-index:1; behavior:url('PIE.htc')}
+/*arrondis du haut*/ 
+.arrondi5_hgd{-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; behavior: url('PIE.htc')} 
+.arrondi5_hg{-moz-border-radius:5px 0 0 0;-o-border-radius:5px 0 0 0;-webkit-border-radius:5px 0 0 0; border-radius:5px 0 0 0; position:relative; z-index:1; behavior: url('PIE.htc')} 
+.arrondi5_hd{-moz-border-radius:0 5px 0 0;-o-border-radius:0 5px 0 0;-webkit-border-radius:0 5px 0 0; border-radius:0 5px 0 0; position:relative; z-index:1; behavior: url('PIE.htc')}
+/*arrondis du bas*/
+.arrondi5_bgd{-moz-border-radius:0 0 5px 5px;-o-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; position:relative; z-index:1; behavior: url('PIE.htc')} 
+.arrondi5_bd{-moz-border-radius:0 0 5px 0;-o-border-radius:0 0 5px 0;-webkit-border-radius:0 0 5px 0; border-radius:0 0 5px 0; position:relative; z-index:1; behavior: url('PIE.htc')} 
+.arrondi5_bg{-moz-border-radius:0 0 0 5px;-o-border-radius:0 0 0 5px;-webkit-border-radius:0 0 0 5px; border-radius:0 0 0 5px; position:relative; z-index:1; behavior: url('PIE.htc')} 
+ /*arrondis cote droite en haut et bas*/
+.arrondi5_dhb{-moz-border-radius:0 5px 5px 0;-o-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0; position:relative; z-index:1; behavior: url('PIE.htc')}
+ /*arrondis cote gauche en haut et bas*/
+.arrondi5_ghb{-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;-webkit-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; position:relative; z-index:1; behavior: url('PIE.htc')}
+
+/*Arrondis 10px*/
+.arrondi10{-moz-border-radius:10px;-o-border-radius:10px;-webkit-border-radius:10px; border-radius:10px; position:relative; z-index:1; behavior:url('PIE.htc')}
+/*arrondis du haut*/ 
+.arrondi10_hgd{-moz-border-radius:10px 10px 0 0;-o-border-radius:10px 10px 0 0;-webkit-border-radius:10px 10px 0 0; border-radius:10px 10px 0 0 behavior: url('PIE.htc')} 
+.arrondi10_hg{-moz-border-radius:10px 0 0 0;-o-border-radius:10px 0 0 0;-webkit-border-radius:10px 0 0 0; border-radius:10px 0 0 0; position:relative; z-index:1; behavior: url('PIE.htc')} 
+.arrondi10_hd{-moz-border-radius:0 10px 0 0;-o-border-radius:0 10px 0 0;-webkit-border-radius:0 10px 0 0; border-radius:0 10px 0 0; position:relative; z-index:1; behavior: url('PIE.htc')}
+/*arrondis du bas*/
+.arrondi10_bgd{-moz-border-radius:0 0 10px 10px;-o-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px; border-radius:0 0 10px 10px; position:relative; z-index:1; behavior: url('PIE.htc')} 
+.arrondi10_bd{-moz-border-radius:0 0 10px 0;-o-border-radius:0 0 10px 0;-webkit-border-radius:0 0 10px 0; border-radius:0 0 10px 0; position:relative; z-index:1; behavior: url('PIE.htc')} 
+.arrondi10_bg{-moz-border-radius:0 0 0 10px;-o-border-radius:0 0 0 10px;-webkit-border-radius:0 0 0 10px; border-radius:0 0 0 10px; position:relative; z-index:1; behavior: url('PIE.htc')} 
+ /*arrondis cote droite en haut et bas*/
+.arrondi10_dhb{-moz-border-radius:0 10px 10px 0;-o-border-radius:0 10px 10px 0;-webkit-border-radius:0 10px 10px 0; border-radius:0 10px 10px 0; position:relative; z-index:1; behavior: url('PIE.htc')}
+ /*arrondis cote gauche en haut et bas*/
+.arrondi10_ghb{-moz-border-radius:10px 0 0 10px;-o-border-radius:10px 0 0 10px;-webkit-border-radius:10px 0 0 10px; border-radius:10px 0 0 10px; position:relative; z-index:1; behavior: url('PIE.htc')}
+
+.ombres10{
+	-webkit-box-shadow: #DCDADB 0px 2px 10px;
+	-moz-box-shadow: #DCDADB 0px 2px 10px;
+	-o-box-shadow: #DCDADB 0px 2px 10px;
+	box-shadow: #DCDADB 0px 2px 10px;
+	position:relative;/*bug IE7 et 8*/ 
+	z-index:1;
+	background: #FFF;
+	behavior: url('PIE.htc');
+}
+.ombres5{
+	-webkit-box-shadow: #DCDADB 0 2px 5px;
+	-moz-box-shadow: #DCDADB 0 2px 5px;
+	-o-box-shadow: #DCDADB 0 2px 5px;
+	box-shadow: #DCDADB 0 2px 5px;
+	position:relative;
+	z-index:1;
+	background:#FFF;
+	behavior: url('PIE.htc');
+}
+
+/*Couleurs*/
+.blanc{color:#FFF}
+.noir{color:#1a1a1a}
+.gris_clair{color:#ccc}
+.gris_moyen{color:#666}
+.gris_fonce{color:#999}
+.rouge{color:#9A57B6}
+.rose{color:#FF3366}
+
+/*Texte shadow avec effet blur pour banniere instit du footer*/
+.textShadow{
+	text-shadow: 
+		 0px -1px 3px #7B746F,  /* north      */
+		 0px  1px 3px #7B746F,  /* south      */
+		-1px  0px 3px #7B746F,  /* west       */
+		 1px  0px 3px #7B746F,  /* east       */
+		-1px -1px 3px #7B746F,  /* north-west */
+		-1px  1px 3px #7B746F,  /* north-east */
+		 1px -1px 3px #7B746F,  /* south-west */
+		 1px  1px 3px #7B746F;  /* south-east */
+}
+/*Texte shadow pour IE*/
+.ie6 .textShadow,
+.ie8 .textShadow,
+.ie9 .textShadow{
+	zoom: 1;
+	background-color: #7B746F;
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#7B746F)
+			progid:DXImageTransform.Microsoft.Glow(Color=#7B746F, Strength=3);
+	position:relative;
+	top:-3px;
+	left:-3px;
+}
+.ie7 .textShadow{
+	zoom: 1;
+	background-color: #7B746F;
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#7B746F)
+			progid:DXImageTransform.Microsoft.Glow(Color=#7B746F, Strength=3);
+	position:relative;
+	top:-3px;
+	left:-3px;
+}
+
+/*Texte shadow avec effet blur pour banniere instit sur la fiche produit*/
+.textShadow2{
+	text-shadow: 
+		 0px -1px 3px #F50A5C,  /* north      */
+		 0px  1px 3px #F50A5C,  /* south      */
+		-1px  0px 3px #F50A5C,  /* west       */
+		 1px  0px 3px #F50A5C,  /* east       */
+		-1px -1px 3px #F50A5C,  /* north-west */
+		-1px  1px 3px #F50A5C,  /* north-east */
+		 1px -1px 3px #F50A5C,  /* south-west */
+		 1px  1px 3px #F50A5C;  /* south-east */
+}
+/*Texte shadow pour IE*/
+.ie6 .textShadow2,
+.ie8 .textShadow2,
+.ie9 .textShadow2{
+	zoom: 1;
+	background-color: #F50A5C;
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#F50A5C)
+			progid:DXImageTransform.Microsoft.Glow(Color=#F50A5C, Strength=3);
+	position:relative;
+	top:-3px;
+	left:-3px;
+}
+.ie7 .textShadow2{
+	zoom: 1;
+	background-color: #F50A5C;
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#F50A5C)
+			progid:DXImageTransform.Microsoft.Glow(Color=#F50A5C, Strength=3);
+	position:relative;
+	top:-3px;
+	left:-3px;
+}
+
+

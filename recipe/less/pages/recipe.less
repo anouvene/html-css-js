@@ -1,0 +1,52 @@
+.recipeImg {
+  .recipe-img > img{
+    height: 100%;
+   }
+ }
+ 
+.recipe{
+  .row;
+  border-radius: 10px;
+  background: @light-grey;
+  .box-shadow(0 30px 30px @dark-grey);
+  .recipeImg;
+  .recipe-img > img{
+    border-radius: 10px 0 0 10px;
+   }
+ }
+ 
+ 
+
+/* Media Queries */
+//< lg
+@media screen and (max-width: @screen-md-max){
+  .recipe {
+    border-radius: 10px;
+    .recipe-img > img{
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  
+}
+
+//< md
+@media screen and (max-width: @screen-sm-max){
+  .recipe {
+    border-radius: 10px;
+    .recipe-img > img{
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  
+}
+
+//< sm
+@media screen and (max-width: @screen-xs-max){
+  .recipe {
+    border-radius: 10px;
+    .recipe-img > img{
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}
+

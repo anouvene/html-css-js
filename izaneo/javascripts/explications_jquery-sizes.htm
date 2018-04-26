@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>JSizes ― jQuery extension plugin for CSS properties - bramstein.com</title>
+      <link rel="alternate" type="application/rss+xml" title="RSS Feed for www.bramstein.com" href="http://www.bramstein.com/rss.xml">
+      <link rel="stylesheet" href="explications_jquery-sizes_fichiers/undohtml.css">
+      <link rel="stylesheet" href="explications_jquery-sizes_fichiers/main.css">
+      <!--[if lte IE 6]>
+		<script type="text/javascript" src="/supersleight.min.js"></script>
+		<![endif]-->
+      <!--[if IE 7]>
+		<link rel="stylesheet" href="/ie.css" />
+		<![endif]-->
+   </head>
+   <body>
+      <div id="header"><img id="logo" alt="bramstein logo" src="explications_jquery-sizes_fichiers/logo_small.png" height="14" width="85"><ul>
+            <li><a href="http://www.bramstein.com/">Home</a></li>
+            <li><a title="Programming and design projects" class="here" href="http://www.bramstein.com/projects/">Projects</a></li>
+            <li><a title="Articles on programming" href="http://www.bramstein.com/articles/">Articles</a></li>
+            <li><a class="last" title="About Bram Stein" href="http://www.bramstein.com/about/">About</a></li>
+         </ul>
+      </div>
+      <div id="subheader-small"></div>
+      <div id="content">
+         <h1>JSizes ― jQuery extension plugin for CSS properties</h1>
+         <div class="sidebar">
+            
+            <h3>Download</h3>
+            
+            
+            <p>Version 0.33 ― 2010-02-07.</p>
+            
+            
+            <ul>
+               <li>
+                  
+                  <p><a href="http://www.bramstein.com/projects/jsizes/jquery.sizes.js">jquery.sizes.js</a>
+                     (Uncompressed, 2.3KB)
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p><a href="http://www.bramstein.com/projects/jsizes/jquery.sizes.min.js">jquery.sizes.min.js</a>
+                     (Minified, 1.3KB)
+                  </p>
+                  
+               </li>
+            </ul>
+            
+            
+            <h3>License</h3>
+            
+            
+            <p>JSizes is licensed under the <a href="http://www.bramstein.com/licenses/BSD.txt">new BSD
+                  license</a>. To summarize the license; JSizes is completely free for
+               commercial and non-commercial use and you can do with it whatever you
+               want, except claim it as your own work.
+            </p>
+            
+         </div>
+         <div class="section">
+            <h2>Introduction</h2>
+            <p>JSizes is a small plugin for the <a href="http://jquery.com/">jQuery JavaScript library</a> which adds
+               support for querying and setting the <abbr>CSS</abbr>
+               <code class="property">min-width</code>, <code class="property">min-height</code>,
+               <code class="property">max-width</code>, <code class="property">max-height</code>,
+               <code class="property">border-*-width</code>, <code class="property">margin</code>, and
+               <code class="property">padding</code> properties. Additionally it has one method
+               for determining whether an element is visible. In total it adds six new
+               methods to the jQuery element <abbr>API</abbr>. It internally calls
+               the jQuery built-in <code class="methodname">css</code> method, so syntax and use
+               is identical to calling <code>css('property-name', ...)</code>. An example
+               of its use follows.
+            </p><pre><code class="programlisting prettyprint">jQuery(function($) {
+   var myDiv = $('#myDiv');
+
+   myDiv.minSize({width: 100}); // set 'min-width' to 100px
+   alert(myDiv.minSize().width); // displays '100'
+});</code></pre><p>Note that all returned values are converted to pixel values, without
+               the <code class="literal">px</code> suffix. It is thus safe to use these methods in
+               calculations without having to worry about non-numeric values. Most
+               importantly, it does not add support for min- and max-sizes on browsers
+               that do not natively support it, it just adds convenient methods to query
+               these properties and return a sensible value when they are not available
+               or not set.
+            </p>
+         </div>
+         <div class="section">
+            <h2>API</h2>
+            <p>The plugin adds the following methods to the JQuery object:</p>
+            <dl>
+               
+               <dt>minSize()</dt>
+               <dd>
+                  
+                  <p>Returns the CSS <code class="property">min-width</code> and
+                     <code class="property">min-height</code> properties of the first matched
+                     element as pixel values in an object with <code class="property">width</code>
+                     and <code class="property">height</code> properties. If a CSS property is not
+                     set <code class="literal">0</code> is returned as value.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>minSize(value)</dt>
+               <dd>
+                  
+                  <p>Sets the CSS <code class="property">min-width</code>, and
+                     <code class="property">min-height</code> property on all matched elements.
+                     Expects a value object containing any of <code class="property">width</code>
+                     and <code class="property">height</code> properties. If the property values
+                     are numbers they will be converted to pixel values.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>maxSize()</dt>
+               <dd>
+                  
+                  <p>Returns the CSS <code class="property">max-width</code> and
+                     <code class="property">max-height</code> properties of the first matched
+                     element as pixel values in an object with <code class="property">width</code>
+                     and <code class="property">height</code> properties. If a CSS property is not
+                     set <code class="constant">Number.MAX_VALUE</code> is returned as
+                     value.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>maxSize(value)</dt>
+               <dd>
+                  
+                  <p>Sets the CSS <code class="property">max-width</code> and
+                     <code class="property">max-height</code> property on all matched elements.
+                     Expects a value object containing any of <code class="property">width</code>
+                     and <code class="property">height</code> properties. If the property values
+                     are numbers they will be converted to pixel values.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>margin()</dt>
+               <dd>
+                  
+                  <p>Returns the CSS <code class="property">margin</code> property of the
+                     first matched element as pixel values in an object with
+                     <code class="property">top</code>, <code class="property">bottom</code>,
+                     <code class="property">left</code>, and <code class="property">right</code>
+                     properties.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>margin(value)</dt>
+               <dd>
+                  
+                  <p>Sets the CSS <code class="property">margin</code> property on all
+                     matched elements. Expects a value object containing any of
+                     <code class="property">top</code>, <code class="property">bottom</code>,
+                     <code class="property">left</code>, and <code class="property">right</code>
+                     properties. If the property values are numbers they will be
+                     converted to pixel values.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>padding()</dt>
+               <dd>
+                  
+                  <p>Returns the CSS <code class="property">padding</code> property of the
+                     first matched element as pixel values in an object with
+                     <code class="property">top</code>, <code class="property">bottom</code>,
+                     <code class="property">left</code>, and <code class="property">right</code>
+                     properties.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>padding(value)</dt>
+               <dd>
+                  
+                  <p>Sets the CSS <code class="property">padding</code> property on all
+                     matched elements. Expects a value object containing any of
+                     <code class="property">top</code>, <code class="property">bottom</code>,
+                     <code class="property">left</code>, and <code class="property">right</code>
+                     properties. If the property values are numbers they will be
+                     converted to pixel values.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>border()</dt>
+               <dd>
+                  
+                  <p>Returns the CSS <code class="property">border-*-width</code> property
+                     of the first matched element as pixels values in an object with
+                     <code class="property">top</code>, <code class="property">bottom</code>,
+                     <code class="property">left</code>, and <code class="property">right</code>
+                     properties.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>border(value)</dt>
+               <dd>
+                  
+                  <p>Sets the CSS <code class="property">border-*-width</code> property on
+                     all matched elements. Expects a value object containing any of
+                     <code class="property">top</code>, <code class="property">bottom</code>,
+                     <code class="property">left</code>, and <code class="property">right</code>
+                     properties. If the property values are numbers they will be
+                     converted to pixel values. Note that the CSS
+                     <code class="property">border-style</code> property also needs to be set in
+                     order for the border to show.
+                  </p>
+                  
+               </dd>
+               
+               
+               <dt>isVisible()</dt>
+               <dd>
+                  
+                  <p>Returns true if the any of the matched element are visible,
+                     false otherwise.
+                  </p>
+                  
+               </dd>
+               
+            </dl>
+         </div>
+         <div class="section">
+            <h2>Examples</h2>
+            <p>Some examples of how the new methods can be used:</p><pre><code class="programlisting prettyprint">jQuery(function($) {
+   var myDiv = $('#myDiv');
+
+   // set margin-top to 100px and margin-bottom to 10em
+   myDiv.margin({top: 100, bottom: '10em'});
+
+   // displays the size of the top border in pixels
+   alert(myDiv.border().top);
+
+   // displays true if the element is visible, false otherwise
+   alert(myDiv.isVisible());
+
+   // set padding-right to 10px and margin-left to 15px using chaining
+   myDiv.padding({right: 10}).margin({left: 15});
+});</code></pre><p>The above example also shows that chaining can be used on methods
+               that do not return values.
+            </p>
+         </div>
+         <div class="section">
+            <h2>Credits</h2>
+            <ul>
+               <li>
+                  
+                  <p>John Bowers ― Setting values to zero bug fix.</p>
+                  
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div id="footer">
+         <div class="columns">
+            <div class="left-column">
+               <h2>Project updates</h2>
+               <p><a href="http://www.bramstein.com/projects/column/"><em>jQuery column selector</em> ― A plugin for the jQuery JavaScript library which adds a table column cell selector</a>.
+               </p>
+               <p><a href="http://www.bramstein.com/projects/jlayout/"><em>jLayout</em> ― The jLayout JavaScript library provides layout algorithms for laying out components and containers</a>.
+               </p>
+               <p><a href="http://www.bramstein.com/projects/junify/"><em>JUnify</em> ― JUnify is a JavaScript library for performing unification on objects and arrays</a>.
+               </p>
+               <p><a href="http://www.bramstein.com/projects/xsltjson/"><em>XSLTJSON</em> ― XSLTJSON is an <abbr>XSLT</abbr> 2.0 stylesheet to transform
+                     						               arbitrary <abbr>XML</abbr> to JavaScript Object Notation
+                     						               (<abbr>JSON</abbr>)</a>.
+               </p>
+               <p><a href="http://www.bramstein.com/projects/jsizes/"><em>JSizes</em> ― A small plugin for the jQuery JavaScript library which adds support for various size related <abbr>CSS</abbr> properties</a>.
+               </p>
+            </div>
+            <div class="right-column">
+               <h2>Latest articles</h2>
+               <ul>
+                  <li>
+                     <p><a href="http://www.bramstein.com/articles/advanced-pattern-matching.html">Advanced pattern matching in JavaScript</a></p>
+                  </li>
+                  <li>
+                     <p><a href="http://www.bramstein.com/articles/extracting-object-values.html">Extracting
+                           					                        values from JavaScript objects</a></p>
+                  </li>
+                  <li>
+                     <p><a href="http://www.bramstein.com/articles/pattern-matching.html">Pattern matching
+                           					                        in JavaScript</a></p>
+                  </li>
+                  <li>
+                     <p><a href="http://www.bramstein.com/articles/gettingstarted.html">GUI - Getting started</a></p>
+                  </li>
+                  <li>
+                     <p><a href="http://www.bramstein.com/articles/fontengine.html">GUI - Writing your own font engine</a></p>
+                  </li>
+                  <li>
+                     <p><a href="http://www.bramstein.com/articles/selection.html">GUI - How selection works</a></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div id="footer-navigation">
+         <p>Copyright 2008-2010, Bram Stein. All rights reserved.</p>
+         <ul>
+            <li><a href="http://www.bramstein.com/">Home</a></li>
+            <li><a href="http://www.bramstein.com/projects/">Projects</a></li>
+            <li><a href="http://www.bramstein.com/articles/">Articles</a></li>
+            <li><a href="http://www.bramstein.com/about/">About</a></li>
+         </ul>
+      </div><script type="text/javascript">
+			
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			
+			</script><script src="explications_jquery-sizes_fichiers/ga.js" type="text/javascript"></script><script type="text/javascript">
+			
+			try {
+				var pageTracker = _gat._getTracker("UA-10076742-1");
+				pageTracker._trackPageview();
+			} catch(err) {
+			}
+			
+			</script>
+</body></html>

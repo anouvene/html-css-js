@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 314 287" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="General-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="footer-slices" transform="translate(-258.000000, -420.000000)" fill="#FFFFFF">
+      <g id="footer" transform="translate(0.000000, 12.000000)">
+        <g id="bulles-deco" transform="translate(107.357654, 408.000000)">
+          <g id="bulles-c" transform="translate(151.380685, 0.000000)">
+            <ellipse id="bull4" opacity="0.600000024" cx="75.6956502" cy="122.853933" rx="4.78925824" ry="4.78651685"></ellipse>
+            <ellipse id="bull4" opacity="0.5" cx="68.032837" cy="94.7730337" rx="2.23498718" ry="2.23370787"></ellipse>
+            <ellipse id="bull4" opacity="0.5" cx="66.1171337" cy="141.361798" rx="3.51212271" ry="3.51011236"></ellipse>
+            <ellipse id="bull4" opacity="0.385086287" cx="6.73033152" cy="260.705618" rx="6.70496154" ry="6.7011236"></ellipse>
+            <ellipse id="bull3" opacity="0.800000012" cx="44.0865458" cy="190.18427" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull3" opacity="0.699999988" cx="15.3509964" cy="231.667416" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull3" opacity="0.5" cx="40.893707" cy="150.61573" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull1" opacity="0.5" cx="61.3856777" cy="280.382022" rx="6.38567766" ry="6.38202247"></ellipse>
+            <ellipse id="bull3" opacity="0.75" cx="62.605011" cy="163.379775" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull3" opacity="0.75" cx="95.1719671" cy="166.570787" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull3" opacity="0.900000036" cx="65.7978498" cy="210.606742" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull3" opacity="0.800000012" cx="30.6766227" cy="270.597753" rx="3.19283883" ry="3.19101124"></ellipse>
+            <ellipse id="bull1" opacity="0.5" cx="305.056093" cy="113.430103" rx="7.98209707" ry="7.97752809"></ellipse>
+            <ellipse id="bull2" opacity="0.504197761" cx="9.60388646" cy="9.57303371" rx="9.57851649" ry="9.57303371"></ellipse>
+            <ellipse id="bull1" opacity="0.5" cx="98.3648059" cy="92.5393258" rx="6.38567766" ry="6.38202247"></ellipse>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <title>Basic CSS3 Demos</title>
+		<SCRIPT SRC="jquery-1.6.4.min.js" type="text/javascript"></SCRIPT>    
+		<SCRIPT SRC="modernizr_2.5.3 .js" type="text/javascript"></SCRIPT>   
+		<SCRIPT SRC="jquery.textshadow.js" type="text/javascript"></SCRIPT>    
+		<link href="jquery.textshadow_bis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    	<SCRIPT type="text/javascript">
+			$(document).ready(function(){
+				$('h1').textshadow();
+			});
+        </SCRIPT>    
+        <div class="box">
+          <h1>
+            <span class="ui-text-shadow">
+                <span class="ui-text-shadow-original">Some</span>
+                <span class="ui-text-shadow-copy">Some </span>
+            </span>
+            <span class="ui-text-shadow">
+                <span class="ui-text-shadow-original">text </span>
+                <span class="ui-text-shadow-copy">text </span>
+            </span>
+            <span class="ui-text-shadow">
+                <span class="ui-text-shadow-original">that</span>
+            </span>
+          </h1>
+        </div>
+    </body>
+</html>

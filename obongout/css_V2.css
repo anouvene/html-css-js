@@ -1,0 +1,364 @@
+
+/*---------- @GROUPE STRUCTURE ----------*/
+#grillage{position:absolute; left:0; top:557px; z-index:0; width:100%; min-width:1115px; height:690px; background:url('images/grillage.png') repeat-x #1C150F}
+#conteneur{position:relative; left:0; top:0; z-index:1; width:950px; margin:0 auto; padding:0; text-align:left}
+	#header{width:950px; background-color:#1C150F}
+	#contenupage{width:916px; min-height:800px; padding:0 17px; background:url('images/degrade_taupe.jpg') repeat-x #fff}
+		.gauche_droite{display:block; width:972px; position:relative}
+			.gauche{float:left; width:279px; padding-top:20px; background:url('images/guirlande_h.jpg') no-repeat center top}
+			.gauche_index{float:left; width:305px; height:800px; margin:-274px 0 0 -17px; position:relative; z-index:10}
+			html>body .gauche{min-height:800px; height:auto}
+			.droite{float:right; width:622px}
+			.droite_index{float:right; width:622px; margin-top:36px}
+	#footer{width:916px; padding:0 17px; background-color:#fff}
+		
+/*---------- @HEADER ----------*/
+/*recherche par région*/		
+.regions{float:left; width:245px; height:136px; margin:36px 42px 0 24px; padding-top:8px; background:url('images/cartedefrance.jpg') no-repeat 184px top; position:relative; z-index:1}
+	.regions_txt{width:190px; height:78px}
+		.regions_txt font{display:block; line-height:.9em; font-weight:bold}
+		.ie7 .regions_txt font.size_28, .ie8 .regions_txt font.size_28, .ie9 .regions_txt font.size_28{line-height:normal; margin-top:-0.3em}
+	
+	span.customSelect {
+		width:174px; height:30px; padding:0 10px; line-height:30px; font-weight:bold;  background:url('images/puce_select.jpg') no-repeat 176px center #fff; color:#281F1A;  border:1px solid #8E8A87;
+		-moz-border-radius:5px; -o-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url('PIE.htc')
+	}
+	span.customSelect.changed {background-color:#f0dea4}
+	.customSelectInner{}
+	
+/*logo*/		
+.logo{float:left; width:316px; height:180px; text-align:center}
+
+.menudivers_monpanier_rech{float:right; width:295px; height:180px}
+	/*Menu divers*/
+	.menudivers{height:42px; padding-top:20px; text-align:right}
+		.menudivers a{font-family:opensans; font-size:12px}
+	/*Mon panier*/		
+	.monpanier{float:right; clear:both; width:195px; height:67px; margin-bottom:21px; background:url('images/monpanier_bg.jpg') no-repeat; text-align:center; font-weight:bold}
+		.monpanier a{display:block; width:195px; height:29px; padding-top:38px}
+			.monpanier_tot{padding-right:9px}
+	
+	/*Barre de recherche*/
+	.rech{clear:both; padding-left:52px}
+		.inputrech{
+			width:170px; height:24px; margin:0; padding:0 0 0 39px; border:solid 1px #ECECEC; background:url('images/loupe_rech.jpg') no-repeat #fff; border:0 none; line-height:24px; font-size:14px; font-style:italic; font-family:Georgia, "Times New Roman", Times, serif
+		}
+
+/*ONGLETS*/		
+.onglets{position:relative; z-index:2000; clear:both; width:950px; height:50px; padding-top:17px; line-height:normal}
+	.crochet_g{position:absolute; left:-40px; top:30px; width:40px}
+	.crochet_d{position:absolute; right:-40px; top:30px; width:40px}
+	.madeinfrance{position:absolute; right:-104px; top:87px; width:112px; height:131px}
+	.onglets_content{position:absolute; left:-15px; top:17px; width:980px; height:50px; line-height:normal;
+		background: #DD004F;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#DD004F), to(#BF014B));
+		background: -webkit-linear-gradient(#DD004F, #BF014B);
+		background: -moz-linear-gradient(#DD004F, #BF014B);
+		background: -ms-linear-gradient(#DD004F, #BF014B);
+		background: -o-linear-gradient(#DD004F, #BF014B);
+		background: linear-gradient(#DD004F, #BF014B);
+		-pie-background: linear-gradient(#DD004F, #BF014B);
+		behavior: url('PIE.htc');
+	}
+
+		.onglets table{width:100%; height:50px; border-spacing:0;
+		}
+			td.ongletBit{height:50px; cursor:pointer}
+				.ongletBit_lib{position:relative; left:0; top:0}
+					.ongletBit_lib a{position:relative; display:block; height:42px; padding:8px 18px 0 18px; line-height:.9em; font-size:20px; font-family:ritasmith}
+					.ongletsep_g{position:absolute; left:0; top:0; width:55px; height:50px; background:url('images/ongletsep_g.png') no-repeat}
+					.ongletsep_d{position:absolute; right:0; top:0; width:43px; height:50px; background:url('images/ongletsep_d.png') no-repeat right top}
+	
+		/*onglet actif*/
+		td.ongletBit_over .ongletBit_lib{top:-10px}
+			td.ongletBit_over .ongletBit_lib a{background:url('images/onglet_bg2.jpg') repeat-x left top}
+			#header .ongletBit_lib a:hover{text-decoration:none}
+			/*menu déroulant*/
+			.menu{position:absolute; left:15px; top:50px; width:950px; height:310px}
+				.menu_content{width:950px; height:310px; background:url('images/menu_bg.png') no-repeat}
+					.menu_g{float:left; width:496px; height:284px; padding:26px 0 0 18px}
+						/*Niv0*/
+						.niv0Bit{height:62px; padding-left:8px; font-size:36px; font-family:ritasmith}
+							.niv0Bit a{color:#2A1F19}
+							#header .niv0Bit a:hover{text-decoration:none}
+						/*Niv1*/
+						.niv1Bit, .voirplus{float:left; width:221px; height:26px; margin:0 27px 6px 0}
+							.niv1Bit a, .voirplus a{
+								display:block; width:196px; height:26px; padding-left:26px; line-height:25px; font-size:14px; background:url('images/puce_niv1.png') no-repeat 8px 95px #665649; color:#E2D6CA; overflow:hidden;
+								-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px; border-radius:5px; position:relative; z-index:1; behavior:url('PIE.htc')
+							}
+							#header .niv1Bit a:hover{background:url('images/puce_niv1.png') no-repeat 8px 95px #2A1F19; text-decoration:none; color:#E2D6CA}
+							.voirplus a{background:url('images/puce_niv1.png') no-repeat 8px 95px #DF0050}
+								.voirplus a:hover{background:url('images/puce_niv1.png') no-repeat 8px 95px #AB0743; color:#E2D6CA}
+								
+					.menu_d{float:right; width:197px; height:257px; margin:19px 142px 0 0; background-color:#FFF; text-align:center}
+						.articlemenuBit_ima{width:197px; height:167px; color:#2D201A}
+						.articlemenuBit_lib{height:32px; padding-top:14px; line-height:1.1em}
+							.articlemenuBit_lib a{font-size:14px; font-weight:bold; color:#2D201A}
+						.articlemenuBit_prixpromo{font-size:22px; font-weight:bold; color:#CB004F}
+						.articlemenuBit_prixold{font-style:italic; color:#29201B}
+							.articlemenuBit_prixold span{text-decoration:line-through}
+
+/*Barre de navigation*/
+.navigation{height:36px}
+	.navigation_content{height:36px; line-height:36px; font-style:italic; font-size:14px; color:#2A201A}
+		.navigation_content h1, .navigation_content h2{display:inline; font-style:italic; font-size:14px; color:#2A201A}
+			.navigation_content a , .navigation_content h1 a, .navigation_content h2 a{color:#2A201A}
+		
+/*---------- @FOOTER ----------*/
+/*Nos avantages*/				
+.avantages{width:916px; padding-top:6px}
+	.coin_recette{float:left; width:303px}
+	.garantie_qualite{float:left; width:299px; margin:-23px 0 0 5px}
+	.produit_region{float:right; width:305px}
+/*banniere instit*/			
+.engagements{width:916px; height:78px; margin-bottom:17px; padding-top:9px; background:url('images/banniere_instit.jpg') no-repeat}
+	.engagements a{display:block; float:left; height:42px; padding-top:33px; text-align:center; font-family:optimusprinceps, "Times New Roman", Times, serif; font-size:14px}
+	a.direct_producteur{width:102px; margin-left:15px}
+	a.specialite_francaise{width:95px; margin-left:2px}
+	a.paiement_securise{width:102px; margin-left:2px}
+	a.qualite_garantie{width:82px; margin-left:2px}
+	a.production_francaise{width:105px; margin-left:2px}
+	a.livraison_rapide{width:107px}
+	#footer .engagements a:hover{text-decoration:none}
+
+/**Espace infos**/	
+.espace_infos{width:950px; height:201px; background:url('images/espaceinfos_m.jpg') no-repeat #fff; position:relative; left:-17px; top:0}
+	.espaceinfos_g{position:absolute; left:-41px; top:-15px; width:41px; height:216px; background:url('images/espaceinfos_g.png') no-repeat}
+	.espaceinfos_d{position:absolute; right:-41px; top:-15px; width:41px; height:216px; background:url('images/espaceinfos_d.png') no-repeat}
+	/**Menu instit**/
+	.menuinstit{float:left; width:605px; height:134px; padding:67px 0 0 13px; overflow:hidden; font-size:13px; font-weight:bold}
+		.menuinstit_1{float:left; width:255px; padding-left:5px}
+		.menuinstit_2{float:left; width:188px}
+		.menuinstit_3{float:left; width:157px}
+			.menuinstit ul{padding-right:10px; list-style:inside disc}
+				.menuinstit ul li{padding-bottom:5px; }
+	/*Encart contact*/
+	.contact{float:right; width:298px; height:172px; padding:10px 20px 0 0}		
+		
+/*copyright*/			
+#copyright{width:950px; padding:7px 0 17px 0; height:22px; background:url('images/espaceinfos_b.png') no-repeat center top; font-style:italic}
+	.banques{float:left; width:245px; height:22px; margin-left:-16px}
+	.copyright_txt{float:left; width:690px; height:22px; padding-left:15px; line-height:22px; color:#56524F; font-style:italic}
+		.copyright_txt a{border-bottom:dashed 1px #56524F; color:#56524F}
+		#copyright a:hover{text-decoration:none}
+
+/*---------- @INDEX ----------*/
+/*les diapos*/
+.diapos{float:left; width:950px; height:310px; margin:-36px 0 0 -17px; background-color:#64584A; position:relative}
+	/*carrousel*/
+	.carrousel{width:950px; height:310px; position:relative; overflow:hidden}
+		.carrousel ul{width:20000px; height:310px; list-style:none}
+			/**Diapos images**/
+			li.carrouselImageBit{float:left; width:950px; height:310px}
+	/**Boutons carrousel**/
+	table.btn{position:absolute; right:10px; top:32px; z-index:10; width:11px}
+		.btn td{width:11px; height:11px; padding:4px 0}
+			.btn a{display:block; width:11px; height:11px; background:url('images/btn.png') no-repeat}
+			#contenupage .btn a:hover{background:url('images/btn_over.png') no-repeat; text-decoration:none}
+			/*boutons actifs*/
+			.btn .btn_1_over a, .btn .btn_2_over a, .btn .btn_3_over a, .btn .btn_4_over a, .btn .btn_5_over a{background:url('images/btn_over.png') no-repeat}
+	
+/**edito**/	
+.edito{margin-left:16px; color:#fff}
+	.edito_content{width:237px; height:178px; padding:20px 21px 21px 21px; background:url('images/opacite_marron.png')}
+		.edito_content .scroll-pane{width:237px; height:178px; margin:0; position:relative; overflow:auto}/*conteneur*/
+			/*contenu*/
+			.edito_content .scroll-content{position:absolute; top:0; left:0; width:220px}
+				.edito_txt{font-size:14px; font-style:italic; line-height:1.2em}
+			/*scroll*/
+			.edito_content .slider-wrap{position:absolute;right:0;top:0; background:url('images/opacite_marron.png'); width:5px}/*Scrollbar*/
+				.edito_content .slider-vertical{position:relative; height:100%}/*positionnement du scroll*/
+					.edito_content a.ui-slider-handle{display:block;position:absolute; width:5px;height:10px;margin:0 auto; background-color:#000}/*scroll*/
+						/*a.ui-slider-handle img{border:none}
+						.scrollbar-top{position:absolute;top:0;}
+						.scrollbar-bottom{position:absolute;bottom:0;}
+						.scrollbar-grip{position:absolute;top:50%;margin-top:-6px;}*/
+					.edito_content .ui-slider-range{position:absolute;width:100%; background:url('images/opacite_blanc20.png')}/*espace vide autour du scroll*/
+
+/*Top recherche*/
+.toprech{width:258px; height:183px; padding:97px 18px 0 25px; background:url('images/toprecherches_bg.png'); font-family:Tahoma, Geneva, sans-serif; text-align:center}
+
+/*Facebook Twitter*/
+.facebook_twitter, .facebook_twitter_bis{width:100px; height:55px; margin-top:-10px; padding:17px 0 0 210px; background:url('images/facebooktwitter_bg.png') no-repeat}
+.facebook_twitter_bis{margin:-10px 0 0 -14px; position:relative; z-index:1}
+	.facebook_twitter a, .facebook_twitter_bis a{display:block; float:left; width:37px; height:37px; margin-right:5px}
+				
+/**Nouveautes ...**/	
+.nouveautes{width:622px; margin:10px 0}						
+	.titre_cbox{margin-bottom:22px; padding-bottom:8px; border-bottom:solid 1px #2A1F19; line-height:normal; font-size:27px; color:#2A201A; font-family:c_box, Georgia, "Times New Roman", Times, serif}
+	
+/*---------- @CATEGORIE ----------*/
+/*Catalogue*/
+.catalogue{width:245px; min-height:675px; padding:0 17px 17px 17px; background:url('images/catalogue_bg.jpg') no-repeat center bottom #2A1F19}
+	.catalogue_entete{width:245px; height:93px; background:url('images/catalogue.jpg') no-repeat center 23px}
+	
+	/*Niv0*/
+	.ul_niv0{width:245px; list-style:none}
+		/*open*/
+		.li0_folderBitOpen{margin-bottom:12px; border-bottom:solid 2px #605953;}
+			.li0_folderBitOpen .li0_lib{padding-bottom:25px; border:none}
+				.li0_lib a{font-style:italic; font-size:16px; font-weight:bold}
+		/*close*/
+		.li0_folderBitClose{margin-bottom:12px; padding-bottom:8px; border-bottom:solid 2px #605953}
+			.li0_folderBitClose .li0_lib{}
+
+			/*Niv1*/
+			.ul_niv1{width:245px; list-style:none}
+				.li0_folderBitClose .ul_niv1{display:none}
+					.li1_folderBitOpen, .li1_folderBitClose{padding-left:17px; background:url('images/puce_cat.png') no-repeat 5px 4px}
+						.li1_lib{padding-bottom:25px; font-style:italic; font-size:16px}
+							/*Niv2*//*.ul_niv2{list-style:none}.li2_folderBitOpen{}.li2_folderBitClose{}*/
+/*Labels*/
+.grands_labels{margin-left:-13px}
+
+/*description categ*/
+.guirlande_h{height:20px; background:url('images/guirlande_h.jpg') no-repeat center top }
+.categ{width:622px; background:url('images/carreau.jpg')}
+	.categ_desc{min-height:580px; background:url('images/deco.png') no-repeat right bottom}
+		.categdesc_txt{float:left; width:276px; padding:30px 0 0 19px; font-style:italic; font-size:14px}
+			.categ_lib{margin-bottom:16px; padding-bottom:9px; border-bottom:solid 2px #605953; font-style:italic; font-size:26px}
+		/*image catégorie*/
+		.categ_ima{float:right; width:268px; height:197px; margin:16px 6px 0 0; padding:14px 23px 21px 15px; background:url('images/categdesc_ima.png') no-repeat}
+		/*Sous-rayons*/
+		.sscategs{padding:25px 0 0 0;}
+			.sscategBit{float:left; width:122px; height:159px; margin:0 0 10px 8px; padding:8px 12px 15px 10px; background:url('images/sscategBit_bg.png') no-repeat; text-align:center; font-style:italic; font-size:14px; color:#2A211C}
+			.sscategBit_2, .sscategBit_3{margin:0}
+			.sscategBit_4{float:right}
+				.sscategBit_ima{width:122px; height:90px; background-color:#DAD6D3}
+				h2.sscategBit_lib{padding:9px 0 6px 0;  font-weight:bold}
+					h2.sscategBit_lib a{color:#2A211C}
+.guirlande_b{height:20px; background:url('images/guirlande_b.jpg') no-repeat center top #fff}
+	
+/*Articles + pagination*/	
+.cdc, .articles{width:622px; margin-bottom:10px}
+	.articles .categ_lib{color:#2A201A; border-bottom:1px solid #2A1F19}
+	.desc_txt{padding-bottom:10px; font-style:italic; font-size:14px; color:#2A201A;}					
+	/*Pagination*/
+	.pagination_h, .pagination_b{height:26px; margin-bottom:15px; background-color:#ECE8DF; color:#2A1F19; -moz-border-radius:10px;-o-border-radius:10px;-webkit-border-radius:10px; border-radius:10px; position:relative; z-index:10; behavior: url('PIE.htc')}
+	.pagination_b{margin:0}
+		.pagination_h td, .pagination_b td{height:26px}
+			td.parpage{width:195px; padding-left:10px; font-size:14px; font-weight:bold; font-style:italic; color:#352C25}
+				.pagination select{}
+				#formuperpage span.customSelect, #formuperpage2 span.customSelect {width:18px; height:15px; padding:0 10px 0 5px; line-height:normal; font-weight:bold; background:url('images/puce_select.jpg') no-repeat 19px 7px #fff; border:1px solid #8B847C; color:#352C25; font-style:italic;
+				-moz-border-radius:0; -o-border-radius:0; -webkit-border-radius:0; border-radius:0; behavior:url('PIE.htc')}
+				#formuperpage .customSelectInner, #formuperpage2 .customSelectInner{margin-top:-3px}
+			
+			form.pagenav{float:right; width:400px; height:26px; padding-right:10px; font-size:14px;  font-style:italic; color:#352C25}
+				.pagesuiv a, .pageprec a{color:#352C25; font-weight:bold;}
+				.pages a, .points{display:block; float:left; width:17px; height:17px; border:solid 1px #ECE8DF; text-align:center; font-size:14px; color:#352C25}
+				.encours{display:block; float:left; width:17px; height:17px; border:1px solid #8B847C; text-align:center;line-height:.9em;  font-size:14px; font-weight:bold; color:#352C25}
+			
+	/*Articles*/
+	.articleBit{float:left; width:185px; height:318px; padding:5px; background:url('images/articleBit_bas.jpg') no-repeat center bottom #2A201A; text-align:center}
+	.articleBit_2{margin-left:18px}
+	.droite .articleBit_2{margin-left:16px}
+	.articleBit_3{float:right}
+			.articleBit_ima{width:185px; height:185px; margin:0 auto 7px auto; background-color:#fff; position:relative}
+			.articleBit_lib{height:36px; line-height:1em; font-size:13px; font-weight:bold}
+			.articleBit_prix{padding-top:29px; color:#150F0A}
+				.articleBit_prixpromo{font-size:22px; font-weight:bold}
+				.articleBit_prixold{text-decoration:line-through; font-style:italic}
+				
+			.articleBit_bouton{float:right; width:31px;}
+		
+/*---------- @FICHE PRODUIT ----------*/
+#contenuArticle{width:916px; position:relative}
+	/*pagination*/
+	.produit_pagenav{position:absolute; right:0; top:-10px; z-index:10; width:326px; height:24px; text-align:right}
+		.produit_retour{float:right; width:71px}
+		.produit_suiv{float:right; width:120px}
+		.produit_prec{float:left; width:133px}
+
+	.produit{width:876px; min-height:345px; padding:20px; background:url('images/produit_bg.jpg') repeat-x #2A1F19; position:relative; z-index:10;}
+		/*colonne gauche : les photos*/
+		.produit_g{float:left; width:414px}
+			.produit_ima{width:414px; height:414px; background-color:#fff; position:relative}
+				.etiquette_region{position:absolute; left:0; top:-14px; width:106px; height:197px}
+				.produit_etiquette{position:absolute; right:16px; bottom:0; width:109px; height:141px}
+			/*Photos supplementaires*/	
+			.photos{height:110px; padding-top:20px}
+				.photoBit{float:left; width:97px; height:97px; background-color:#fff}
+				.photoBit_2{margin:0 9px 0 9px}
+				.photoBit_4{float:right; margin:0}
+			.info_zoom{font-style:italic}
+			
+		/*colonne droite : les details*/			
+		.produit_d{float:right; width:437px}
+			/*Libéllé*/
+			h1.produit_lib{font-style:italic; font-size:26px}
+			.produit_lib2{padding-bottom:30px; font-style:italic; font-size:14px}
+			
+			/*Formulaires articleLienpanier et ArticleBoutonContacter*/
+			.produit_formu{padding:10px 0 15px 0}
+				.produit_formuG{float:left; width:230px}
+					/*Qté*/
+					.produit_qte{height:32px; padding-bottom:10px}
+						.champ_lib, .champ_val{font-weight:bold; font-style:italic}
+						.inputqte{width:20px; height:19px; margin:0; padding:0 0 0 8px; border:0 none; line-height:19px; font-style:italic; font-weight:bold}
+					/*Les caracteristiques*/
+					.produit_caracts{padding-bottom:10px}
+						#contenuArticle span.customSelect{width:90px; height:19px; padding:0 10px 0 8px; line-height:1.2em; font-weight:bold; background:url('images/puce_select.jpg') no-repeat 90px 7px #fff; color:#352C25; font-style:italic; font-size:14px; font-weight:bold; border:none;
+						-moz-border-radius:0; -o-border-radius:0; -webkit-border-radius:0; border-radius:0; behavior:url('PIE.htc')}
+				
+				.produit_formuD{float:right; width:207px; text-align:right}
+					/*Prix*/
+					.produit_prix{height:100px; position:relative; text-align:center}
+						table.produit_prixcontent{position:absolute; right:-32px; top:0; width:186px; height:77px; padding:10px 3px 7px 7px; background:url('images/produit_prix_bg.png') no-repeat; text-align:center; font-style:italic}
+							.produit_prixpromo{font-size:26px; font-weight:bold}
+							.produit_prixold{font-size:14px}
+								.prix_barre{text-decoration:line-through}
+	
+					/*Delai et recommander*/
+					.produit_delai{height:35px; font-size:14px; /*font-weight:bold;*/ font-style:italic}
+					.produit_recommander{height:46px; font-size:14px; /*font-weight:bold;*/ font-style:italic; text-decoration:underline}
+					/*Les boutons de partage*/
+					.partage_jaime{height:40px}
+						.partage{float:right; width:125px; height:16px; margin-top:5px}
+						.jaime{float:right; width:63px; height:24px; margin-left:5px; overflow:hidden}
+					
+			/*Classeur*/
+			.classeur{width:437px; height:28px; cursor:pointer}
+				.dossier_close, .dossier_open{float:left; height:28px; text-align:center; line-height:28px; font-style:italic; font-size:14px; font-weight:bold; color:#FFF; position:relative; left:0; top:0}
+				.dossier_close{background-color:#604D3F}
+				.dossier_open{background-color:#C1B4AB; color:#2A1F19}
+				#dossier1{width:155px; margin-right:2px}
+				#dossier2{width:125px; margin-right:2px}
+				#dossier3{width:153px}
+				
+			.classeur_content{width:417px; padding:10px; margin-bottom:90px; background-color:#C1B4AB; position:relative}
+				.scroll-pane{width:417px; height:137px; margin:0; position:relative; overflow:auto}/*conteneur*/
+					/*contenu*/
+					.scroll-content{position:absolute;top:0;left:0; width:407px}
+						.dossier_content{padding:0 5px 0 0; text-align:justify; color:#2A1F19; font-style:italic; font-size:14px;}
+							.dossier_content ul{list-style:inside disc}
+						
+					/*scroll*/
+					.slider-wrap{position:absolute;right:0;top:0;background-color:#fff;width:5px}/*Scrollbar*/
+						.slider-vertical{position:relative;height:100%}/*positionnement du scroll*/
+							a.ui-slider-handle{display:block;position:absolute; width:5px;height:10px;margin:0 auto;background-color:#604D3F}/*scroll*/
+								/*a.ui-slider-handle img{border:none}
+								.scrollbar-top{position:absolute;top:0;}
+								.scrollbar-bottom{position:absolute;bottom:0;}
+								.scrollbar-grip{position:absolute;top:50%;margin-top:-6px;}*/
+							.ui-slider-range{position:absolute;width:100%;background-color:#fff}/*espace vide autour du scroll*/
+							
+				/*Bandeau instit*/
+				.bandeau_instit{position:absolute; left:-16px; bottom:-63px; width:458px; height:58px; background:url('images/bandeau_instit.png') no-repeat; padding:9px 5px 6px 5px}
+					.bandeau_instit a{display:block; float:left; height:31px; padding-top:27px; text-align:center; font-family:optimusprinceps, "Times New Roman", Times, serif; font-size:10px}
+					a.direct_producteur2{width:82px; background:url('images/producteur.png') no-repeat}
+					a.specialite_francaise2{width:73px; background:url('images/specialitefrancaise.png') no-repeat}
+					a.paiement_securise2{width:78px; background:url('images/paiementsecurise.png') no-repeat}
+					a.qualite_garantie2{width:64px; background:url('images/qualitegarantie.png') no-repeat}
+					a.production_francaise2{width:80px; background:url('images/productionfrancaise.png') no-repeat}
+					a.livraison_rapide2{width:80px; background:url('images/livraisonrapide.png') no-repeat}
+					#contenuArticle .bandeau_instit a:hover{text-decoration:none}
+						.bandeau_instit a span{display:block; cursor:pointer}
+				/*Logos banques*/
+				.paiementsecurise_bis{position:absolute; left:0; bottom:-117px; width:458px; height:58px; padding-left:19px}
+			
+			
+/*Articles conseilles*/
+.articlesconseilles{width:876px; padding:20px; background:url('images/articlesconseilles_bg.jpg') no-repeat right 58px}
+	.articlesconseilles .articleBit_3{float:left; margin-left:18px}					
+					

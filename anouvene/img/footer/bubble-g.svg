@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="74px" height="232px" viewBox="0 0 74 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="footer-slices" transform="translate(-107.000000, -437.000000)" fill="#FFFFFF">
+    <g id="footer" transform="translate(0.000000, 12.000000)">
+      <g id="bulles-deco" transform="translate(107.357654, 408.000000)">
+        <g id="bulles-g" transform="translate(0.000000, 17.231461)">
+          <ellipse id="bull3" cx="39.5912015" cy="77.2224719" rx="1.9157033" ry="1.91460674"></ellipse>
+          <ellipse id="bull1" opacity="0.5" cx="67.6881832" cy="225.923596" rx="5.10854213" ry="5.10561798"></ellipse>
+          <ellipse id="bull4" opacity="0.499067164" cx="34.8019432" cy="40.5258427" rx="6.70496154" ry="6.7011236"></ellipse>
+          <ellipse id="bull3" opacity="0.900000036" cx="46.6154469" cy="3.19101124" rx="3.19283883" ry="3.19101124"></ellipse>
+          <ellipse id="bull3" opacity="0.800000012" cx="3.19283883" cy="29.9955056" rx="3.19283883" ry="3.19101124"></ellipse>
+          <ellipse id="bull3" opacity="0.699999988" cx="59.3868022" cy="186.993258" rx="3.19283883" ry="3.19101124"></ellipse>
+          <ellipse id="bull3" cx="32.5669561" cy="113.6" rx="1.9157033" ry="1.91460674"></ellipse>
+          <ellipse id="bull3" opacity="0.850000024" cx="40.2297692" cy="144.233708" rx="3.19283883" ry="3.19101124"></ellipse>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

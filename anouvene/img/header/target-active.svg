@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>target-active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="General-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-slices" transform="translate(-595.000000, -139.000000)" fill="#CC6055">
+            <polygon id="target-active" transform="translate(600.993099, 145.260984) rotate(-315.000000) translate(-600.993099, -145.260984) " points="602.380656 139.004843 602.380656 143.851943 606.92986 143.851943 606.92986 146.64953 602.380656 146.64953 602.380656 151.517125 599.605542 151.517125 599.605542 146.64953 595.056338 146.64953 595.056338 143.851943 599.605542 143.851943 599.605542 139.004843"></polygon>
+        </g>
+    </g>
+</svg>

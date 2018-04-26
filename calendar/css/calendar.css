@@ -1,0 +1,125 @@
+html, body { height:100%; margin:0; padding:0; }
+body { min-height: 100%; font-family: 'PT Sans Narrow', sans-serif; color: #686868; outline: none; }
+
+h1 { margin:0 1em 0 0; }
+
+table tr td {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* Mobile first display control
+--------------------------------*/
+/* @Calendar
+-----------------*/
+#calendar { width:100%; height: 100%; margin-top: 20px; }
+    #calendar form { width:100%; height: 100%; }
+        h1.calendarTitle {
+            margin-bottom:1em;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .calendar {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+            color: #FFF;
+        }
+            #calendar tr:first-child > td {
+                border: none;
+                text-align: left;
+                padding-bottom: 5px;
+            }
+
+            .calendar td, .calendar th {
+                width: calc(100%/7);
+                border: solid thin #686868;
+                font-size: .8em;
+            }
+
+        /* @Calendar head
+        -----------------*/
+        .calendar th {
+            border-bottom-color: #80bdff;
+            background-color: #686868;
+            color: #FFF;
+        }
+
+        /* @Calendar body
+        ----------------*/
+        #calendar tr:first-child > td label { color: #686868; }
+        .monthPrev { background-color: #b9bbbe; }
+
+        .monthNow { color: #0062cc; }
+        .monthNow.dayNow { background-color: #686868; color: #FFF; }
+        .monthNow.dayNow.daySelected, .daySelected { background-color: #80bdff; color: white; }
+
+        /* Days name */
+        .dayNames{ background: #0062cc; }
+        .dayNames > td { border-bottom-color: #80bdff; cursor: pointer;}
+        .dayNames > td:not(:last-child) { border-right-color: #80bdff; }
+            .dayNames > td span {
+                display: block;
+                width: 25px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+/* @Test: all selected days container
+-------------------------------------*/
+#allSelectedDays {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: .8em;
+}
+
+/* Media query display control
+--------------------------------*/
+@media (min-width: 480px) {
+    h1.calendarTitle { font-size: 1.8em; }
+    .calendar {
+        height: 80%;
+    }
+    .calendar td, .calendar th {
+        font-size: 1em;
+    }
+
+    /* @Calendar head
+    -----------------*/
+    .calendar th {
+        border-bottom-color: #80bdff;
+        font-size: 1.4em;
+    }
+
+    /* @Calendar body
+    ----------------*/
+    .dayNames > td span {
+        width: 100%;
+        text-overflow: inherit;
+        white-space: normal;
+    }
+
+    /* @Test: all selected days container
+    -------------------------------------*/
+    #allSelectedDays {
+        font-size: 1em;
+    }
+
+}
+
+@media (min-width: 960px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}

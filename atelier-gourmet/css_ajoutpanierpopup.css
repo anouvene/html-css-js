@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+#TB_window a:link, #TB_window a:visited , #TB_window a:hover, #TB_window a:focus, a:active {text-decoration:none; outline:none; color:#37363B}
+
+/*---------- @POPUB ARTICLE ----------*/
+#TB_window{width:600px; background-color:#fff; border:solid 4px #5B5F66; color:#1a1a1a; 				margin: 100px auto 0 auto}
+	#TB_title{height:30px; margin:0; padding:0; background-color:#FFF; position:relative}
+		#TB_ajaxWindowTitle{float:none; margin:0; padding:0;}
+		#TB_closeAjaxWindow{position:absolute; right:20; top:-10px; width:95px; height:30px; float:none; margin:0; padding:0; text-align:left}
+			/*#TB_closeWindowButton img{vertical-align:middle}
+			#TB_closeWindowButton a{color:#202E49;}*/
+	#TB_ajaxContent{width:544px; margin:0; padding:0 28px 10px 28px; background-color:#FFF}
+		.artPopub_titre{height:21px; border-bottom:solid 1px #1a1a1a; font-size:16px; font-family:'alido', Arial, sans-serif}
+		/**Détails article popup ajouté**/
+		.artPopub{height:195px; padding-top:7px; border-top:solid 1px #C6C6C6}
+			.artPopub_ima{float:left; width:117px; height:175px; padding-bottom:15px; background:url('images/ajoutpopup_ima_bas.jpg') no-repeat center bottom #f4f4f4;}
+			.artPopub_details{float:right; width:416px}
+				.artPopub_caracts{float:left; width:197px}
+					.artPopub_lib{padding:12px 0 5px 0}
+						#TB_window .artPopub_lib a{font-size:13px; color:#1a1a1a}
+					.artPopub_lib2{height:20px; color:#777}
+					.artPopub_tablecaract{margin-bottom:10px; color:#777}
+					.artPopub_qte{color:#777}
+					.artPopub_prix{height:35px}
+						.artPopub_prixold{padding-right:5px; text-decoration:line-through; color:#DD074A}
+						.artPopub_prixpromo{color:#DD074A}
+						
+				.artPopub_boutons{float:right; width:213px; padding-top:105px; text-align:right}
+					.artPopub_continuer{height:40px}
+
+		/*les articles conseilles*/
+		.pourcompleter{width:544px; height:23px; border-bottom:solid 1px #1a1a1a; font-size:16px; font-family:'alido', Arial, sans-serif}
+		.popupConseil{width:527px; height:220px; padding:8px 0 0 17px; border-top:solid 1px #C6C6C6}
+			.popupConseilBit{float:left; width:115px}
+			.popupConseilBit_2{margin:0 25px}
+			.popupConseilBit_3{margin-right:25px}
+			.popupConseilBit_4{float:right; width:107px}
+			
+				.popupConseilBit_ima{width:90px; height:135px; text-align:center; position:relative; z-index:1}
+					.popupConseilBit_ima .etiquettes{position:absolute; bottom:-5px; right:29px; z-index:1;  height:62px}
+						/*.popupConseilBit_ima .etiquettes a{display:block; float:right; width:53px; height:62px}
+							.popupConseilBit_ima .etiquettes a.etiquette_promo, .popupConseilBit_ima .etiquettes a.etiquette_soldes{width:48px; height:27px; padding:35px 5px 0 0; background:url('images/etiquette_promo.png') no-repeat; text-align:center; color:#fff; font-size:18px; font-family:impact, Arial, Helvetica, sans-serif}
+							.popupConseilBit_ima .etiquettes a.etiquette_soldes{background:url('images/etiquette_soldes.png') no-repeat}
+						.popupConseilBit_ima .stock_alerte{position:absolute; bottom:-22px; left:0; z-index:0; width:215px; height:22px; padding-left:10px; background-color:#6D6D6D; text-align:left; line-height:22px; font-size:10px; font-family:opensansSemibold, Arial, Helvetica, sans-serif; text-transform:uppercase; color:#fff}*/
+
+				.popupConseilBit_lib{height:33px; padding-top:10px; background:url('images/popupConseilBit_bas.jpg') no-repeat center top; line-height:.8em}
+					.popupConseilBit_lib a{color:#1a1a1a}
+				.popupConseilBit_lib2{height:20px; font-size:11px; color:#777}
+				.popupConseilBit_prix{}
+					.popupConseilBit_prixold{padding-right:5px; text-decoration:line-through; font-size:11px; color:#DD074A}
+					.popupConseilBit_prixpromo{font-size:15px; font-family:opensansSemibold, Arial, Helvetica, sans-serif; color:#DD074A}
+					
+					
+					
+					
+					
+					
+					
+					
+					

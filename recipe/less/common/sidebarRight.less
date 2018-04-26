@@ -1,0 +1,40 @@
+.sidebar-right{
+  .make-xs-column(12);
+  .make-sm-column(3);
+  .make-md-column(3);
+  .make-lg-column(3);
+  background: @mi-white;
+  /*height: image-height('../img/img_bis/recipe-photo.jpg');*/
+}
+
+/* Media Queries */
+//>lg
+@media screen and (min-width: @screen-lg){
+  .sidebar-right{
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+//< lg
+@media screen and (max-width: @screen-md-max){
+   .sidebar-right{
+    .make-md-column(12);
+    border-radius: 0 10px 10px 10px;
+  }
+}
+
+//< md
+@media screen and (max-width: @screen-sm-max){
+  .sidebar-right{
+    .make-xs-column(12);
+    .make-sm-column(12);
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+//< sm
+@media screen and (max-width: @screen-xs-max){
+  .sidebar-right{
+    border-radius: 0 0 10px 10px;
+   }
+}

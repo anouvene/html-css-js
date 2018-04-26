@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="HelveticaNeueLT-Light, HelveticaNeue LT 45 Light" font-size="8.9474" font-weight="normal" letter-spacing="1.27819997" fill="#FFFFFF">
+            <tspan x="2.73735274" y="39.1380268">Facebook</tspan>
+        </text>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="General-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer-slices" transform="translate(-468.000000, -191.000000)">
+            <g id="footer" transform="translate(0.000000, 12.000000)">
+                <g id="facebook" transform="translate(442.857991, 163.505618)">
+                    <ellipse id="facebook-content" fill="#000000" cx="55.5553956" cy="45.9505618" rx="26.1812784" ry="26.1662921"></ellipse>
+                    <ellipse id="border" stroke="#FFFFFF" stroke-width="3.1955" opacity="0.3" transform="translate(55.874680, 46.269663) rotate(-76.000000) translate(-55.874680, -46.269663) " cx="55.8746795" cy="46.2696629" rx="28.4162656" ry="28.4"></ellipse>
+                    <polygon id="+" fill="#717F8E" points="57.2925345 39.5685393 57.2925345 44.5131693 61.9410733 44.5131693 61.9410733 47.3670467 57.2925345 47.3670467 57.2925345 52.3325843 54.4568245 52.3325843 54.4568245 47.3670467 49.8082857 47.3670467 49.8082857 44.5131693 54.4568245 44.5131693 54.4568245 39.5685393"></polygon>
+                    <g id="label" transform="translate(45.976879, 40.525843) rotate(-152.000000) translate(-45.976879, -40.525843) translate(8.301381, 14.678652)">
+                        <path d="M46.6342939,15.2767258 C40.7903011,3.81380927 26.7549569,-0.743940138 15.2854752,5.09670754 C13.126318,6.19622339 11.2120128,7.58586605 9.56587804,9.19391018 C2.4677158,16.127825 0.355779359,27.1225869 5.09962659,36.427582 C10.9436194,47.8904985 24.9789636,52.4482479 36.4484453,46.6076003 C47.9179269,40.7669526 52.4782867,26.7396423 46.6342939,15.2767258 L46.6342939,15.2767258 Z" id="path" stroke="#B6D7FE" stroke-width="0.6391" opacity="0.232217817" transform="translate(25.866960, 25.852154) rotate(-5.000000) translate(-25.866960, -25.852154) "></path>
+                        <g id="faccebook" transform="translate(38.821397, 35.635510) rotate(-4.000000) translate(-38.821397, -35.635510) " fill-opacity="1" fill="#FFFFFF">
+                            <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                            <use xlink:href="#text-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

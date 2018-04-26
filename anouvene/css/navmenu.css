@@ -1,0 +1,90 @@
+body {  padding: 50px 0 0 0;  }
+
+/* Navbar
+----------*/
+.navbar {
+  display: block;
+  text-align: center;
+  background: rgba(255,255,255,.9);
+  border: none;
+}
+
+/* Navmenu
+----------*/
+.navmenu-default{
+  box-shadow: 2px 0 15px 5px rgba(0,0,0,.7);
+  background:  url('../img/white_wave.png');
+  opacity: 0.9;
+
+}
+
+.navmenu-default, .navmenu{
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  overflow-x: hidden;
+}
+.nav, .navmenu-nav{  }
+
+.navmenu-brand { padding: 5px 15px; }
+
+.navbar-brand {
+  display: inline-block;
+  float: none;
+  text-align:right
+}
+
+.navbar-toggle {
+  position: absolute;
+  right: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+  .input-group{ padding:0 0 15px 15px; }
+  
+  /* Menu left sidebar
+  ---------------------*/
+  .navmenu-default .navmenu-nav>li.active>a, .navmenu-default .navmenu-nav>li.active>a:hover {color:#fff; background: #2980B9} 
+  .navmenu-default .navmenu-nav>li.active{font-weight:bold; background: #2980B9}
+  
+  .dropdown.open>a{padding-bottom:0}
+  .navmenu-default .navmenu-nav.dropdown-menu, .dropdown-menu  {
+    position: inherit; 
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float:  none; 
+    min-width: 160px;
+    padding: 5px;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    background-color: #C0392B;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: none; 
+    border-radius: none; 
+    box-shadow: none;
+    list-style-type:circle;
+    list-style-position:inside
+  }
+  .dropdown-menu.show{ padding-top: 0; margin-top:0}
+  .show{ display: block }
+    .navmenu-default .navmenu-nav.dropdown-menu a, .dropdown-menu  a{color: #fff}
+    .navmenu-default .navmenu-nav.dropdown-menu a:hover, .navmenu-default .navmenu-nav.dropdown-menu a.dropdown-toggle, .navmenu-default .navmenu-nav.dropdown-menu.show a{background:none; color:#fff; }
+
+@media (min-width: 1px) {
+  .navbar-toggle {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body {  padding: 0 0 0 300px; }
+  .navmenu { padding-top: 0; }
+  .navbar {  display: none !important;  /*IE8 fix */  }
+}

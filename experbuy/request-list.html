@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bs-light.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bs-select.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>Request List</title>
+</head>
+<body class="with-top-navbar">
+    <!--NAV BAR-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid container-fluid-spacious">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-brand-emphasized" href="#">
+                    <span class="icon iconav-brand-icon"><img src="./img/experbuy_white.min.png" alt="ExperBuy"></span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--NEW REQUEST-->
+                    <li>
+                        <a href="request-new.html" title="Single-Item Request" class="icon icon-500px icon-news warning"> New Request</a>
+                    </li>
+                    <!--REQUEST LIST-->
+                    <li>
+                        <a href="request-list.html" title="Multi-Item Request" class="icon icon-500px icon-news success"> Request List</a>
+                    </li>
+
+                    <!--SETTINGS-->
+                    <li><a href="#" title="Profil" class="icon icon-500px icon-tools danger"> Settings</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right"><li class="bg_taupe"><a href="login.html" title="Logout" class="icon icon-log-out"> Logout</a></li></ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--CONTENT-->
+    <div class="container-fluid container-fluid-spacious">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="flextable from_to">
+                    <!--SEARCH BAR-->
+                    <div class="row">
+                        <!--Search Request-->
+                        <div class="col-xs-12 col-md-4">
+                            <form class="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Filter">
+                                    <span class="input-group-addon"><span class="icon icon-magnifying-glass"></span></span>
+                                </div>
+                                <span class="warning">1 request found out of 4</span>
+                            </form>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <!--FROM-->
+                            <div class="input-group">
+                                <span class="from">
+                                    <span class="input-group-addon">From</span>
+                                    <input type="text" class="form-control" data-provide="datepicker">
+                                    <span class="input-group-addon">
+                                        <span class="icon icon-calendar"></span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <!--TO-->
+                            <div class="input-group">
+                            <span class="to">
+                                <span class="input-group-addon">To</span>
+                                <input type="text" value="" class="form-control" data-provide="datepicker">
+                                <span class="input-group-addon">
+                                    <span class="icon icon-calendar"></span>
+                                </span>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--HEADER-->
+                <div class="dashhead">
+                    <div class="dashhead-titles">
+                        <h2 class="dashhead-title">Request List</h2>
+                        <h6 class="dashhead-subtitle">To find here your all requests and its details</h6>
+                    </div>
+                </div>
+
+                <!--CONTENT-->
+                <div class="content">
+                    <!--Request form -->
+                    <div class="table-full">
+
+                        <div class="hr-divider">
+                            <h3 class="hr-divider-content hr-divider-heading"><span class="label label-success">Proposal record transfered succesfully</span></h3>
+                        </div>
+
+                        <div class="table-responsive mcs-horizontal">
+                            <table class="table" data-sort="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th><i class="icon icon-reply"></i> Request</th>
+                                        <th>Custom Ref#</th>
+                                        <th>Request name</th>
+                                        <th>Date</th>
+
+                                        <th>Status</th>
+                                        <th>Proposal</th>
+                                        <th>Send to basket</th>
+                                        <th>Reject ExperBuy Offer</th>
+                                        <th>Add comment</th>
+
+                                        <th>Created By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="flextable-item">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-warning">
+                                                        <span class="icon icon-info-with-circle"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>12754508</td>
+                                        <td>12345</td>
+                                        <td>test RFQ  Amazon plan 5060</td>
+                                        <td>Jun 27, 2017 8:09:57 PM</td>
+
+                                        <td>Not send to ExperBuy</td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-download warning"> PDF</a></td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-shopping-basket success"></a></td>
+                                        <td><a href="#" title="Reject offer" class="icon icon-erase danger"></a></td>
+                                        <td>
+                                            <a href="#" class="icon icon-pencil" data-toggle="modal" data-target="#commentModal" title="Add comment"></a>
+                                            <!-- Modal -->
+                                            <div id="commentModal"class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <img src="./img/experbuy_white.min.png" alt="ExperBuy">
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="well">
+                                                                <form action="#" method="post">
+                                                                    <div class="form-group">
+                                                                        <label for="message">Your message :</label>
+                                                                        <textarea id="message" class="form-control"></textarea>
+                                                                    </div>
+
+                                                                    <input type="submit" name="add_comment" value="Add" class="btn btn-primary"/>
+                                                                    <a class="right icon icon-circle-with-minus" href="#" title="" data-dismiss="modal">Close</a>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                        <td>Maeva KEEN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flextable-item">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-warning">
+                                                        <span class="icon icon-info-with-circle"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>12754508</td>
+                                        <td>12345</td>
+                                        <td>test RFQ  Amazon plan 5060</td>
+                                        <td>Jun 27, 2017 8:09:57 PM</td>
+
+                                        <td>Not send to ExperBuy</td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-download warning"> PDF</a></td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-shopping-basket success"></a></td>
+                                        <td><a href="#" title="Reject offer" class="icon icon-erase danger"></a></td>
+                                        <td>
+                                            <a href="#" class="icon icon-pencil" data-toggle="modal" data-target="#commentModal" title="Add comment"></a>
+                                            <!-- Modal -->
+                                            <div id="commentModal"class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <img src="./img/experbuy_white.min.png" alt="ExperBuy">
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="well">
+                                                                <form action="#" method="post">
+                                                                    <div class="form-group">
+                                                                        <label for="message">Your message :</label>
+                                                                        <textarea id="message" class="form-control"></textarea>
+                                                                    </div>
+
+                                                                    <input type="submit" name="add_comment" value="Add" class="btn btn-primary"/>
+                                                                    <a class="right icon icon-circle-with-minus" href="#" title="" data-dismiss="modal">Close</a>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                        <td>Maeva KEEN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flextable-item">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-warning">
+                                                        <span class="icon icon-info-with-circle"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>12754508</td>
+                                        <td>12345</td>
+                                        <td>test RFQ  Amazon plan 5060</td>
+                                        <td>Jun 27, 2017 8:09:57 PM</td>
+
+                                        <td>Not send to ExperBuy</td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-download warning"> PDF</a></td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-shopping-basket success"></a></td>
+                                        <td><a href="#" title="Reject offer" class="icon icon-erase danger"></a></td>
+                                        <td>
+                                            <a href="#" class="icon icon-pencil" data-toggle="modal" data-target="#commentModal" title="Add comment"></a>
+                                            <!-- Modal -->
+                                            <div id="commentModal"class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <img src="./img/experbuy_white.min.png" alt="ExperBuy">
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="well">
+                                                                <form action="#" method="post">
+                                                                    <div class="form-group">
+                                                                        <label for="message">Your message :</label>
+                                                                        <textarea id="message" class="form-control"></textarea>
+                                                                    </div>
+
+                                                                    <input type="submit" name="add_comment" value="Add" class="btn btn-primary"/>
+                                                                    <a class="right icon icon-circle-with-minus" href="#" title="" data-dismiss="modal">Close</a>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                        <td>Maeva KEEN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flextable-item">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-warning">
+                                                        <span class="icon icon-info-with-circle"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>12754508</td>
+                                        <td>12345</td>
+                                        <td>test RFQ  Amazon plan 5060</td>
+                                        <td>Jun 27, 2017 8:09:57 PM</td>
+
+                                        <td>Not send to ExperBuy</td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-download warning"> PDF</a></td>
+                                        <td><a href="#" title="Send to basket" class="icon icon-shopping-basket success"></a></td>
+                                        <td><a href="#" title="Reject offer" class="icon icon-erase danger"></a></td>
+                                        <td>
+                                            <a href="#" class="icon icon-pencil" data-toggle="modal" data-target="#commentModal" title="Add comment"></a>
+                                            <!-- Modal -->
+                                            <div id="commentModal"class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <img src="./img/experbuy_white.min.png" alt="ExperBuy">
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="well">
+                                                                <form action="#" method="post">
+                                                                    <div class="form-group">
+                                                                        <label for="message">Your message :</label>
+                                                                        <textarea id="message" class="form-control"></textarea>
+                                                                    </div>
+
+                                                                    <input type="submit" name="add_comment" value="Add" class="btn btn-primary"/>
+                                                                    <a class="right icon icon-circle-with-minus" href="#" title="" data-dismiss="modal">Close</a>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                        <td>Maeva KEEN</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="margin-top-20 text-center">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--FOOTER-->
+                <footer>
+                    <div class="hr-divider">
+                        <h3 class="hr-divider-content hr-divider-heading">mentions légales</h3>
+                    </div>
+                    <ul class="nav nav-bordered">
+                        <li>
+                            <a href="#">@Copyright 2017</a>
+                        </li>
+                        <li>
+                            <a href="#">Qui sommes nous ?</a>
+                        </li>
+                        <li>
+                            <a href="#">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#">Politique de confidentialité</a>
+                        </li>
+                        <li>
+                            <a href="#">Conditions d'utilisation</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="bootstrap/js/jquery.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bs.min.js"></script>
+    <script src="bootstrap/js/tablesorter.min.js"></script>
+    <script src="bootstrap/js/bs-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(function(){
+            // Scrollbar horizontal
+            $(".mcs-horizontal").mCustomScrollbar({
+                axis:"x",
+                theme:"dark-3"
+            });
+        });
+    </script>
+</body>
+</html>

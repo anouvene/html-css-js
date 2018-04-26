@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path d="M30.1079812,52.9079903 C42.8131234,52.9079903 53.1126761,42.6094555 53.1126761,29.905569 C53.1126761,27.5140321 52.7476706,25.2077383 52.0703241,23.0393469 C49.1495938,13.6892044 40.4213501,6.9031477 30.1079812,6.9031477 C17.4028391,6.9031477 7.10328638,17.2016825 7.10328638,29.905569 C7.10328638,42.6094555 17.4028391,52.9079903 30.1079812,52.9079903 Z" id="path-1"></path>
+    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="46.0093897" height="46.0048426" fill="white">
+      <use xlink:href="#path-1"></use>
+    </mask>
+  </defs>
+  <g id="General-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="header-slices" transform="translate(-540.000000, -164.000000)">
+      <g id="Technos-web-active" transform="translate(540.699531, -0.150121)">
+        <g id="tab-active" transform="translate(0.000000, 165.000000)">
+          <path d="M30.1079812,59.8087167 C46.624666,59.8087167 60.0140845,46.4206215 60.0140845,29.905569 C60.0140845,26.796571 59.5395774,23.7983891 58.6590269,20.9794802 C54.8620775,8.82429505 43.5153607,0.00242130751 30.1079812,0.00242130751 C13.5912964,0.00242130751 0.201877934,13.3905166 0.201877934,29.905569 C0.201877934,46.4206215 13.5912964,59.8087167 30.1079812,59.8087167 Z" id="tab-active-content" fill="#000000"></path>
+          <polygon id="Triangle" fill="#CC6055" transform="translate(29.482653, 53.767402) scale(-1, -1) translate(-29.482653, -53.767402) " points="29.4826534 48.5918569 34.6587097 58.9429465 24.3065971 58.9429465"></polygon>
+          <use id="border" stroke="#CC6055" mask="url(#mask-2)" stroke-width="13.8" xlink:href="#path-1"></use>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

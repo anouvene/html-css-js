@@ -1,0 +1,108 @@
+/*---------- @STYLES DE BASE ----------*/
+@charset "utf-8";
+
+/* Page */ 
+html {height:100%; font-size:100%; /* Évite un bug d'IE 6-7.*/ } 
+body {
+	height:100%;
+	margin:0; 
+	padding:0;
+	background:url('images/bg.jpg') no-repeat #E8E8E8;
+	text-align:center;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 1.2em; /*À adapter au design.*/ 
+	color:#747474
+} 
+body.recommander {background:none}
+
+
+/* Titres */ 
+h1, h2, h3, h4, h5, h6 { 
+  margin:0; /* Rapproche le titre du texte.*/ 
+  line-height:1.2em; 
+  font-weight:normal; /* Valeur par défaut.*/ 
+  font-style:normal; 
+} 
+h1 {font-size:1.75em} 
+h2 {font-size:1.5em} 
+h3 {font-size:1em} 
+h4 {font-size: 1em} 
+ 
+/* Listes */ 
+ul, ol { 
+  margin:0; 
+  padding:0; 
+  list-style:none;
+}
+li{list-style:none;}
+
+/* Paragraphes */ 
+p { margin: .75em 0; /*Marges plus faibles que par défaut.*/} 
+address { margin: .75em 0; font-style: normal} 
+blockquote{margin:0; padding:5px}
+
+/* Liens */ 
+a {text-decoration:none; color:#747474} 
+a:link, a:visited , a:hover, a:focus, a:active {text-decoration:none; outline:none}
+#conteneur a:hover {text-decoration:underline} 
+
+/*Pas de bordure autour des images dans les liens */ 
+a img {border: none} 
+ 
+/*Divers éléments de type en-ligne*/ 
+em {font-style: italic} 
+strong {font-weight:bold} 
+ 
+/*Formulaires*/ 
+form, fieldset {margin: 0; padding: 0; border: none} 
+input, button, select {vertical-align:middle; font-size:12px; font-family:Arial, Verdana, Helvetica, sans-serif; color:#747474; line-height:1em;/* Solution pb. d'alignement.*/ }
+textarea{color:#747474}
+
+/*Tableaux*/
+table{border:0}
+
+/*---------- @ARRONDIS ----------*/
+/*Arrondis à 5px*/
+.arrondi{-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px; border-radius:5px}
+/*arrondis du haut*/ 
+.arrondi_hgd{-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0} 
+.arrondi_hg{-moz-border-radius:5px 0 0 0;-o-border-radius:5px 0 0 0;-webkit-border-radius:5px 0 0 0; border-radius:5px 0 0 0} 
+.arrondi_hd{-moz-border-radius:0 5px 0 0;-o-border-radius:0 5px 0 0;-webkit-border-radius:0 5px 0 0; border-radius:0 5px 0 0}
+/*arrondis du bas*/
+.arrondi_bgd{-moz-border-radius:0 0 5px 5px;-o-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px} 
+.arrondi_bd{-moz-border-radius:0 0 5px 0;-o-border-radius:0 0 5px 0;-webkit-border-radius:0 0 5px 0; border-radius:0 0 5px 0} 
+.arrondi_bg{-moz-border-radius:0 0 0 5px;-o-border-radius:0 0 0 5px;-webkit-border-radius:0 0 0 5px; border-radius:0 0 0 5px} 
+ /*arrondis cote droite en haut et bas*/
+.arrondi_dhb{-moz-border-radius:0 5px 5px 0;-o-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0}
+ /*arrondis cote gauche en haut et bas*/
+.arrondi_ghb{-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;-webkit-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px}
+/*---------- @FIN DES ARRONDIS ----------*/
+
+#conteneur{width:980px; margin:0 auto}
+/**Le carrousel**/
+.carrousel_content{width:774px; height:307px; margin:0 auto; position:relative; z-index:0}
+	.carrouselBordure_g{position:absolute; top:0; left:0; z-index:10; width:10px; height:307px}
+	.carrouselBordure_d{position:absolute; top:0; right:0; z-index:10; width:10px; height:307px}
+	.carrouselBordure_h{position:absolute; top:0; left:10px; z-index:10; width:754px; height:10px; background:url('images/carrouselBordure_h.png') repeat-x}
+	.carrouselBordure_b{position:absolute; bottom:0; left:10px; z-index:10; width:754px; height:10px; background:url('images/carrouselBordure_b.png') repeat-x}
+
+	.carrousel{width:765px; height:300px; position:relative; top:2px; left:3px; overflow:hidden}
+		.carrousel ul{width:20000px; height:300px}
+			/**Diapos images**/
+			li.carrouselImageBit{float:left; width:765px; height:300px; position:relative; z-index:2}
+				li.carrouselImageBit a{/*display:block; width:765px; height:300px; position:relative; left:0; top:0; z-index:20;*/ cursor:pointer}
+			
+				
+	/**Boutons**/
+	.btn{width:765px; height:32px; margin:20px auto 0 auto}
+		.btn table{height:22px}
+			/**Boutons au repos**/
+			.btn_1 a, .btn_2 a, .btn_3 a, .btn_4 a, .btn_5 a{display:block; width:11px; height:12px; background:url('images/btn.png') no-repeat}
+			/*Hover sur les boutons*/
+			.btn_1 a:hover,.btn_2 a:hover,.btn_3 a:hover,.btn_4 a:hover, .btn_5 a:hover{background:url('images/btn_over.png') no-repeat}
+				
+			/**Boutons à l'action par jquery**/
+			.btn_1_over a, .btn_2_over a, .btn_3_over a, .btn_4_over a, .btn_5_over a,
+			.btn_1_over a:hover, .btn_2_over a:hover, .btn_3_over a:hover, .btn_4_over a:hover, .btn_5_over a:hover{display:block; width:11px; height:12px; background:url('images/btn_over.png') no-repeat}
+

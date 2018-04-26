@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bs-light.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bs-select.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+    <title>Proposal</title>
+</head>
+<body class="with-top-navbar">
+    <!--NAV BAR-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid container-fluid-spacious">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-brand-emphasized" href="#">
+                    <span class="icon iconav-brand-icon"><img src="./img/experbuy_white.min.png" alt="ExperBuy"></span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--NEW REQUEST-->
+                    <li>
+                        <a href="request-new.html" title="Single-Item Request" class="icon icon-500px icon-news warning"> New Request</a>
+                    </li>
+                    <!--REQUEST LIST-->
+                    <li>
+                        <a href="request-list.html" title="Multi-Item Request" class="icon icon-500px icon-news success"> Request List</a>
+                    </li>
+
+                    <!--SETTINGS-->
+                    <li><a href="#" title="Profil" class="icon icon-500px icon-tools danger"> Settings</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right"><li class="bg_taupe"><a href="login.html" title="Logout" class="icon icon-log-out"> Logout</a></li></ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--CONTENT-->
+    <div class="container-fluid container-fluid-spacious">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!--HEADER-->
+                <div class="dashhead">
+                    <div class="dashhead-titles">
+                        <h2 class="dashhead-title">Proposal</h2>
+                        <h6 class="dashhead-subtitle">To visualise and create your basket here</h6>
+                    </div>
+                </div>
+
+                <!--CONTENT-->
+                <div class="content">
+                    <!--Proposal-->
+                    <a href="#" class="btn warning icon icon-shopping-basket"> Send Basket</a>
+                    <a href="#" class="btn success icon icon-documents"> Download as PDF</a>
+                    <a href="#" class="btn danger icon icon-ticket"> JSON</a>
+                    <div class="table-full">
+                        <div class="table-responsive mcs-horizontal margin-bottom-20">
+                            <table class="table" data-sort="table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Proposal Id</th>
+                                    <th>Clerk</th>
+                                    <th>Created By/On</th>
+                                    <th>Proposal valid until</th>
+                                    <th>Sum</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="tr_hover">
+                                    <td>
+                                        <div class="flextable-item">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary">
+                                                    <span class="icon icon-info-with-circle"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>GSQ03391</td>
+                                    <td>Natacha SAFARIN</td>
+                                    <td>ExpertBuy-Natacha SAFARIN<br>Oct 27, 2017 8:09:57 PM</td>
+                                    <td>Nov 27, 2017 8:09:57 PM</td>
+                                    <td>52,682 30CZK</td>
+                                    <td><span class="btn btn-xs btn-pill btn-info">Quote available</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="hr-divider">
+                            <h3 class="hr-divider-content hr-divider-heading">Proposal Positions : 1</h3>
+                        </div>
+
+                        <div class="table-responsive mcs-horizontal">
+                            <table class="table" data-sort="table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Position</th>
+                                    <th>Product Description</th>
+                                    <th>Qty</th>
+                                    <th>Unit Price</th>
+                                    <th>Status</th>
+                                    <th>Presupplier</th>
+                                    <th>Created By/on</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="flextable-item">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary-outline">
+                                                    <span class="icon icon-info-with-circle"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>Souris sans fil<br>Microsoft 1850 Noir</td>
+                                    <td>10</td>
+                                    <td>5,268.23 CZK</td>
+                                    <td><span class="btn btn-xs btn-pill btn-info">Quote available</span></td>
+                                    <td>OFFICE MEDIA</td>
+                                    <td>ExpertBuy-Natacha SAFARIN<br>Oct 27, 2017 8:09:57 PM</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!--PAGINATION-->
+                    <div class="margin-top-20 text-center">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--FOOTER-->
+                <footer>
+                    <div class="hr-divider">
+                        <h3 class="hr-divider-content hr-divider-heading">mentions légales</h3>
+                    </div>
+                    <ul class="nav nav-bordered">
+                        <li>
+                            <a href="#">@Copyright 2017</a>
+                        </li>
+                        <li>
+                            <a href="#">Qui sommes nous ?</a>
+                        </li>
+                        <li>
+                            <a href="#">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#">Politique de confidentialité</a>
+                        </li>
+                        <li>
+                            <a href="#">Conditions d'utilisation</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="bootstrap/js/jquery.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bs.min.js"></script>
+    <script src="bootstrap/js/tablesorter.min.js"></script>
+    <script src="bootstrap/js/bs-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/script.js"></script></body>
+    <script>
+        $(function(){
+            // Scrollbar horizontal
+            $(".mcs-horizontal").mCustomScrollbar({
+                axis:"x",
+                theme:"dark-3"
+            });
+        });
+    </script>
+</html>

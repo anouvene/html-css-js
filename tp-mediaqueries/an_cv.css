@@ -1,0 +1,172 @@
+/* Mise en forme divers */
+figure{margin:0; padding:0}
+h2{margin:10px 0;}
+ul{margin:0; padding:0; list-style-position: inside}
+p{margin:0; padding:0}
+.clear{clear:both}
+section{margin:0; padding:0}
+img{margin:0}
+
+@font-face{ 
+	font-family:'CaptureIt';
+	src: url('fonts/capture_it/capture_it.eot');
+	src: url('fonts/capture_it/capture_it.eot?#iefix') format('eot'),
+	     url('fonts/capture_it/capture_it.woff') format('woff'),
+	     url('fonts/capture_it/capture_it.ttf') format('truetype'),
+	     url('fonts/capture_it/capture_it.svg#CaptureIt') format('svg');
+}
+/* Fin divers */
+
+html{ height: 100%; }
+	body{
+			height:100%;
+			margin:0;
+			padding:90px 0 0 0;
+			background:url("images/top.png") repeat-x left top, url("images/linedpaper.png") left top;/*Guirlande haut*/
+			font-family: Arial; 
+			font-size:12px
+		}
+		#conteneur{
+			width:100%;
+			min-height:100%;
+			background:url("images/bottom.png") repeat-x left bottom;/*Guirlande bas*/
+		}
+			/*Entête*/
+			header{
+				width:92%;
+				margin:20px auto 30px auto;
+				padding:0 0 10px 0;
+				text-align:center;
+			}
+			/* A gauche, un liseret (purement décoratif, mais vous pouvez aussi mettre des informations à l'intérieur)*/
+			/* hauteur du liseret peut être définie en valeur absolue (en pixels) */
+			#liseret {
+				display:inline-block;
+				width:1%;
+				height:520px;
+				vertical-align:top;
+				text-align:right;
+				
+				background-color:#FF482C
+			}
+				h1{text-shadow:0 2px 5px rgba(127,127,127,0.63)}
+				h1, figcaption{
+					margin:0;
+					padding-top:10px;
+					font-family:'CaptureIt', Verdana, Arial;
+					font-size:40px;
+				}
+				figcaption{font-size:20px}
+			
+			/*Contenu principal de la page*/
+			#contenu{
+				display:inline-block;
+				width:89%;
+				margin-left:2%;
+				vertical-align:top;
+
+			}
+				
+				/* A droite, le contenu de votre CV, qui contiendra à l'intérieur, de gauche à droite les sections suivantes */
+				/* les différentes sections de la page en valeur relative (pourcentages) */
+				#contenu section{display:inline-block; vertical-align:top; padding-right:2%;}
+				#competences{width:10%;}
+					#competences img[src $="tags2.png" ]{display:none}
+				#experiences{width:25%;}
+				#formations{width:25%;}
+				#interets{width:15%;}
+				#langue{width:10%;}
+					/* Détails des sections */
+					h2 {
+						font-family: 'CaptureIt', Verdana, Arial;
+						font-size:18px;
+						color:#FF482C;
+					}
+					
+					h3{
+						margin:0;
+						font-family: 'CaptureIt', Verdana, Arial;
+						font-size:14px;
+						color:#009288;
+					}
+					
+					.date_lieu{color:rgba(0, 145, 136, 0.9); font-weight: bold; padding-bottom:5px}
+					.details{margin-bottom:10px; color:#6A6A6A}
+					
+			/* Pied de page */
+			footer{
+				width:92%;
+				margin:0 auto;
+				height:50px;
+				padding:10px 0;
+				text-align:center;
+			}
+				small{
+					color:#5e5d5d;
+					font-style:italic;
+				}
+		
+		
+
+/* Correctifs pour les vieilles versions d'Internet Explorer */
+/* Pour activer un positionnement type inline-block sur les vieilles versions d'IE */
+
+.old_ie{display:inline;zoom: 1;}
+
+/* Quelques ajustements pour les vieilles versions d'IE */
+.old_ie section h1, .ie8 section h1{ /*font-size: 1.1em;*/}
+
+
+
+/* ========= Media queries ======== */
+
+/*@viewport {
+   width: device-width;  largeur du viewport */
+   /*zoom: 1;  zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7)
+} */
+
+
+
+
+/* Pour tous les écrans dont la taille de la zone de visualisation inférieure à 1024 pixels */
+@media screen and (max-width: 1024px){
+	#conteneur{ width:auto; }
+		header{ width:auto; }
+		#contenu{
+			display:block;
+			width:auto;/*97%*/
+			margin-left:3%;
+		}
+			#liseret { display:none; }
+			#contenu section{ display:block; width:100%; padding-right:2%; }
+				/* Permuter l'image de la section "compétences" */
+				#competences img[src $="tags2.png" ]{ display:block }
+				#competences img[src $="tags.png" ]{ display:none }
+
+}
+
+
+
+/* Appareils mobiles taille écran max 320 pixels et mode Portrait */
+@media all and (max-device-width:320px) and (orientation: portrait){
+	#conteneur{ width:100%; }
+		header{ width:auto; }
+		#contenu{
+			display:block;
+			width:auto;
+			margin-left:3%;
+		}
+			#liseret { display:none; }
+			#contenu section{ display:block; width:100%; padding-right:2%; }
+				/* Permuter l'image de la section "compétences" */
+				competences img[src $="tags2.png" ]{ display:block }
+				#competences img[src $="tags.png" ]{ display:none }
+
+}
+
+
+
+
+
+
+

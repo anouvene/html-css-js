@@ -1,0 +1,10 @@
+
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+    <path d="M0,43 C0,25.8791728 13.8791728,12 31,12 C48.1208272,12 62,25.8791728 62,43 C62,60.1208272 48.1208272,74 31,74 C13.8791728,74 0,60.1208272 0,43 L0,43 Z" id="Oval-1" stroke="none" fill="none"></path></defs>
+    <text x="43" y="14" fill="#FFFFFF" stroke="none" font-family="HelveticaLT-Condensed-Light, Helvetica LT CondensedLight" font-size="14" font-style="condensed" font-weight="normal" letter-spacing="-0.160071656">
+        <textPath xlink:href="#Oval-1">cv</textPath>
+    </text>
+</svg>
+
+

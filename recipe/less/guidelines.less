@@ -1,0 +1,112 @@
+/* Color Text */
+.txt-dark-grey{
+  color: @dark-grey;
+}
+.txt-light-grey{
+  color: @light-grey;
+}
+.txt-light-green{
+  color: @light-green;
+}
+.txt-orange{
+  color: @orange;
+}
+
+/* Color backgrounds */
+.bg-taupe{
+  background-color: @body-bg ;
+}
+
+.bg-green{
+  background-color: @green;
+}
+
+
+/* Guidelines Texts */
+
+/* H1 */
+h1{
+  font-size:45px;
+}
+/* H2 */
+
+/* H3 */
+h3{
+  font-size:16px;
+}
+/* P */
+
+/* Body */
+body{ background: @body-bg; }
+
+/* List */
+.reset-list{
+   list-style: none;
+   padding-left: 0;
+   margin-left: 0;
+   li{
+     padding-left: 0;
+     margin-left: 0;
+     list-style-image: none;
+     list-style-type: none;
+   }
+ }
+
+/* Media */
+img{
+  width: 100%;
+}
+
+/* Hyperlink */
+.link{
+  font-family: 'Rambla';
+  text-decoration: none;
+  color: @dark-grey;
+  &:hover{ color: @white; }
+}
+
+/* Interface */
+/* Buttons */
+/* Search and Input */
+
+/* Icones */
+.ico {
+  background-image: url('../img/icones/icones.png');   
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align:top;
+
+  &.ico-calorie {
+    .ico-sprite(0, 0, 17px, 15px);
+  }
+
+  &.ico-recipe {
+    .ico-sprite(-17px, 0, 27px, 32px);
+  }
+
+  &.ico-recipe-on {
+    .ico-sprite(-44px, 0, 27px, 31px);
+  }
+
+  &.ico-time {
+    .ico-sprite(-71px, 0, 17px, 17px);
+  }
+
+  &.ico-toque {
+    .ico-sprite(-88px, 0, 48px, 48px);
+  }
+
+  &.ico-toque-on {
+    .ico-sprite(-136px, 0, 48px, 48px);
+  }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: @screen-xs-max){}
+@media screen and (max-width: @screen-sm-max){
+  /*max-width: ~"calc(100% - 40px)";*/
+}
+
+/* Block content */
+

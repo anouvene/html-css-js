@@ -1,0 +1,690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Article</title>
+<SCRIPT SRC="javascripts/jquery-1.6.4.min.js" type="text/javascript"></SCRIPT>
+<SCRIPT SRC="javascripts/modernizr_2.5.3.js" type="text/javascript"></SCRIPT>
+<SCRIPT SRC="javascripts/yepnope.1.5.4-min.js" type="text/javascript"></SCRIPT>
+<SCRIPT SRC="javascripts/jCarou.js" type="text/javascript"></SCRIPT>
+<SCRIPT SRC="javascripts/fonction-spe.js" type="text/javascript"></SCRIPT>
+<SCRIPT SRC="javascripts/jquery.scrollTo.min.js" type="text/javascript"></SCRIPT>
+<script type="text/javascript" src="javascripts/concat-min.js"></script>
+<SCRIPT SRC="javascripts/fonctions.js" type="text/javascript"></SCRIPT>
+<link href="css.css" rel="stylesheet" type="text/css">
+<link href="jquery.textshadow.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script type="text/javascript">
+			$(document).ready(function() {
+				if (!Modernizr.textshadow && $.browser.msie) {
+					Modernizr.load([
+						{
+							//load: [appvars.jsDir + 'javascripts/jquery.textshadow.js'],
+							test: Modernizr.textshadow,
+							nope : 'javascripts/jquery.textshadow.js',
+							complete: function () {
+								$('.ongletBitLib').textshadow({ useStyle: true });
+								$('.niv1Bit_lib').textshadow({ useStyle: true });
+								$('.niv2Bit_lib').textshadow({ useStyle: true });
+								if($.browser.msie && $.browser.version == '7.0'){
+									$('.ongletBitLib').css({'left':'0px','top':'12px'});
+									$('.ongletBitLib .ui-text-shadow-copy').css({'left':'0px','top':'2px'});
+									$('.niv1Bit_lib .ui-text-shadow-copy').css({'left':'0px','top':'5px'});
+									$('.niv2Bit_lib .ui-text-shadow-copy').css({'left':'0px','top':'12px'});
+								}else{
+									$('.ongletBitLib .ui-text-shadow-copy').css({'left':'0px','top':'-10px'});
+									$('.niv1Bit_lib .ui-text-shadow-copy').css({'left':'0px','top':'-10px'});
+									$('.niv2Bit_lib .ui-text-shadow-copy').css({'left':'0px','top':'-9px'});
+								}
+							}
+						}
+					]);
+				}
+				
+				$('.menudiversBit').each(function(){
+					$(this).mouseenter(function(){
+						$(this).removeClass('menudiversBit').addClass('menudiversBit_over');
+						$(this).find('.menudiversBit_over_bas').css('display','block');
+					}).mouseleave(function(){
+						$(this).removeClass('menudiversBit_over').addClass('menudiversBit');
+						$(this).find('.menudiversBit_over_bas').css('display','none');
+					});
+				});
+			});
+		</script>
+<div id="haut"></div>
+<div id="conteneur">
+  <div id="header">
+    <div class="header_content">
+      <div class="langues">
+        <div class="menu_langues"> <a class="choix_langue" href="#" title="FR"><img src="images/btn_langue_FR.png" alt=""></a>
+          <ul class="ul_langues arrondi5_bgd" style="display:none">
+            <li><a href="#" title="FR">EN</a></li>
+            <li><a href="#" title="SP">SP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="suiveznous">
+        <table height="36" cellpadding="0" cellspacing="0" align="right">
+          <tr>
+            <td><a href="#" title="FR"><img src="images/facebook.png" alt=""></a></td>
+            <td width="37" align="right"><a href="#" title="FR"><img src="images/twitter.png" alt=""></a></td>
+            <td width="37" align="right"><a href="#" title="FR"><img src="images/youtube.png" alt=""></a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="logo"><a href="./" title="FR"><img src="images/logo.png" alt=""></a></div>
+      <div class="menudivers">
+        <div class="menudiversBit arrondi5_bgd"> <a href="./index.html" title="Accueil"><img src="images/menudivers_accueil.png" alt=""></a> </div>
+        <div class="menudiversBit arrondi5_bgd"><a href="client.htm" title="Mon compte"><img src="images/menudivers_moncompte.png" alt=""></a></div>
+        <div class="menudiversBit arrondi5_bgd"><a href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Contact"><img src="images/menudivers_contact.png" alt=""></a></div>
+        <div class="menudiversBit arrondi5_bgd"><a href="cde1.php" title="FR"><img src="images/menudivers_monpanier.png" alt=""></a></div>
+      </div>
+      <div class="onglets">
+        <table cellpadding="0" cellspacing="0">
+          <tr> 
+            <!-- BEGIN CommunOngletsRayons --> 
+            <!-- BEGIN CommunOngletsRayonsNiveau0 --> 
+            <!-- BEGIN CommunOngletsRayonsNiveau0Bit -->
+            <td class="menu ongletBit arrondi5_hgd" nowrap><a class="ongletBitLib" href="$onglet[url]" title="$onglet[$libelle]">Robots educatifs</a>
+              <div class="cache_bordure" style="display:none"></div>
+              <div class="ssmenu arrondi5_bgd" style="display:none"> 
+                <!-- BEGIN CommunOngletsRayonsNiveau1 -->
+                <div class="ssmenu_g">
+                  <ul class="ul_rayonsNiv1" cellpadding="0" cellspacing="0">
+                    <!-- BEGIN CommunOngletsRayonsNiveau1Bit -->
+                    <li class="li_niv1Bit" valign="top"> <a class="niv1Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Bioloid &amp; Darwin-op</a> 
+                      <!-- BEGIN CommunOngletsRayonsNiveau2 -->
+                      <ul class="ul_rayonsNiv2">
+                        <!-- BEGIN CommunOngletsRayonsNiveau2Bit -->
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon1</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon2</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon3</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon4</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon5</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon6</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon7</a></li>
+                        <!-- END CommunOngletsRayonsNiveau2Bit -->
+                        <li class="li_plusdechoix" style="display:none"><a href="$onglet[url]" title="Plus de choix">Plus de choix<img src="images/puce_plusdechoix.jpg" alt=""></a></li>
+                      </ul>
+                      <!-- END CommunOngletsRayonsNiveau2 --> 
+                    </li>
+                    <!-- BEGIN CommunOngletsRayonsNiveau1Bit -->
+                    <li class="li_niv1Bit" valign="top"> <a class="niv1Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Lego education</a> </li>
+                    <li class="li_niv1Bit" valign="top"> <a class="niv1Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Vex robotics</a> </li>
+                    <li class="li_niv1Bit" valign="top"> <a class="niv1Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Pop-technology</a> </li>
+                    <li class="li_niv1Bit" valign="top"> <a class="niv1Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Autres ...</a> </li>
+                  </ul>
+                  <table class="meilleuresventes arrondi5" cellpadding="0" cellspacing="0" align="left">
+                    <tr>
+                      <td class="transparent_g">&nbsp;</td>
+                      <td class="transparent_m"><a href="$regleurlrewriteTemp[top]-meilleures-ventes-1.htm" title="Meilleures ventes"><img src="images/meilleuresventes.png" alt=""></a></td>
+                      <td class="transparent_d">&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table class="promos arrondi5" cellpadding="0" cellspacing="0" align="left">
+                    <tr>
+                      <td class="transparent_g">&nbsp;</td>
+                      <td class="transparent_m"><a href="$regleurlrewriteTemp[top]-articles-en-promotion-3.htm" title="Articles en promotion"><img src="images/promos.png" alt=""></a></td>
+                      <td class="transparent_d">&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table class="voircategs arrondi5" cellpadding="0" cellspacing="0" align="right">
+                    <tr>
+                      <td class="transparent_g">&nbsp;</td>
+                      <td class="transparent_m"><a href="$onglet[url]" title="Voir toutes les cat&eacute;gories"><img src="images/voircategs.png" alt=""></a></td>
+                      <td class="transparent_d">&nbsp;</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="ssmenu_d arrondi5">
+                  <div class="topvente_txt">Top ventes</div>
+                  <div class="articlemenuBit">
+                    <div class="articlemenuBit_ima"><a href="#" title="#"><img src="images_bis/articlemenuBit_ima.jpg" alt=""></a></div>
+                    <div class="articlemenuBit_details">
+                      <h3 class="articlemenuBit_lib"><a href="#" title="#">Karotz</a></h3>
+                      <div class="articlemenuBit_titre2">le nabaztag évolue</div>
+                      <div class="articlemenuBit_prix">89,00 &euro;<span class="articlemenuBit_prixold">120,00 &euro;</span></div>
+                      <div class="articlemenuBit_boutons"> <a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a>
+                        <form class="articlemenuBit_formu">
+                          <input type="image" src="images/btn_ajoutpanier.jpg">
+                        </form>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="articlemenuBit">
+                    <div class="articlemenuBit_ima"><a href="#" title="#"><img src="images_bis/articlemenuBit_ima.jpg" alt=""></a></div>
+                    <div class="articlemenuBit_details">
+                      <h3 class="articlemenuBit_lib"><a href="#" title="#">Karotz</a></h3>
+                      <div class="articlemenuBit_titre2">le nabaztag évolue</div>
+                      <div class="articlemenuBit_prix">89,00 &euro;<span class="articlemenuBit_prixold">120,00 &euro;</span></div>
+                      <div class="articlemenuBit_boutons"> <a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a>
+                        <form class="articlemenuBit_formu">
+                          <input type="image" src="images/btn_ajoutpanier.jpg">
+                        </form>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                <div class="clear"></div>
+                <!-- END CommunOngletsRayonsNiveau1 --> 
+              </div></td>
+            <td class="ongletBit_sep">&nbsp;</td>
+            <!-- END CommunOngletsRayonsNiveau0Bit -->
+            <td class="menu ongletBit arrondi5_hgd" nowrap><a class="ongletBitLib" href="$onglet[url]" title="$onglet[$libelle]">Robots Humanoides</a>
+              <div class="cache_bordure" style="display:none"></div>
+              <div class="ssmenu arrondi5_bgd" style="display:none">
+                <div class="ssmenu_g">
+                  <ul class="ul_rayonsNiv1" cellpadding="0" cellspacing="0">
+                    <!-- BEGIN CommunOngletsRayonsNiveau1Bit -->
+                    <li class="li_niv1Bit" valign="top"> <a class="niv1Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Bioloid &amp; Darwin-op</a> 
+                      <!-- BEGIN CommunOngletsRayonsNiveau2 -->
+                      <ul class="ul_rayonsNiv2">
+                        <!-- BEGIN CommunOngletsRayonsNiveau2Bit -->
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon1</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon2</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon3</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon4</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon5</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon6</a></li>
+                        <li class="li_niv2Bit"><a class="niv2Bit_lib" href="$onglet[url]" title="$onglet[$libelle]">Sous-rayon7</a></li>
+                        <!-- END CommunOngletsRayonsNiveau2Bit -->
+                        <li class="li_plusdechoix" style="display:none"><a href="$onglet[url]" title="Plus de choix">Plus de choix<img src="images/puce_plusdechoix.jpg" alt=""></a></li>
+                      </ul>
+                      <!-- END CommunOngletsRayonsNiveau2 --> 
+                    </li>
+                    <!-- BEGIN CommunOngletsRayonsNiveau1Bit -->
+                  </ul>
+                  <table class="meilleuresventes arrondi5" cellpadding="0" cellspacing="0" align="left">
+                    <tr>
+                      <td class="transparent_g">&nbsp;</td>
+                      <td class="transparent_m"><a href="$regleurlrewriteTemp[top]-meilleures-ventes-1.htm" title="Meilleures ventes"><img src="images/meilleuresventes.png" alt=""></a></td>
+                      <td class="transparent_d">&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table class="promos arrondi5" cellpadding="0" cellspacing="0" align="left">
+                    <tr>
+                      <td class="transparent_g">&nbsp;</td>
+                      <td class="transparent_m"><a href="$regleurlrewriteTemp[top]-articles-en-promotion-3.htm" title="Articles en promotion"><img src="images/promos.png" alt=""></a></td>
+                      <td class="transparent_d">&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table class="voircategs arrondi5" cellpadding="0" cellspacing="0" align="right">
+                    <tr>
+                      <td class="transparent_g">&nbsp;</td>
+                      <td class="transparent_m"><a href="$onglet[url]" title="Voir toutes les cat&eacute;gories"><img src="images/voircategs.png" alt=""></a></td>
+                      <td class="transparent_d">&nbsp;</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="ssmenu_d arrondi5">
+                  <div class="topvente_txt">Top ventes</div>
+                  <div class="articlemenuBit">
+                    <div class="articlemenuBit_ima"><a href="#" title="#"><img src="images_bis/articlemenuBit_ima.jpg" alt=""></a></div>
+                    <div class="articlemenuBit_details">
+                      <h3 class="articlemenuBit_lib"><a href="#" title="#">Karotz</a></h3>
+                      <div class="articlemenuBit_titre2">le nabaztag évolue</div>
+                      <div class="articlemenuBit_prix">89,00 &euro;<span class="articlemenuBit_prixold">120,00 &euro;</span></div>
+                      <div class="articlemenuBit_boutons"> <a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a>
+                        <form class="articlemenuBit_formu">
+                          <input type="image" src="images/btn_ajoutpanier.jpg">
+                        </form>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="articlemenuBit">
+                    <div class="articlemenuBit_ima"><a href="#" title="#"><img src="images_bis/articlemenuBit_ima.jpg" alt=""></a></div>
+                    <div class="articlemenuBit_details">
+                      <h3 class="articlemenuBit_lib"><a href="#" title="#">Karotz</a></h3>
+                      <div class="articlemenuBit_titre2">le nabaztag évolue</div>
+                      <div class="articlemenuBit_prix">89,00 &euro;<span class="articlemenuBit_prixold">120,00 &euro;</span></div>
+                      <div class="articlemenuBit_boutons"> <a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a>
+                        <form class="articlemenuBit_formu">
+                          <input type="image" src="images/btn_ajoutpanier.jpg">
+                        </form>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div></td>
+            <td class="ongletBit_sep">&nbsp;</td>
+            <td class="menu ongletBit arrondi5_hgd" nowrap><a class="ongletBitLib" href="$onglet[url]" title="$onglet[$libelle]">Robots jouets</a>
+              <div class="ssmenu arrondi5_bgd" style="display:none"></div></td>
+            <td class="ongletBit_sep">&nbsp;</td>
+            <td class="menu ongletBit arrondi5_hgd" nowrap><a class="ongletBitLib" href="$onglet[url]" title="$onglet[$libelle]">Robots Wifi</a>
+              <div class="ssmenu arrondi5_bgd" style="display:none"></div></td>
+            <td class="ongletBit_sep">&nbsp;</td>
+            <td class="menu ongletBit arrondi5_hgd" nowrap><a class="ongletBitLib" href="$onglet[url]" title="$onglet[$libelle]">Robots Domestiques</a>
+              <div class="ssmenu arrondi5_bgd" style="display:none"></div></td>
+            <td class="ongletBit_sep">&nbsp;</td>
+            <!-- END CommunOngletsRayonsNiveau0 --> 
+            <!-- END CommunOngletsRayons --> 
+          </tr>
+        </table>
+      </div>
+      <form class="recherche" action="rechercher.htm" method="post">
+        <input name="action" value="search" type="hidden">
+        <input id="rayonid" name="rayonid" value="0" type="hidden">
+        <table cellpadding="0" cellspacing="0" align="right">
+          <tr>
+            <td width="230" height="23"><input class="input_rech" type="text" name="qm" value="Rechercher"></td>
+            <td width="215" height="23"><div class="touteslescategs"> <span class="categ_selected">Toutes les cat&eacute;gories</span>
+                <ul class="ul_categs arrondi5_bgd" style="display:none">
+                  <li id="categ_1"><a href="#" title="#">Homme</a></li>
+                  <li id="categ_2"><a href="#" title="#">Femme</a></li>
+                  <li id="categ_3"><a href="#" title="#">Enfant/Ados</a></li>
+                  <li id="categ_4"><a href="#" title="#">Chaussures</a></li>
+                  <li id="categ_5"><a href="#" title="#">Accessoires</a></li>
+                </ul>
+              </div></td>
+            <td><input type="image" src="images/btn_okrech.jpg"></td>
+          </tr>
+        </table>
+      </form>
+      <div class="boutons_recap"><a href="$regleurlrewriteTemp[top]-nouveautes-2.htm" title="Nouveaut&eacute;"><img src="images/btn_nouveautes.jpg" alt=""></a>&nbsp;&nbsp;<a href="$regleurlrewriteTemp[top]-articles-en-promotion-3.htm" title="Articles en promotion"><img src="images/btn_articlesenpromo2.jpg" alt=""></a>&nbsp;&nbsp;<a href="$regleurlrewriteTemp[top]-meilleures-ventes-1.htm" title="Meilleures ventes"><img src="images/btn_meilleuresventes2.jpg" alt=""></a></div>
+      <div class="clear"></div>
+      <div class="navigation">
+        <h2><a href="./" title="Robot Advance">Robot Advance</a></h2>
+        &gt;
+        <h2><a href="#" title="#">iRobot</a></h2>
+        &gt;
+        <h1>Lorem ipsum</h1>
+        &gt; 
+        Article </div>
+    </div>
+  </div>
+  <div id="contenupage">
+    <div class="contenu"> 
+      
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style" style="display:none"> 
+        <!--<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eae9fca7534cb84"></script>--> 
+        <img src="images_bis/jaime.jpg" alt=""> </div>
+      <!-- AddThis Button END -->
+      
+      <div class="produit">
+        <div class="produit_partage"> 
+          <!-- AddThis Button BEGIN --> 
+          <!--<div class="addthis_toolbox2 addthis_default_style">
+              <a href="#" class="addthis_button_preferred_1"></a>
+              <a href="#" class="addthis_button_preferred_2"></a>
+              <a href="#" class="addthis_button_preferred_3"></a>
+              <a href="#" class="addthis_button_preferred_4"></a>
+              <a class="addthis_button_compact"></a>
+          </div>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f6c3b0c466bc616"></script>--> 
+          <img src="images_bis/produit_partage.jpg" alt=""> 
+          <!-- AddThis Button END --> 
+        </div>
+        <div class="produit_g"> 
+          <script type="text/javascript">
+              $(document).ready(function(){
+                  $('.jaime').partager();//idem
+              });
+          </script>
+          <div class="produit_pagenav"> 
+            <!-- BEGIN ArticleajaxPrecedent -->
+            <div class="produitprec"> <a href="$regleurlrewriteTemp[article]-$precedent_url-$article_precedent[artid].htm" title="$article_precedent[$libelle]" rel="nofollow"><img src="images/btn_articleprec.jpg" alt=""></a> </div>
+            <!-- END ArticleajaxPrecedent -->
+            <div class="produitretour" > <a href="$produitretour" title="$multilangue[retouraurayon]"><img src="images/btn_retourcateg.jpg" alt=""></a> </div>
+            <!-- BEGIN ArticleajaxSuivant -->
+            <div class="produitsuiv"> <a href="$regleurlrewriteTemp[article]-$suivant_url-$article_suivant[artid].htm" title="$article_suivant[$libelle]" rel="nofollow"><img src="images/btn_articlesuiv.jpg" alt=""></a> </div>
+            <!-- END ArticleajaxSuivant --> 
+          </div>
+          <div class="produit_ima">
+            <div class="produit_imaH"></div>
+            <div class="produit_imaB">
+              <div class="produit_zoom"> <a href="" title=""><img src="images_bis/produit_ima.jpg" alt=""></a>
+                <div class="btn_zoom"><a href="" title=""><img src="images/btn_zoom.png" alt=""></a></div>
+              </div>
+              <!-- BEGIN ArticleajaxPhoto -->
+              <input id="tot_photoBit" type="hidden" value="$increment">
+              <div class="produit_photos">
+                <div class="defilementG_PHOTO"> <a href="javascript:;" id="paginPHOTO_prev"></a> </div>
+                <div class="photos_overflow" id="divPHOTO">
+                  <ul class="posrelative">
+                    <!-- BEGIN ArticleajaxPhotoBit --> 
+                    <li>
+                      <div class="photobit" id="PHOTOproduit1"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <li>
+                      <div class="photobit" id="PHOTOproduit2"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <li>
+                      <div class="photobit" id="PHOTOproduit3"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <li>
+                      <div class="photobit" id="PHOTOproduit4"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <li>
+                      <div class="photobit" id="PHOTOproduit5"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <li>
+                      <div class="photobit" id="PHOTOproduit6"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <li>
+                      <div class="photobit" id="PHOTOproduit7"><a href="#" title="#"><img src="images_bis/produit_ima2.jpg" alt="#"></a></div>
+                    </li>
+                    <!-- END ArticleajaxPhotoBit -->
+                    <li class="clear_ul"></li>
+                  </ul>
+                </div>
+                <div class="defilementD_PHOTO"> <a href="javascript:;" id="paginPHOTO_next"></a> </div>
+                <div class="clear"></div>
+              </div>
+              <script language="javascript" type="text/javascript">
+                  $(document).ready(function() {
+                     /* $.ajax({
+                         type: "GET",
+                         url: "js-concat-min.js",
+                         dataType: "script"
+                      })*/
+                  });
+              </script> 
+              <!-- END ArticleajaxPhoto --> 
+            </div>
+          </div>
+          <div class="produit_boutons">
+            <form class="produit_imprimer" name="formPDF" method="post" enctype="multipart/form-data">
+              <input type="hidden" value="pdfarticle" name="actionpdf">
+              <input type="image" src="images/btn_imprimer.png">
+            </form>
+            <div class="produit_recommander"><a href="recommander.php?artid=$top[artid]&keepThis=true&TB_iframe=true&height=250&width=400" title="$multilangue[recommanderami]" class="thickbox" rel="nofollow"><img src="images/btn_recommander.png" alt=""></a></div>
+            <div class="produit_favoris"><a href="#" onclick="Javascript:$favoris;" title="$multilangue[ajouterauxfavoris]"><img src="images/btn_favoris.png" alt=""></a></div>
+          </div>
+          <div class="jaime"></div>
+        </div>
+        <div class="produit_m">
+          <h1 class="produit_lib">Karotz</h1>
+          <div class="produit_lib2">Le nabaztag évolue</div>
+          <div class="produit_logomarque"><img src="images_bis/produit_logo.jpg" alt=""></div>
+          <div class="produit_desc">Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.</div>
+        </div>
+        <div class="produit_d">
+          <form class="produit_formu" name="formuadd" action="cde1.php" method="post">
+            <input type="hidden" id="artid" name="artid" value="$top[artid]">
+            <input type="hidden" name="action" value="addpanier">
+            <div class="produit_caracts"> 
+              <!-- BEGIN ArticleajaxCaracteristiques -->
+              <table cellpadding="0" cellspacing="0">
+                <!-- BEGIN ArticleajaxCaracteristique --> 
+                <tr class="produit_caractBit">
+                  <td>Taille :&nbsp;</td>
+                  <td><select>
+                      <option>XL</option>
+                    </select></td>
+                </tr>
+                <!-- END ArticleajaxCaracteristique --> 
+                <!-- BEGIN ArticleajaxCaracteristiqueUnique -->
+                <tr>
+                  <td>Mati&egrave;re :&nbsp;</td>
+                  <td>Aliminium</td>
+                </tr>
+                <!-- END ArticleajaxCaracteristiqueUnique -->
+              </table>
+              <!-- END ArticleajaxCaracteristiques --> 
+            </div>
+            <div class="produit_qte"> 
+              <!-- BEGIN ArticleajaxLienPanierMaxQuantite -->
+              <div class="etoile">$multilangue[maxatteint] !</div>
+              <!-- END ArticleajaxLienPanierMaxQuantite --> 
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>Choix de la qunatit&eacute; :&nbsp;</td>
+                  <td width="28" height="20"><input class="input_qte" type="text" value="1"></td>
+                  <td width="13" height="20"><a href="" title="+"><img src="images/btn_plus.jpg" alt=""></a><a href="" title="-"><img src="images/btn_moins.jpg" alt=""></a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="produit_enstock"> <img src="images/enstock.jpg" alt=""> En stock,&nbsp; 
+              <!-- BEGIN ArticleajaxStockRestant --> 
+              <!--$multilangue[plusque] $stockRestant $multilangue[disponibles]--> 
+              plus que 5 disponible(s) 
+              <!-- END ArticleajaxStockRestant --> 
+              <!-- BEGIN ArticleajaxStockDispo --> 
+              <!--$stockRestant $multilangue[disponibles]--> 
+              <!-- END ArticleajaxStockDispo --> 
+            </div>
+            <div class="produit_delai">Commande exp&eacute;di&eacute;e sous 48h</div>
+            <div class="produit_prix"> 
+              <!-- BEGIN ArticleajaxPrixNormal --> 
+              <!--<strong class="produit_prixpromo">$top[prixE] $symboleMonetaire</strong>--> 
+              <!-- END ArticleajaxPrixNormal --> 
+              <!-- BEGIN ArticleajaxPrixPromo --> 
+              <!--<span class="produit_prixold">$top[prixE] $symboleMonetaire</span><strong class="produit_prixpromo">$top[prixpromoE] $symboleMonetaire</strong>--> 
+              <span class="produit_prixold">50,00 &euro; &euro;</span><strong class="produit_prixpromo">44,70 &euro;</strong> 
+              <!-- END ArticleajaxPrixPromo --> 
+            </div>
+            <div class="boutons_formu">
+              <div class="produit_btn">
+                <input type="image" src="images/btn_ajoutpanier2.jpg">
+              </div>
+              <div class="produit_paiementsec"><a href="$regleurlrewriteTemp[institutionnel]-paiement-securise-#.htm" title"Paiement sécurisé"><img src="images/paiementsecurise3.jpg" alt=""></a></div>
+            </div>
+          </form>
+          <div class="telechargement"> 
+            <!-- BEGIN ArticleajaxPiecesJointes --> 
+            <!-- BEGIN ArticleajaxPiecesJointesVideoBit --> 
+            <!-- END ArticleajaxPiecesJointesVideoBit --> 
+            <!-- BEGIN ArticleajaxPiecesJointesPDFBit -->
+            <div class="telechargementBit">
+              <div class="telechargementBit_g"><a href="$nom_piece" target="_blank" rel="nofollow"><img src="images/pdf_ico.jpg" alt="$multilangue[telechargerladocumentation]"></a></div>
+              <div class="telechargementBit_d">
+                <div class="pdf_txt">Visualiser le PDF</div>
+                Lorem ipsum caca lopem ... </div>
+            </div>
+            <div class="telechargementBit">
+              <div class="telechargementBit_g"><a href="$nom_piece" target="_blank" rel="nofollow"><img src="images/pdf_ico.jpg" alt="$multilangue[telechargerladocumentation]"></a></div>
+              <div class="telechargementBit_d">
+                <div class="pdf_txt">Visualiser le PDF</div>
+                Lorem ipsum caca lopem ... </div>
+            </div>
+            <div class="telechargementBit">
+              <div class="telechargementBit_g"><a href="$nom_piece" target="_blank" rel="nofollow"><img src="images/pdf_ico.jpg" alt="$multilangue[telechargerladocumentation]"></a></div>
+              <div class="telechargementBit_d">
+                <div class="pdf_txt">Visualiser le PDF</div>
+                Lorem ipsum caca lopem ... </div>
+            </div>
+            <!-- END ArticleajaxPiecesJointesPDFBit --> 
+            <!-- BEGIN ArticleajaxPiecesJointesHTMLBit --> 
+            <!-- END PiecesJointesHTMLBit --> 
+            <!-- BEGIN ArticleajaxPiecesJointesAudioBit --> 
+            <!-- END ArticleajaxPiecesJointesAudioBit --> 
+            <!-- END ArticleajaxPiecesJointes --> 
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <script type="text/javascript" language="javascript">
+          voirDossier1();
+      </script>
+      <div id="ancre_classeur"></div>
+      <div class="classeur">
+        <div id="dossier1" class="dossier_close"  onClick="javascript:voirDossier1();">&nbsp;</div>
+        <!--$(document).scrollTo('#ancre_classeur',800);-->
+        <div id="dossier2" class="dossier_close" onClick="javascript:voirDossier2();">&nbsp;</div>
+        <div id="dossier3" class="dossier_close" onClick="javascript:voirDossier3();">&nbsp;</div>
+        <div class="hautdepage"><a href="#haut" title="haut de page"><img src="images/btn_hautpage.jpg" alt=""></a></div>
+      </div>
+      <div id="dossier_content1" class="dossier_content arrondi5" style="display:none">
+        <div class="dossier_txt">$top[$description]</div>
+      </div>
+      <div id="dossier_content2" class="dossier_content arrondi5" style="display:none"> 
+        <!-- BEGIN ArticleajaxNotreavis -->
+        <div class="dossier_txt">$top[$notreavis] - 5847</div>
+        <!-- END ArticleajaxNotreavis --> 
+      </div>
+      <div id="dossier_content3" class="dossier_articlescompl arrondi5" style="display:none">
+        <div class="btn_pageprec"><a href="#" title="Article(s) précédent(s)"><img src="images/btn_selectprev.png" alt=""></a></div>
+        <div class="btn_pagesuiv"><a href="#" title="Article(s) suivant(s)"><img src="images/btn_selectnext.png" alt=""></a></div>
+        <div class="selection_masque">
+          <div class="selection_carrousel">
+            <ul>
+              <li class="selectionBit">
+                <div class="selectionBit_h"><img src="images/articleBit_h.png" alt=""></div>
+                <div class="selectionBit_m">
+                  <div class="selectionBit_ima">
+                    <div class="etiquette_pctpromo"><a href="$top[url]" title="$top[libelle]">-10%</a></div>
+                    <div class="etiquette"> <a href="$top[url]" title="$top[libelle]"><img src="images/etiquette_nouv.png" alt="#"></a> </div>
+                    <a href="#" title="#"><img src="images_bis/articleBit_ima.jpg" alt="#"></a> </div>
+                  <h3 class="selectionBit_lib"><a href="#" title="#">Karotz</a></h3>
+                  <div class="selectionBit_lib2"><a href="#" title="#">Sous-titre</a></div>
+                </div>
+                <div class="selectionBit_b">
+                  <div class="selectionBit_prix"> <strong class="selectionBit_prixpromo">88,00 &euro;</strong><span class="selectionBit_prixold">99,00 &euro;</span> </div>
+                  <div class="selectionBit_boutons">
+                    <div class="selectionBit_detail"><a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a></div>
+                    <form class="selectionBit_form" action="" method="post">
+                      <input type="image" src="images/btn_ajoutpanier.jpg">
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li class="selectionBit">
+                <div class="selectionBit_h"><img src="images/articleBit_h.png" alt=""></div>
+                <div class="selectionBit_m">
+                  <div class="selectionBit_ima">
+                    <div class="etiquette_pctpromo"><a href="$top[url]" title="$top[libelle]">-10%</a></div>
+                    <div class="etiquette"> <a href="$top[url]" title="$top[libelle]"><img src="images/etiquette_nouv.png" alt="#"></a> </div>
+                    <a href="#" title="#"><img src="images_bis/articleBit_ima.jpg" alt="#"></a> </div>
+                  <h3 class="selectionBit_lib"><a href="#" title="#">Karotz</a></h3>
+                  <div class="selectionBit_lib2"><a href="#" title="#">Sous-titre</a></div>
+                </div>
+                <div class="selectionBit_b">
+                  <div class="selectionBit_prix"> <strong class="selectionBit_prixpromo">88,00 &euro;</strong><span class="selectionBit_prixold">99,00 &euro;</span> </div>
+                  <div class="selectionBit_boutons">
+                    <div class="selectionBit_detail"><a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a></div>
+                    <form class="selectionBit_form" action="" method="post">
+                      <input type="image" src="images/btn_ajoutpanier.jpg">
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li class="selectionBit">
+                <div class="selectionBit_h"><img src="images/articleBit_h.png" alt=""></div>
+                <div class="selectionBit_m">
+                  <div class="selectionBit_ima"> 
+                    <!--<div class="etiquette_pctpromo"><a href="$top[url]" title="$top[libelle]">-10%</a></div>-->
+                    <div class="etiquette"> <a href="$top[url]" title="$top[libelle]"><img src="images/etiquette_nouv.png" alt="#"></a> </div>
+                    <a href="#" title="#"><img src="images_bis/articleBit_ima.jpg" alt="#"></a> </div>
+                  <h3 class="selectionBit_lib"><a href="#" title="#">Karotz</a></h3>
+                  <div class="selectionBit_lib2"><a href="#" title="#">Sous-titre</a></div>
+                </div>
+                <div class="selectionBit_b">
+                  <div class="selectionBit_prix"> <strong class="selectionBit_prixpromo">88,00 &euro;</strong><span class="selectionBit_prixold">99,00 &euro;</span> </div>
+                  <div class="selectionBit_boutons">
+                    <div class="selectionBit_detail"><a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a></div>
+                    <form class="selectionBit_form" action="" method="post">
+                      <input type="image" src="images/btn_ajoutpanier.jpg">
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li class="selectionBit">
+                <div class="selectionBit_h"><img src="images/articleBit_h.png" alt=""></div>
+                <div class="selectionBit_m">
+                  <div class="selectionBit_ima"> 
+                    <!--<div class="etiquette_pctpromo"><a href="$top[url]" title="$top[libelle]">-10%</a></div>-->
+                    <div class="etiquette"> <a href="$top[url]" title="$top[libelle]"><img src="images/etiquette_nouv.png" alt="#"></a> </div>
+                    <a href="#" title="#"><img src="images_bis/articleBit_ima.jpg" alt="#"></a> </div>
+                  <h3 class="selectionBit_lib"><a href="#" title="#">Karotz</a></h3>
+                  <div class="selectionBit_lib2"><a href="#" title="#">Sous-titre</a></div>
+                </div>
+                <div class="selectionBit_b">
+                  <div class="selectionBit_prix"> <strong class="selectionBit_prixpromo">88,00 &euro;</strong><span class="selectionBit_prixold">99,00 &euro;</span> </div>
+                  <div class="selectionBit_boutons">
+                    <div class="selectionBit_detail"><a href="$top[url]" title="D&eacute;tail"><img src="images/btn_detail.jpg" alt=""></a></div>
+                    <form class="selectionBit_form" action="" method="post">
+                      <input type="image" src="images/btn_ajoutpanier.jpg">
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="prefooter">
+        <div class="menuinstit ombres3">
+          <div class="menuinstit_head"><img src="images/infos_services.jpg" alt=""></div>
+          <div class="menuinstit_sep">
+            <ul class="menuinstit1">
+              <li class="menuinstitBit"><a href="#" title="#">Lorem ipsum caliptus narnar voyages</a></li>
+              <li class="menuinstitBit"><a href="#" title="#">Lorem ipsum</a></li>
+              <li class="menuinstitBit"><a href="#" title="#">Lorem ipsum</a></li>
+              <li class="menuinstitBit"><a href="#" title="#">Lorem ipsum</a></li>
+              <li class="menuinstitBit"><a href="#" title="#">Lorem ipsum</a></li>
+              <li class="clear"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="paiementsecurise ombres3"><a href="$regleurlrewriteTemp[institutionnel]-paiement-securise-#.htm" title="Paiement s&eacute;curis&eacute;"><img src="images/paiementsecurise.jpg" alt=""></a></div>
+        <div class="livraisonrapide ombres3"><a href="$regleurlrewriteTemp[institutionnel]-livraison-rapide-#.htm" title="Livraison rapide"><img src="images/livraisonrapide.jpg" alt=""></a></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="footer_content">
+      <div class="actu">
+        <div class="actu_title"><a href="" title="Tous nos articles">&gt; Tous nos articles</a></div>
+        <div class="actu_ima"><img src="images/robot_main.jpg" alt=""></div>
+        <div class="actu_desc">
+          <div class="actu_txt"> <strong>Salon iNNo robot 2012</strong><br>
+            qsfsdfdff, zdqsfsff dsfdfds ddfdg sfsfdf, sdfsdfdsfdss sryiio lorem ipsum ... </div>
+          <div class="lirelasuite"><a href="" title="Lire la suite">&gt; Lire la suite</a></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="bannieres_sep"><img src="images/bannieres_sep.jpg" alt=""></div>
+      <form class="newsletter" action="newsletter.htm" method="post">
+        <input name="action" value="enregistrer" type="hidden">
+        <input name="choixnewsletter" value="1" type="hidden">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td><input class="input_news" type="text" name="adressenewsletter" value="Votre mail" onClick="Javascript:this.value='';"></td>
+            <td><input type="image" src="images/btn_oknews.png" alt="Ok"></td>
+          </tr>
+        </table>
+      </form>
+      <div class="bannieres_sep"><img src="images/bannieres_sep.jpg" alt=""></div>
+      <div class="serviceclient"><a href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Service client"><img src="images/serviceclient.jpg" alt=""></a></div>
+      <div class="copyright">Copyright 2012 www.robot-advance.com, Site r&eacute;alis&eacute; par la <a target="_blank" title="Solution e-commerce" href="http://www.vendre-en-ligne.fr">solution e-commerce vendre en ligne</a></div>
+      <div class="foot_categs"> 
+        <!-- BEGIN CommunCategories --> 
+        <!-- BEGIN CommunCategoriesNiveau0 --> 
+        <!-- BEGIN CommunCategoriesNiveau0Bit -->
+        <div class="footCategBit">
+          <div class="footCategBit_lib"><a href="$categorie[url]" title="$categorie[nomlien]">Robot éducatif</a></div>
+          <!-- BEGIN CommunCategoriesNiveau1 -->
+          <ul class="footSsCateg">
+            <!-- BEGIN CommunCategoriesNiveau1Bit -->
+            <li class="footSsCategBit"><a href="$categorie[url]" title="$categorie[nomlien]">$categorie[$libelle]</a></li>
+            <!-- END CommunCategoriesNiveau1Bit -->
+          </ul>
+          <!-- END CommunCategoriesNiveau1 --> 
+        </div>
+        <!-- END CommunCategoriesNiveau0Bit -->
+        <div class="footCategBit">
+          <div class="footCategBit_lib"><a href="$categorie[url]" title="$categorie[nomlien]">Divers</a></div>
+          <ul class="footSsCateg">
+            <li class="footSsCategBit"><a href="$categorie[url]" title="$categorie[nomlien]">$categorie[$libelle]</a></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+        <!-- END CommunCategoriesNiveau0 --> 
+        <!-- END CommunCategories --> 
+      </div>
+      <div class="referencement"> <a href="#" title="#">Lorem ipsum</a>, Sed tamen haec cum ita tutius observentur, quidam vigore artuum inminuto rogati ad nuptias ubi aurum dextris manibus cavatis offertur, inpigre vel usque Spoletium pergunt. haec nobilium sunt instituta. </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

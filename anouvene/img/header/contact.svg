@@ -1,0 +1,6 @@
+<svg viewBox="-15.5 -1.8 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs><path d="M0,28.5 C0,19.3873016 7.38730163,12 16.5,12 C25.6126984,12 33,19.3873016 33,28.5 C33,37.6126984 25.6126984,45 16.5,45 C7.38730163,45 0,37.6126984 0,28.5 L0,28.5 Z" id="Oval-1" stroke="none" fill="none"></path></defs>
+    <text x="5.8" y="10" id="Recherche" stroke="none" fill="white" font-family="HelveticaLT-Condensed-Light, Helvetica LT CondensedLight" font-size="14" font-style="condensed" font-weight="normal" letter-spacing="-0.160071656">
+        <textPath xlink:href="#Oval-1">Contact</textPath>
+    </text>
+</svg>

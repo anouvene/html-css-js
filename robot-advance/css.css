@@ -1,0 +1,800 @@
+/*---------- @STYLES DE BASE ----------*/
+@charset "utf-8";
+/* Page */ 
+html {height:100%; font-size: 100%; /* Évite un bug d'IE 6-7.*/ } 
+body {
+	height:100%; 
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:1.1em; /*À adapter au design.*/ 
+	color:#4F5356
+} 
+body.recommander {background:none}
+
+/* Titres */ 
+h1, h2, h3, h4, h5, h6 { 
+  margin:0; /* Rapproche le titre du texte.*/ 
+  line-height:1.2em; 
+  font-weight:normal; /* Valeur par défaut.*/ 
+  font-style:normal; 
+} 
+h1 {font-size:1.75em} 
+h2 {font-size:1.5em} 
+h3 {font-size:1em} 
+h4 {font-size: 1em} 
+ 
+/* Listes */ 
+ul, ol { 
+  margin:0; 
+  padding:0; 
+  list-style:none;
+}
+li{list-style:none;}
+
+/* Paragraphes */ 
+p { margin: .75em 0; /*Marges plus faibles que par défaut.*/} 
+address { margin: .75em 0; font-style: normal} 
+blockquote{margin:0; padding:5px}
+
+/* Liens */ 
+a {text-decoration:none; color:#4F5356} 
+a:link, a:visited , a:hover, a:focus, a:active {text-decoration:none; outline:none}
+#conteneur a:hover {text-decoration:underline} 
+
+/*Pas de bordure autour des images dans les liens */ 
+a img {border:none} 
+ 
+/*Divers éléments de type en-ligne*/ 
+em {font-style: italic} 
+strong {font-weight:bold} 
+
+/*Formulaires*/ 
+form, fieldset {margin: 0; padding: 0; border: none} 
+input, button, select {vertical-align:middle; font-size:12px; font-family:Arial, Verdana, Helvetica, sans-serif; color:#6F7172; line-height:1em;/* Solution pb. d'alignement.*/ }
+textarea{color:#6F7172}
+
+/*Tableaux*/
+table{border:0}
+
+/*---------- @DIVERS ET UTILITAIRES ----------*/
+/*Police spéciale*/
+@font-face {
+    font-family:'goodTimes';
+    src: url('fonts/good_times_rg.eot'); /*ie9*/
+    src: url('fonts/good_times_rg.eot?#iefix') format('embedded-opentype'), /*ie6-ie8*/
+         url('fonts/good_times_rg.woff') format('woff'), /*modern browsers*/
+         url('fonts/good_times_rg.ttf') format('truetype'), /*safari, etc*/
+         url('fonts/good_times_rg.svg#goodTimes') format('svg'); /*XML format sur les mobiles*/
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'openSans';
+    src: url('fonts/opensans_rg.eot'); /*ie9*/
+    src: url('fonts/opensans_rg.eot?#iefix') format('embedded-opentype'), /*ie6-ie8*/
+         url('fonts/opensans_rg.woff') format('woff'), /*modern browsers*/
+         url('fonts/opensans_rg.ttf') format('truetype'), /*safari, etc*/
+         url('fonts/opensans_rg.svg#goodTimes') format('svg'); /*XML format sur les mobiles*/
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'openSansBold';
+    src: url('fonts/opensans_bold.eot'); /*ie9*/
+    src: url('fonts/opensans_bold.eot?#iefix') format('embedded-opentype'), /*ie6-ie8*/
+         url('fonts/opensans_bold.woff') format('woff'), /*modern browsers*/
+         url('fonts/opensans_bold.ttf') format('truetype'), /*safari, etc*/
+         url('fonts/opensans_bold.svg#goodTimes') format('svg'); /*XML format sur les mobiles*/
+    font-weight:normal;
+    font-style:normal;
+}
+.goodTimes{font-family:'goodTimes', Arial, sans-serif}/*utilisation*/
+.openSans{font-family:'openSans', Arial, sans-serif}/*utilisation*/
+.openSansBold{font-family:'openSansBold', Arial, sans-serif}/*utilisation*/
+
+/** Sablier **/
+.ajax-loader {background:url('images/ajax-loader.gif') no-repeat center top; height:200px}
+/** JQUERY VALIDATE ET FORMULAIRES**/
+label.errorForm  {color:#E63937;display:none;font-size:10px}
+label {cursor:pointer}
+input.errorForm, select.errorForm, textarea.errorForm {border:1px solid #E63937}
+input.validForm, select.validForm, textarea.validForm {border:1px solid #066DEA}
+.input_txt, .textarea_txt, .txt_cnx{width:200px; padding:4px; border:solid 1px #D5D5D5}
+.textarea_txt{height:80px}
+.input{width:200px; padding:4px; background-color:#FFF; border:solid 1px #D5D5D5}
+.textarea{width:200px; height:80px; padding:4px; border:solid 1px #D5D5D5}
+.champform input, .champform textarea{width:240px; padding:4px; border:solid 1px #D5D5D5}
+.champform textarea{height:80px}
+.textarea_produit{width:240px; padding:4px; border:solid 1px #3CA199; background-color:#7FC3C2; color:#fff}
+
+/*Divers*/
+.clear{clear:both; height:1px}
+.etoile{color:#E63937}
+.erreur{text-align:center; color:#E63937; font-weight:bold}
+.stat{display:none}
+#contenupage .souligner, #contenupage .souligner:hover{text-decoration:underline}
+.cadre{width:70%; margin:0 auto 15px auto; padding:20px; border:solid 1px #1a1a1a; text-align:center}
+.popup_alerte{margin-top:20px; height:120px; background-color:#FFF; border:solid 1px #1a1a1a; text-align:center; font-style:italic; font-size:14px; color:#D50050}
+.texteperso{padding:15px 0; font-style:italic; color:#747474}
+.texteperso_panier{padding:15px 0; font-style:italic; font-weight:bold}
+
+.td_alt1, .td_alt2{padding:10px; background:url('images/pointille_h.gif') repeat-x left bottom}
+.alt1{background-color:#EAEAEA}
+.alt2{background-color:#FFF}
+	#conteneur .divers_lib{display:block; margin-bottom:10px; font-weight:bold; text-decoration:underline; color:#E53000}
+.td_gras{text-align:right; font-weight:bold}
+
+/*Bordures et pointillés*/
+.pointille_haut{background:url('images/pointille_h.gif') repeat-x}
+.pointille_bas{background:url('images/pointille_h.gif') repeat-x left bottom}
+.pointille_vertical{background:url('images/pointille_v.gif') repeat-y center top}
+.bordure{border:1px solid #1a1a1a}
+	.bordure_h{border-top:1px solid #1a1a1a}
+	.bordure_d{border-right:1px solid #1a1a1a}
+	.bordure_b{border-bottom:1px solid #1a1a1a}
+	.bordure_g{border-left:1px solid #1a1a1a}
+
+/*Arrondis 5px*/
+.arrondi5{-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px; border-radius:5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+/*arrondis du haut*/ 
+.arrondi5_hgd{-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; /*position:relative; z-index:10;*/ behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi5_hg{-moz-border-radius:5px 0 0 0;-o-border-radius:5px 0 0 0;-webkit-border-radius:5px 0 0 0; border-radius:5px 0 0 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi5_hd{-moz-border-radius:0 5px 0 0;-o-border-radius:0 5px 0 0;-webkit-border-radius:0 5px 0 0; border-radius:0 5px 0 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+/*arrondi5s du bas*/
+.arrondi5_bgd{-moz-border-radius:0 0 5px 5px;-o-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; /*position:relative; z-index:1;*/ behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi5_bd{-moz-border-radius:0 0 5px 0;-o-border-radius:0 0 5px 0;-webkit-border-radius:0 0 5px 0; border-radius:0 0 5px 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi5_bg{-moz-border-radius:0 0 0 5px;-o-border-radius:0 0 0 5px;-webkit-border-radius:0 0 0 5px; border-radius:0 0 0 5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+ /*arrondi5s cote droite en haut et bas*/
+.arrondi5_dhb{-moz-border-radius:0 5px 5px 0;-o-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+ /*arrondi5s cote gauche en haut et bas*/
+.arrondi5_ghb{-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;-webkit-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+
+/*Arrondis 10px*/
+.arrondi10{-moz-border-radius:10px;-o-border-radius:5px;-webkit-border-radius:5px; border-radius:5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+/*arrondis du haut*/ 
+.arrondi10_hgd{-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi10_hg{-moz-border-radius:5px 0 0 0;-o-border-radius:5px 0 0 0;-webkit-border-radius:5px 0 0 0; border-radius:5px 0 0 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi10_hd{-moz-border-radius:0 5px 0 0;-o-border-radius:0 5px 0 0;-webkit-border-radius:0 5px 0 0; border-radius:0 5px 0 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+/*arrondi10 du bas*/
+.arrondi10_bgd{-moz-border-radius:0 0 5px 5px;-o-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi10_bd{-moz-border-radius:0 0 5px 0;-o-border-radius:0 0 5px 0;-webkit-border-radius:0 0 5px 0; border-radius:0 0 5px 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+.arrondi10_bg{-moz-border-radius:0 0 0 5px;-o-border-radius:0 0 0 5px;-webkit-border-radius:0 0 0 5px; border-radius:0 0 0 5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')} 
+ /*arrondi10 cote droite en haut et bas*/
+.arrondi10_dhb{-moz-border-radius:0 5px 5px 0;-o-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+ /*arrondi10 cote gauche en haut et bas*/
+.arrondi10_ghb{-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;-webkit-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; position:relative; z-index:1; behavior: url('./javascripts/css3_pie/PIE.htc')}
+
+.ombres10{
+	-webkit-box-shadow: #666 0px 2px 10px;
+	-moz-box-shadow: #666 0px 2px 10px;
+	-o-box-shadow: #666 0px 2px 10px;
+	box-shadow: #666 0px 2px 10px;
+	position:relative;/*important pour IE7 et 8*/ 
+	z-index:1;/*important pour IE7 et 8*/
+	background: #FFF;/*important pour IE7 et 8*/
+	/*background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
+	background: -webkit-linear-gradient(#EEFF99, #66EE33);
+	background: -moz-linear-gradient(#EEFF99, #66EE33);
+	background: -ms-linear-gradient(#EEFF99, #66EE33);
+	background: -o-linear-gradient(#EEFF99, #66EE33);
+	background: linear-gradient(#EEFF99, #66EE33);
+	-pie-background: linear-gradient(#EEFF99, #66EE33);*/
+	behavior: url('/PIE.htc');
+}
+.ombres3{
+	-webkit-box-shadow: #A1A1A1 0 2px 3px;
+	-moz-box-shadow: #A1A1A1 0 2px 3px;
+	-o-box-shadow: #A1A1A1 0 2px 3px;
+	box-shadow: #A1A1A1 0 2px 3px;
+	position:relative;/*important pour IE7 et 8*/ 
+	z-index:1;/*important pour IE7 et 8*/
+	background: #FFF;/*important pour IE7 et 8*/
+	behavior: url('./javascripts/css3_pie/PIE.htc');
+}
+
+/*Couleurs*/
+.blanc{color:#FFF}
+.noir{color:#232526}
+.vert{color:#3BA098}
+.gris_clair{color:#6F7172}
+.gris_moyen{color:4F5356}
+.grisfonce{color:#232526}
+.rouge{color:#E63937}
+.bleu_marine{color:#066DEA}
+
+/*---------- @GROUPE STRUCTURE ----------*/
+#conteneur{height:auto !important; height:100%; min-height:100%; text-align:left}
+	#header{min-width:993px; background:url('images/header_bg.jpg') repeat-x}
+		.header_content{width:980px; margin:0 auto; padding:0 6px 0 7px}
+	#contenupage{min-width:993px; height:950px; background:url('images/contenupage_bg.jpg') repeat-x left bottom}
+	html>body #contenupage{min-height:950px; height:auto}
+		.contenu{width:993px; margin:0 auto}
+	#footer{min-width:993px; background:url('images/footer_bg.jpg') repeat-x}
+		.footer_content{width:980px; height:340px; margin:0 auto; padding:0 6px 0 7px}
+		html>body .footer_content{min-height:340px; height:auto}
+		
+		
+/*---------- @HEADER ----------*/
+.langues{float:left; width:640px; height:36px; padding-top:4px; position: relative; z-index: 2500}
+	.ul_langues{position:absolute; left:0; top:29px; width:165px; height:60px; background:url('images/langue_bg.jpg') repeat-x left bottom #48484A; border:solid 1px #2F2F31; border-top:none}
+		.ul_langues li a{color:#fff}
+
+.suiveznous{float:right; width:340px; height:36px; background:url('images/suiveznous.png') no-repeat 0 13px}	
+
+.logo{float:left; width:391px; height:113px; padding-top:36px}
+.menudivers{float:right; width:468px; height:70px}
+	.menudivers .arrondi5_bgd{position:relative; z-index:1}
+	.menudiversBit{float:left; width:105px; height:54px; margin-left:12px; padding-top:8px; background:url('images/menudivers_bg.jpg') repeat-x; text-align:center}
+	.menudiversBit_over{float:left; width:105px; height:58px; margin-left:12px; padding-top:8px; background:url('images/menudivers_bg_over.jpg') repeat-x left bottom; text-align:center; position:relative}
+		.menudiversBit_over_bas{position:absolute; left:0; top:0; width:105px; height:10px}
+	
+	
+/*Mon panier*/		
+.monpanier{float:left; width:210px; height:120px; margin-top:9px; background:url('images/monpanier_bg.jpg') no-repeat}
+	a.sac{float:left; display:block; width:96px; height:93px; margin-top:14px}
+		#contenuPanierCommun a.sac:hover{text-decoration:none}
+	.monpanier_details{float:right; width:114px; margin-top:14px; padding-top:43px}
+		.monpanier_nbart{padding-bottom:5px; font-size:16px}
+		.monpanier_tot{font-size:16px}
+			.monpanier_tot a{color:#D50050}
+			
+/**Onglets**/
+.onglets{clear:both; height:33px; padding-top:6px; /*border-bottom:solid 1px #9F9F9F;*/ position:relative; z-index:2000}
+	/*ongletBit*/	
+	td.ongletBit{height:33px; padding:0 10px; background:url('images/ongletBit_bg.jpg') repeat-x}
+		/*.ongletBit_content{height:33px; position:relative; z-index: 2000}*/
+		a.ongletBitLib{display:block; padding-right:21px; background:url('images/ongletBit_puce.png') no-repeat right 5px; font-size:13px; text-transform:uppercase; font-family:'openSans', Arial, sans-serif}
+		.textshadow a.ongletBitLib {text-shadow:0 1px 0 white;}
+		.no-textshadow a.ongletBitLib{color:#4F5356}
+		#conteneur a.ongletBitLib:hover{text-decoration: none}
+
+	/*ongletBit_over*/
+	td.ongletBit_over{height:33px; background:url('images/ongletBit_bg_over.jpg') repeat-x}
+		.cache_bordure{position:absolute; left:0; bottom:-1px; z-index:10; height:1px;  border-bottom:solid 1px #f0f0f0}
+		/*Menu déroulant*/
+		.ssmenu{position:absolute; left:-1px; top:39px; z-index:0; width:959px; height: 245px; padding:10px; background-color:#f0f0f0; border:solid 1px #9E9E9E}
+			
+			.ssmenu_g{float:left; width:688px}
+				/*sous-rayons*/
+				.ul_rayonsNiv1{width:688px; height:202px; padding-top:10px}
+					/*niveau2*/
+					.li_niv1Bit{float:left; width:160px; padding:0 15px 15px 0}
+					.li_niv1Bit2{padding:0 15px 24px 0}
+					.li_niv1Bit3{padding:0 15px 24px 0}
+					.li_niv1Bit4{float:right; padding:0 0 24px 0}
+						a.niv1Bit_lib{font-size:15px; color:#43A6A3; text-transform:uppercase; font-family:'openSans', Arial, sans-serif}
+						#conteneur .li_niv1Bit a:hover{text-decoration:none}
+						.textshadow a.niv1Bit_lib{text-shadow:1px 2px 0 #ffffff;}
+						.no-textshadow a.niv1Bit_lib{color:#43A6A3}
+						/*niveau3*/
+						.li_niv2Bit{padding-top:9px}
+							a.niv2Bit_lib{font-size:13px; color:#4F5356; font-family:'openSans', Arial, sans-serif}
+							.textshadow a.niv2Bit_lib{text-shadow:1px 2px 0 #ffffff;}
+							.no-textshadow a.niv2Bit_lib{color:#4F5356}
+						/*Lien plus de choix*/
+						.li_plusdechoix{padding-top:9px}
+							.li_plusdechoix img{vertical-align:middle}
+							.li_plusdechoix a{font-family:'openSansBold', Arial, sans-serif; text-decoration:underline}
+							#conteneur .li_plusdechoix a:hover{text-decoration:underline}
+							
+				/*Boutons recaps*/
+				table.meilleuresventes{width:153px; height:31px; background-color:#47A9A4; border:solid 1px #3F9996}
+				table.promos{width:176px; height:31px; margin-left:10px; background-color:#47A9A4; border:solid 1px #3F9996}
+				table.voircategs{width:198px; height:31px; background-color:#47A9A4; border:solid 1px #3F9996}
+					.transparent_g{width:10px; height:31px; background:url('images/arrondi_g.png') no-repeat}
+					.transparent_m{height:31px; background:url('images/arrondi_m.png') repeat-x}
+					.transparent_d{width:10px; height:31px; background:url('images/arrondi_d.png') no-repeat}
+				
+			/*article-sous-rayon*/
+			.ssmenu .arrondi5{position:relative; z-index:1}/*bug IE7*/
+			.ssmenu_d{float:right; width:240px; height:223px; padding:10px; background:url('images/articlemenuBit_sep.jpg') no-repeat 0 132px #fff; border:solid 1px #C7C7C7}
+				.topvente_txt{height:17px; font-size:15px; font-family:'openSansBold', Arial, sans-serif; color:#161616; text-transform:uppercase}
+				.articlemenuBit_1{margin-bottom:20px}
+					.articlemenuBit_ima{float:left; width:94px; height:94px}
+					.articlemenuBit_details{float:right; width:137px}
+						.articlemenuBit_lib{height:17px; padding-top:5px; font-weight:bold; color:#161616; text-transform:uppercase}
+						.articlemenuBit_lib2{height:20px; color:#4F5356}
+						.articlemenuBit_prix{height:20px; font-size:13px; font-weight:bold; color:#056DEA}
+							.articlemenuBit_prixold{padding-left:5px; font-size:12px; font-weight:normal; color:#4F5356; text-decoration:line-through}
+						.articlemenuBit_formu{display:inline; position:relative; top:-14px}
+				
+	td.ongletBit_sep{width:8px; height:33px}	
+				
+/*Barre de recherche*/
+.recherche{float:left; width:500px; height:23px; padding:14px 0 0 0}
+	.recherche table{height:23px}
+		.input_rech{width:194px; height:23px; margin:0; padding:0 0 0 30px; background:url('images/inputrech_bg.jpg') no-repeat; border:0 none; line-height:23px; color:#717171; outline:none}
+		.touteslescategs{width:167px; height:23px; margin:0; padding:0 29px 0 14px; background:url('images/touteslescategs_bg.jpg') no-repeat right top; line-height:23px; color:#717171; position:relative; z-index:500; cursor:pointer}
+		.touteslescategs_over{background:url('images/touteslescategs_bg_over.jpg') no-repeat right top}
+			/*Liste déroulante des rayons*/
+			.ul_categs{position:absolute; left:0; top:23px; width:159px; padding:10px; background-color:#fff; border:solid 1px #DDD; border-top:none}
+				.ul_categs li{padding-left:8px; background:url('images/puceSsMenu.jpg') no-repeat 0 9px; color:#D80050}
+				.ul_categs li:hover{background-color:#ECECEC}
+					#conteneur .ul_categs li a:hover, #conteneur .ul_categs li:hover a{text-decoration:none; color:#0E97E8}
+				
+/*Boutons recap-tops*/	
+.boutons_recap{float:right; width:447px; height:23px; padding-top:10px; text-align:right}
+			
+/*Barre de navigation*/
+.navigation{height:25px; margin-top:14px; border-top:solid 2px #E9E9E9; line-height:25px; font-size:11px; color:#4F5356}
+	.navigation h1, .navigation h2{display:inline; font-size:11px; color:#4F5356}
+		.navigation a , .navigation h1 a, .navigation h2 a{color:#4F53562}
+			
+/*---------- @FOOTER ----------*/
+/*Actualités*/
+.actu{float:left; width:301px; margin:0 auto 14px auto; padding-top:26px; font-size:11px}
+	.actu_title{height:30px; padding-left:118px; background:url('images/actualites.jpg') no-repeat; line-height:20px}
+	.actu_ima{float:left; width:85px; height:85px}
+	.actu_desc{float:right; width:200px}
+		.actu_txt{height:70px; overflow:hidden; line-height:.9em}
+		.lirelasuite{text-align:right}
+			.lirelasuite a, .actu_title a{color:#066CEA}
+			
+.bannieres_sep{float:left; width:46px; height:158px; text-align:center}
+	
+/*Newsletter*/
+.newsletter{float:left; width:264px; height:62px; margin-top:26px; padding:57px 0 0 17px; background:url('images/newsletter_bg.jpg') no-repeat}
+	.input_news{width:158px; height:25px; margin:0; padding:0 0 0 10px; background:url('images/inputnews_bg.png') no-repeat; border:0 none; line-height:25px; font-size:11px; color:#066CEA; }
+			
+/*service client*/
+.serviceclient{float:right; width:305px; height:134px; padding-top:25px}
+
+/*Copyright*/
+.copyright{clear:both; height:31px; text-align:center; line-height:31px; background:url('images/robotadvance.jpg') no-repeat right 1px; color:#FFF; font-size:11px}
+	.copyright a{text-decoration:underline; color:#fff}
+
+/*Plan des rayons du site*/
+.foot_categs{padding-top:13px}
+	.footCategBit{float:left; width:145px; padding-right:10px}
+		.footCategBit_lib{height:15px}
+			.footCategBit_lib a{color:#959698}
+		ul.footSsCateg{width:145px}
+			li.footSsCategBit{padding:0 0 5px 7px; background:url('images/puce_plancateg.jpg') no-repeat 0 5px}
+				li.footSsCategBit a{font-size:11px; color:#959698}
+				
+/*Référencement*/
+.referencement{padding:10px 0; background:url('images/plancateg_sep.jpg') no-repeat; text-align:center; font-size:11px; color:#959698}	
+	.referencement a{text-decoration:underline; color:#959698}	
+	
+/*---------- @INDEX ----------*/
+/*Carrousel*/
+.diapos{width:980px; height:349px; padding:2px 7px 6px 6px; background:url('images/diapos_bg.jpg') no-repeat}
+
+	/**Le carrousel**/
+	.carrousel{width:980px; height:330px; position:relative; overflow:hidden}
+		.carrousel ul{width:20000px; height:330px}
+			/**Diapos images**/
+			li.carrouselImageBit{float:left; width:980px; height:330px}
+			/**Diapos articles**/
+			li.carrouselArticles{float:left; width:980px; height:330px; background:url('images/carrouselArticles_bg.jpg') no-repeat}
+				.carrouselArticleBit{width:330px; height:215px; padding:60px 53px 49px 224px}
+					.carrouselArticleBit_ima{float:left; width:150px; height:215px; margin-left:10px; position:relative}
+						.trombone{position:absolute; left:0; top:-35px; width:37px; height:55px}
+						.carrouselArticleBit_etiquettemarque{position:absolute; right:-17px; bottom:-8px; width:63px; height:34px; padding:8px; background:url('images/etiquette_marque2.png') no-repeat}
+							.carrouselArticleBit_etiquettemarque img{width:63px; height:34px}
+						.carrouselArticleBit_etiquettemarqueBis{position:absolute; right:-17px; bottom:-8px; width:63px; height:29px; padding:13px 8px 8px 8px; background:url('images/etiquette_marque2.png') no-repeat; text-align:center; font-size:10px}
+					.carrouselArticleBit_details{float:right; width:156px; height:215px}
+						h3.carrouselArticleBit_lib{height:20px; padding-top:29px; line-height:.8em; font-size:18px; font-weight:bold}
+							#contenupage h3.carrouselArticleBit_lib a:hover{text-decoration:none}
+						.carrouselArticleBit_marque{height:20px; text-transform:uppercase}
+						.carrouselArticleBit_prix{height:58px}
+							.carrouselArticleBit_prixpromo{padding-bottom:5px; color:#D40150; font-size:20px}
+							.carrouselArticleBit_prixold{font-size:16px; color:#88888A}
+						.carrouselArticleBit_details input{position:relative; left:0; top:0; z-index:0}
+						
+		/**Boutons**/
+		.btn{width:100%; height:24px; position:absolute; left:0; bottom:0; z-index:10}
+			.btn table{height:24px}
+				/**Boutons au repos**/
+				.btn_1 a, .btn_2 a, .btn_3 a, .btn_4 a, .btn_5 a{display:block; width:10px; height:10px; background:url('images/btn.png') no-repeat}
+				/*Hover sur les boutons*/
+				.btn_1 a:hover,.btn_2 a:hover,.btn_3 a:hover,.btn_4 a:hover, .btn_5 a:hover{background:url('images/btn_over.png') no-repeat}
+					
+				/**Boutons à l'action par jquery**/
+				.btn_1_over a, .btn_2_over a, .btn_3_over a, .btn_4_over a, .btn_5_over a,
+				.btn_1_over a:hover, .btn_2_over a:hover, .btn_3_over a:hover, .btn_4_over a:hover, .btn_5_over a:hover{display:block; width:10px; height:10px; background:url('images/btn_over.png') no-repeat}
+	
+	/*Notre sélection(coups de coeurs)*/
+	.selection{width:993px; height:390px; position:relative; z-index:100}
+		.laselection_txt{height:20px; padding-left:7px; font-size:15px; font-family:'openSansBold', Arial, sans-serif; color:#161616; text-transform:uppercase}
+		.btn_pageprec{position:absolute; top:167px; left:-51px; width:42px; height:42px}
+		.btn_pagesuiv{position:absolute; top:167px; right:-51px; width:42px; height:42px}
+		.selection_masque{width:993px; height:355px; position:relative; z-index:50; overflow:hidden}
+			.selection_carrousel{float:left; width:993px; height:355px; position:relative; left:0; top:0; overflow:hidden}
+				.selection_carrousel ul{width:20000px; height:355px}
+					li.selectionBit{float:left; width:251px; height:355px}
+						.selectionBit_h{width:239px; height:5px; padding-top:5px}
+						.selectionBit_m{width:239px; background:url('images/articleBit_m.png') repeat-y}
+							.selectionBit_ima{width:197px; height:210px; padding:9px 21px 0 21px; background:url('images/articleBit_sep.png') no-repeat left bottom; position:relative; z-index:0; text-align:center}
+								.etiquette_pctpromo{position:absolute; right:5px; top:-6px; width:109px; height:72px; margin:-3px 0 10px -3px; background:url('images/etiquette_promo.png') no-repeat}
+									.etiquette_pctpromo a{display:block;  width:48px; height:20px; padding:25px 0 0 61px; font-size:18px; color:#FFF; font-weight:bold}
+								.etiquette{position:absolute; right:0; top:195px; width:111px}
+								#conteneur .etiquette a:hover, #conteneur .etiquette_pctpromo a:hover{text-decoration:none}
+							.selectionBit_lib{width:197px; height:15px; padding:10px 21px 0 21px}
+								.selectionBit_lib a{font-size:12px; font-weight:bold; color:#151515}
+							.selectionBit_lib2{width:197px; height:31px; padding:0 21px; color:#515254}
+						.selectionBit_b{width:197px; height:70px; padding:0 21px; background:url('images/articleBit_b.png') no-repeat}
+							.selectionBit_prix{height:18px}
+								.selectionBit_prixpromo{font-size:13px; font-weight:bold; color:#036DE7}
+								.selectionBit_prixold{padding-left:5px; text-decoration:line-through}
+							.selectionBit_boutons{height:40px}
+								.selectionBit_detail{float:left; width:68px}
+								.selectionBit_form{float:left; width:35px}
+								
+	/*Menu instit + paiementsecurise + livraison*/
+	.prefooter{width:980px; padding:17px 6px 18px 7px}						
+		/*Menu instit*/
+		.menuinstit{float:left; width:426px; padding:19px 19px 19px 31px; background-color:#FFF; border:solid 1px #E2E2E2}
+			.menuinstit_head{height:33px}
+			.menuinstit_sep{width:415px; background:url('images/menuinstit_sep.jpg') repeat-y}
+				ul.menuinstit1{width:404px; height:86px; padding-left:11px}
+				html>body .menuinstit1{min-height:86px; height:auto}
+					li.menuinstitBit{float:left; width:123px; padding:0 20px 5px 8px; background:url('images/puce_menuinstit.jpg') no-repeat 0 3px; line-height:.9em}
+					li.menuinstitBit_3{width:90px; padding:0 0 5px 8px}
+					
+		/*Paiement sécurisé*/
+		.paiementsecurise{float:left; width:204px; height:138px; margin-left:24px; padding:18px 0 0 20px; background-color:#FFF; border:solid 1px #E2E2E2}
+		/*Livraison*/
+		.livraisonrapide{float:right; width:195px; height:138px; padding:18px 0 0 30px; background-color:#FFF; border:solid 1px #E2E2E2}
+
+/*---------- @CATEGORIE ----------*/
+.contenu_g{float:left; width:250px; height:800px; margin-left:6px}
+	/*Ccatalogue*/
+	.bloc{width:215px; margin-bottom:15px; background-color:#FFF; border:solid 1px #E2E2E2}
+		.catalogue_txt{width:176px; margin:0 auto; padding-top:12px; height:22px}
+		/*niv0*/
+		.ul_niv0{width:176px; padding:0 20px 12px 20px}
+			.li0_folderBitOpen, .li0_folderBitClose{padding-top:10px; border-top:solid 1px #D4D4D4}
+				.li0_folderBitOpen h1, .li0_folderBitClose h1{padding-bottom:10px; font-size:13px}
+					.li0_folderBitOpen h1 a, .li0_folderBitClose h1 a{font-size:13px; text-transform:uppercase}
+					.li0_folderBitOpen h1 a{color:#026CE6}
+				/*niv1*/
+				.ul_niv1{padding-bottom:8px}
+					.li1_folderBitClose{/*display:none;*/padding-left:9px; background:url('images/pucecat.jpg') no-repeat 0 4px}
+					.li1_folderBitOpen{padding-left:9px; background:url('images/pucecat_over.jpg') no-repeat 0 3px}
+						.li1_folderBitOpen h2, .li1_folderBitClose h2{font-size:12px}
+							.li1_folderBitOpen h2 a{color:#026CE6}
+	/*Paiement securise*/
+	.paiementsec{width:175px; margin-bottom:15px; padding:16px 20px 25px 20px; background-color:#FFF; border:solid 1px #E2E2E2}
+	/*Livraison*/
+	.livraison{width:175px; margin-bottom:15px; padding:16px 20px 22px 20px; background-color:#FFF; border:solid 1px #E2E2E2}
+
+	/*Menu instit*/
+		.bloc .menuinstit_head{height:33px; padding:16px 0 0 20px}
+		.bloc ul.menuinstit1{width:176px; height:auto; padding:0 20px 19px 20px}
+		html>body .bloc ul.menuinstit1{min-height:86px; height:auto}
+			.bloc li.menuinstitBit{float:none; width:158px; padding:0 0 5px 17px; background:url('images/puce_menuinstit.jpg') no-repeat 8px 3px; line-height:.9em; border-left:solid 2px #EAEAEA}
+
+.contenu_d{float:left; width:730px}
+	/*Desccription de la categorie*/
+	.categ_ima{float:left; width:123px; height:115px}
+	.categ_desc{float:left; width:586px}
+		h1.categ_lib{font-size:18px; color:#086BEA; text-transform:uppercase}
+
+	/*Les sous-rayons*/
+	.sscategs{width:708px; margin-bottom:21px; padding:18px 8px 13px 14px; background-color:#F4F4F4}
+		.sscategBit{float:left; width:177px; margin-bottom:10px; background:url('images/sscategBit_m.jpg') repeat-y}
+			.sscategBit_h{width:170px; height:12px; background:url('images/sscategBit_h.jpg') no-repeat}
+			.sscategBit_b{width:135px; height:226px; padding:0 25px 0 17px; background:url('images/sscategBit_b.jpg') no-repeat left bottom}
+				.sscategBit_ima{height:148px; background:url('images/sscategBit_sep.jpg') no-repeat left bottom}
+				h2.sscategBit_lib{height:20px; padding-top:9px; line-height:1em; text-transform:uppercase}
+					h2.sscategBit_lib a{font-size:11px; font-weight:bold; color:#086BEA}
+				.nbart{float:left; width:75px; line-height:30px; font-size:11px}
+				.entrer{float:left; width:60px}
+
+/*Articles + pagination*/	
+.articles{padding-bottom:10px}			
+	/*Pagination*/
+	.pagination{height:20px; margin-bottom:10px; padding:7px 0; background-color:#F4F4F4; font-size:11px}
+		.pagination select{font-size:11px}
+		.pagination table{height:20px}
+			td.nbarticles{width:169px; padding-left:10px}
+			td.parpage{width:234px; background:url('images/pagination_sep.jpg') no-repeat}
+			form.pagenav{float:right; width:305px; height:20px; padding-right:10px; background:url('images/pagination_sep.jpg') no-repeat}
+			
+	/*les articles catégorie*/
+	.articleBit{float:left; width:251px; height:355px}
+	.articleBit_1{margin:0 0 15px -6px}
+	.articleBit_2{margin:0 0 15px 1px}
+	.articleBit_3{float:right; width:239px; margin:0 -7px 15px 0}
+		.articleBit_h{width:239px; height:5px; padding-top:5px}
+		.articleBit_m{width:239px; background:url('images/articleBit_m.png') repeat-y}
+			.articleBit_ima{width:197px; height:210px; padding:9px 21px 0 21px; background:url('images/articleBit_sep.png') no-repeat left bottom; position:relative; z-index:0; text-align:center}
+				.etiquette_pctpromo{position:absolute; right:5px; top:-6px; width:109px; height:72px; margin:-3px 0 10px -3px; background:url('images/etiquette_promo.png') no-repeat}
+					.etiquette_pctpromo a{display:block;  width:48px; height:20px; padding:25px 0 0 61px; font-size:18px; color:#FFF; font-weight:bold}
+				.etiquette{position:absolute; right:0; top:195px; width:111px}
+				#conteneur .etiquette a:hover, #conteneur .etiquette_pctpromo a:hover{text-decoration:none}
+			.articleBit_lib{width:197px; height:15px; padding:10px 21px 0 21px}
+				.articleBit_lib a{font-size:12px; font-weight:bold; color:#151515}
+			.articleBit_lib2{width:197px; height:31px; padding:0 21px; color:#515254}
+		.articleBit_b{width:197px; height:70px; padding:0 21px; background:url('images/articleBit_b.png') no-repeat}
+			.articleBit_prix{height:18px}
+				.articleBit_prixpromo{font-size:13px; font-weight:bold; color:#036DE7}
+				.articleBit_prixold{padding-left:5px; text-decoration:line-through}
+			.articleBit_boutons{height:40px}
+				.articleBit_detail{float:left; width:68px}
+				.articleBit_form{float:left; width:35px}
+		
+/*---------- @FICHE PRODUIT ----------*/
+.produit{width:993px; padding:0 0 18px 0; position:relative}
+	.produit_partage{position:absolute; left:6px; top:535px; width:105px; height:16px; overflow:hidden}
+	/*colonne gauche : photos*/
+	.produit_g{float:left; width:369px}
+		/**Barre de pagination**/
+		.produit_pagenav{height:21px}
+			.produitprec{float:left; width:114px; height:14px2; padding-left:6px}
+			.produitsuiv{float:right; width:83px; height:14px; padding:0 6px 0 22px; background:url('images/produit_navsep.jpg') no-repeat}
+			.produitretour{float:left; width:95px; height:14px; padding-left:22px; background:url('images/produit_navsep.jpg') no-repeat}
+			
+		/*les photos*/
+		.produit_ima{width:369px; margin:0 0 0 0; background:url('images/produitima_m.jpg') repeat-y}
+			.produit_imaH{width:369px; height:5px; background:url('images/produitima_h.jpg') no-repeat}
+			.produit_imaB{width:369px; padding-bottom:20px; background:url('images/produitima_b.jpg') no-repeat left bottom}
+				.produit_zoom{width:333px; height:340px; padding:0 18px; background:url('images/produitima_sep.jpg') no-repeat center bottom;  position:relative}
+					.btn_zoom{position:absolute; right:25px; bottom:6px; width:52px; height:15px}
+					
+		/**Défilement des photos**/
+		.produit_photos{width:341px; height:87px; padding:22px 14px 0 14px}
+			/*Fleches*/
+			.defilementG_PHOTO {float:left; width:35px; height:30px; padding-top:31px}
+				.defilementG_PHOTO a{display:block; width:30px; height:30px; background:url('images/btn_photoprev.jpg') no-repeat;}
+			.defilementD_PHOTO {float:right; width:35px; height:30px; padding-top:31px}
+				.defilementD_PHOTO a{display:block; float:right; width:30px; height:30px; background:url('images/btn_photonext.jpg') no-repeat;}
+				/**Défilement fin**/
+				a.defilementG_PHOTO_off {display:block; width:30px; height:30px; background:url('images/btn_photoprev.jpg') no-repeat;}
+				a.defilementD_PHOTO_off {display:block; width:30px; height:30px; background:url('images/btn_photonext.jpg') no-repeat;}
+				a.defilementG_PHOTO_off:hover {display:block; width:30px; height:30px; background:url('images/btn_photoprev.jpg') no-repeat;}
+				a.defilementD_PHOTO_off:hover {display:block; width:30px; height:30px; background:url('images/btn_photonext.jpg') no-repeat;}
+				/*Pas de bordure autour de la balise a lors du click*/
+				.defilementG_PHOTO a:active, .defilementG_PHOTO a:focus, .defilementD_PHOTO a:active, .defilementD_PHOTO a:focus, a.defilementG_PHOTO_off:active, a.defilementG_PHOTO_off:focus, a.defilementD_PHOTO_off:active, a.defilementD_PHOTO_off:focus{outline:none}
+				
+			/*Miniatures*/
+			.photos_overflow{float:left; width:271px; height:87px; overflow:hidden; position:relative; z-index:100}
+				ul.posrelative{width:20000px; height:87px; position:relative; left:0; top:0}
+					ul.posrelative li{float:left; width:92px; height:87px}
+						.photobit{width:87px; height:87px}
+					li.clear_ul{float:none; clear:both}
+		/*Les boutons imprimer, recommander et favoris*/			
+		.produit_boutons{height:25px; padding:13px 0 0 6px}
+			.produit_imprimer{float:left; width:75px}
+			.produit_recommander{float:left; width:139px; height:19px; padding-left:10px; background:url('images/boutons_sep.jpg') no-repeat}
+			.produit_favoris{float:left; width:121px; height:19px; padding-left:10px; background:url('images/boutons_sep.jpg') no-repeat}
+		.jaime{float:right; width:65px; height:22px; overflow:hidden}
+		
+	/*colonne milieu : détails*/
+	.produit_m{float:left; width:335px;	padding:0 0 0 12px}
+		.produit_lib{line-height:1.4em; font-size:16px; font-weight:bold; text-transform:uppercase; color:#076BEA}
+		.produit_lib2{line-height:normal; font-size:16px; color:#4F5356}
+		.produit_logomarque{height:67px; padding-top:5px}
+		.produit_desc{line-height:1em}
+		
+	/*colonne droite : formulaire*/			
+	.produit_d{float:right; width:240px; margin-right:7px; color:#534441}
+		.produit_formu{width:210px; margin-bottom:13px; padding:38px 13px 14px 14px; background:url('images/commander.jpg') no-repeat #F4F4F4}
+			/*Caracteristiques*/
+			.produit_caracts{padding-top:20px}
+				.produit_caracts table td{padding-bottom:5px}
+			/*Qté*/
+			.produit_qte{padding-bottom:5px}
+				.input_qte{width:17px; height:17px; margin:0; padding:0 5px 0 0; border:solid 1px #ACAEBA; text-align:right; line-height:17px}
+			/*Stock*/
+			.produit_enstock{padding-bottom:5px}
+			.produit_epuise{padding-bottom:5px}
+					.produit_enstock img, .produit_epuise img{vertical-align:middle}
+			/*Délai*/
+			.produit_delai{padding-bottom:5px}
+			/*Prix*/
+			.produit_prix{height:35px; padding-top:10px}
+				.produit_prixold{padding-right:5px; font-size:15px; text-decoration:line-through}
+				.produit_prixpromo{font-size:24px; font-weight:bold; color:#066BEA}
+			/*paiement securise*/
+			.produit_paiementsec{padding-top:8px}
+			
+		/*Telechargement pdf*/
+		.telechargement{width:240px; margin-bottom:13px; padding-top:34px; background:url('images/telechargement.jpg') no-repeat #F4F4F4}
+			.telechargementBit{width:240px; height:54px; border-top:solid 2px #D6D6D8}
+				.telechargementBit_g{float:left; width:33px; height:43px; padding:10px 0 0 12px; border-top:solid 1px #fff}
+				.telechargementBit_d{float:left; width:195px; height:43px; padding-top:10px; border-top:solid 1px #fff}
+					.pdf_txt{height:15px; font-weight:bold; color:#242527}
+					
+/*Classeur*/
+.classeur{height:31px; cursor:pointer}
+	#dossier1.dossier_close{float:left; width:210px; height:31px; margin-left:11px; background:url('images/btn_desc.jpg') repeat-y 0 0}
+	#dossier1.dossier_open{background:url('images/btn_desc.jpg') repeat-y 0 -31px}
+	#dossier2.dossier_close{float:left; width:118px; height:31px; margin-left:5px; background:url('images/btn_avis.jpg') repeat-y 0 0}
+	#dossier2.dossier_open{background:url('images/btn_avis.jpg') repeat-y 0 -31px}
+	#dossier3.dossier_close{float:left; width:256px; height:31px; margin-left:6px; background:url('images/btn_prodcompl.jpg') repeat-y 0 0}
+	#dossier3.dossier_open{background:url('images/btn_prodcompl.jpg') repeat-y 0 -31px}
+	.hautdepage{float:right; width:115px; padding-right:7px}
+.dossier_content{width:956px; margin-left:6px; padding:10px; background-color:#FFF; border:solid 2px #D2D2D2}
+	.dossier_txt{height:295px; min-height:180px; /*overflow:hidden; padding-right:10px*/}
+	
+/*Articles complementaires*/
+.dossier_articlescompl{width:968px; height:355px; margin-left:6px; padding:12px 3px 12px 5px; background-color:#FFF; border:solid 2px #D2D2D2; position:relative; z-index:100}
+	.laselection_txt{height:20px; padding-left:7px; font-size:15px; font-family:'openSansBold', Arial, sans-serif; color:#161616; text-transform:uppercase}
+	.btn_pageprec{position:absolute; top:167px; left:-51px; width:42px; height:42px}
+	.btn_pagesuiv{position:absolute; top:167px; right:-51px; width:42px; height:42px}
+		.dossier_articlescompl .selection_carrousel{float:left; width:968px; height:355px; position:relative; left:0; top:0; overflow:hidden}
+			.dossier_articlescompl .selectionBit{float:left; width:242px; height:355px}
+
+/*---------- @ETAPES DE COMMANDE ----------*/
+.etapescommande{width:522px; height:120px; margin:0 auto}
+	.etape1{float:left; width:64px}
+	.etape2{float:left; width:94px; margin:0 70px 0 66px}
+	.etape3{float:left; width:64px; margin-right:72px}
+	.etape4{float:left; width:92px}
+
+/*---------- @ETAPE 1 ----------*/
+.divers{width:950px; height:300px; margin:0 auto; padding:15px 0 20px 0}
+html>body ..divers{min-height:300px; height:auto}
+	.divers_titre{padding-bottom:15px; font-size:18px; font-family:'CaviarDreamsBold', Arial, sans-serif; text-align:center; text-transform:uppercase}
+	.divers_titreBis{padding-bottom:15px; font-size:16px; font-family:'CaviarDreamsBold', Arial, sans-serif; text-transform:uppercase}
+	.tablecde, .tablemoyen{width:100%; margin-bottom:10px; border:solid 1px #E51551}
+		.tdheadcde{height:30px; background-color:#E51553; border-right:dashed 1px #fff; border-bottom:solid 1px #E51551; text-align:center; font-size:13px; font-weight:bold; color:#fff}
+		/*Bits lignes panier*/
+		.cde_td1{padding:5px 0; border-bottom:dashed 1px #E51551; border-right:dashed 1px #E51551}
+		.cde_td2{padding:5px 0; background-color:#EAECF0; border-bottom:dashed 1px #E51551; border-right:dashed 1px #E51551}
+		.cde_tddelete1, .cde_tddelete2{padding:10px 0; border-bottom:dashed 1px #E51551}
+		.cde_tddelete2{ background-color:#EAECF0}
+			.cde_td1 a,.cde_td2 a {color:#1A1A1A; font-weight:bold}
+			.lignepanier_ima{width:50px; height:75px; padding:0 10px}
+			.datedelai{font-style:italic; color:#000; font-size:10px}
+			.tablecaracts {padding-left:10px}
+				.tablecaracts td{padding-bottom:5px}
+					.tablecaracts select{width:120px}
+				
+			.inputqte2 {width:25px; margin-right:5px; padding:3px; background-color:#8F1548; border:0 none; text-align:right; font:italic normal bold 12px Arial; color:#FFF}
+			.input_perso{width:50px; padding:3px 0 3px 3px; border:0 none; text-align:right}
+			
+		.erreur_stock{height:30px; padding-right:5px; border-top:dashed 1px #E51551; color:#A11B5A; text-align:center; font-weight:bold; color:#BB3B30}
+		/*Personnalisation**/
+		.cde_perso{height:30px; background-color:#BBC1CE; text-align:center}
+		/*Fin bits ligne panier*/
+
+		/*Ligne code cadeau*/	
+		.lignecadeau{height:30px; padding-right:10px; background-color:#8F1548; text-align:right; font-weight:bold; color:#fff}
+		.etapescde_divers{padding:15px 0}
+			.etapescde_diversG{width:500px; float:left}
+				/*Modes de livraison*/
+				.modes_livr, .remisePro{width:400px; padding:10px; margin-bottom:6px; background-color:#FFF; border:1px solid #E51551}
+					.cde1livraison select{margin-left:15px}
+					.modelivraisonBit{padding-bottom:5px}
+						.livr_logo{width:50px; height:50px; background-color:#FFF; border:solid 1px #1A1A1A; text-align:center}
+						.livr_txt{padding-left:10px}
+						.tab_remises_pro{border:solid 1px #000; width:300px}
+							.remise_pro_bit{width:305px; float:left; font-size:14px; font-weight:bold; margin:2px}
+							.remise_pro_bit_active{width:305px; float:left; color:#A11B5A; font-weight:bold; font-size:14px; margin:2px}
+			
+			.etapescde_diversD{width:370px; float:right}
+				.totaux{margin-bottom:12px; padding:10px; background-color:#FFF; border:1px solid #E51551}
+					.tot{font-weight:bold; color:#1a1a1a}
+					.totttc{height:30px; padding-top:20px; border-top:dashed 1px #1A1A1A; font-size:16px; font-weight:bold; color:#1A1A1A}
+						.totbis{color:#E51553}
+					.reduction img{vertical-align:middle}
+					
+				.cgv{margin-bottom:6px; padding:5px 10px; background-color:#8F1548; text-align:left; color:#fff; font-weight:bold}
+					.cgv a{color:#fff}
+				
+		.cdeboutonsg{width:50%; float:left; padding-top:30px}
+		.cdeboutonsd{width:50%; float:right; text-align:right}
+			.cdeboutonsd .btn_form{float:right}
+
+/*---------- @ETAPE 2 ----------*/
+.inscrit{float:left; width:40%; margin:20px auto 50px auto; padding:0; border:1px solid #E51551;}
+	.titre_divers, .titre_diversbis, .titre_diversbis2{width:252px; height:28px; margin:0 auto; background-color:#E51553;  border:1px solid #E51551; text-align:center; line-height:28px; position:relative; top:-18px; font-size:14px; font-weight:bold; color:#fff}
+	.titre_diversbis{width:302px}
+	.titre_diversbis2{width:750px; top:-25px;}
+		
+.inscription, .recoverpass{float:right; width:50%; margin:20px auto 0 auto; padding:0; border:1px solid #E51551}
+.inscription{width:55%}
+.recoverpass{height:260px}
+html>body .recoverpass{min-height:260px; height:auto}
+	a.mdp_perdu{font:normal small-caps normal 11px Arial; text-decoration:underline}
+	.mdp_info{padding-left:60px; text-align:left; color:#E51551; font-weight:bold; font-style:italic}
+
+.connecte{margin:30px auto 20px auto; padding:10px 0; border:1px solid #E51551}
+.connecte_bis{width:60%; margin:30px auto 20px auto; padding:10px 0; border:1px solid #E51551}
+	.connecte_sep{background:url('images/pointille_v.gif') repeat-y center top}
+		.bloc_g{float:left; width:380px; padding:30px 0 0 20px}
+		.bloc_d{float:right; width:400px; padding:30px 20px 0 0}
+
+/*---------- @ETAPE 3 ----------*/
+	.btn_imprimer{padding-top:10px}
+	/*encart mode paiement*/
+	.moyen_logo{width:102px; padding:15px}
+		.moyen_logo a{display:block; width:100px; height:60px; border:solid 1px #1A1A1A; background-color:#FFF; text-align:center}
+	.moyen_details{padding:15px 10px}
+		.moyen_details ol{list-style-position:inside}
+	.moyen_bouton{padding:15px}
+		
+/*---------- @ETAPE 4 ----------*/
+.cde4_content{padding:15px 0; border:1px solid #E51551}
+	.cde4_details{float:left; width:490px; padding:20px; background:url('images/pointille_v.gif') repeat-y right 0; text-align:right}
+		.factmontant{font-weight:bold; color:#4D4D4D}
+		.cde4_details blockquote{margin:0; padding:10px 0}
+	.cde4_btn{float:left; width:250px; padding:20px; text-align:left}
+	
+/*---------- @RECHERCHER PAGE ----------*/
+.cadre_g{width:400px; margin:20px 0 0 0; float:left}
+	.bordure_cadre_g{margin-bottom:20px; background-color:#FFF; border:1px solid #E51551}
+		html>body .bordure_cadre_g form{min-height:250px; height:auto}
+			.txt_rech{width:202px; height:28px; margin:0 auto; background-color:#E51553; border:1px solid #E51551; text-align:center; line-height:28px; font-size:14px; font-weight:bold; color:#fff; position:relative; top:-16px}
+			.bordure_cadre_g td{padding:0 0 5px 10px}
+		
+.cadre_d{width:300px; margin:20px 0 20px 0; padding-bottom:1px; float:right}
+	.bordure_cadre_d{height:83px; background-color:#FFF; border:1px solid #E51551}
+	html>body .bordure_cadre_d{height:auto; min-height:83px}
+		.bordure_cadre_d ul{width:268px; padding:0 10px 10px 15px; overflow:hidden; list-style:none}
+			.bordure_cadre_d ul li a{display:block}
+			
+/*Pages résultat rayons et pages instits*/
+.rechcontenubit{width:775px; height:140px; font-style:italic}	
+	.blocdivers_d1, .blocdivers_d2{width:749px; height:108px; padding:10px; border:1px solid #E51551; border-left:solid 5px #E51551}
+
+/*navigation des pages*/	
+.nosarticles_navigation, .nosrayons_navigation, .nospages_navigation{padding-bottom:10px; font:italic normal bold 14px Arial; color:#1A1A1A}
+	.nosarticles_navigation h2, .nosrayons_navigation h2, .nospages_navigation h2{display:inline; font:italic normal bold 12px Arial;}
+		.nosarticles_navigation h2 a, .nosrayons_navigation h2 a, .nospages_navigation h2 a{font:italic normal bold 14px Arial; color:#1A1A1A; text-decoration:none}
+		.nosarticles_navigation h2 a:hover, .nosrayons_navigation h2 a:hover, .nospages_navigation h2 a:hover{text-decoration:underline; font-size:14px}
+	.nosarticles_navigation a, .nosrayons_navigation a, .nospages_navigation a{font:italic normal bold 14px Arial; color:#1A1A1A; text-decoration:underline}
+	.nosarticles_navigation a:hover, .nosrayons_navigation a:hover, .nospages_navigation a:hover{text-decoration:none}
+	
+/*---------- @PAGE MARQUES ----------*/
+.marqueLogo{float:left; width:150px; margin-bottom:20px; padding:0 10px}
+.marqueLogo_2{margin:0 30px 20px 30px}
+.marqueLogo_4{float:right}
+	.marqueLogo_ima, .marqueLogo_libBis{width:150px; height:125px; background:#fff; border:1px solid #E51551}
+	.marqueLogo_libBis table{width:150px; height:125px; background:#fff; text-align:center}
+		.marqueLogo_libBis table a{font-size:18px; color:#D50050}
+	.marquedesc{background:#282725;height:120px;overflow:auto;padding:10px;}
+	.marqueLogo_lib{width:150px; height:20px; line-height:30px}
+		.marqueLogo_lib a{font-weight:bold; color:#D50050}
+	.marqueLogo_nb{height:15px; padding-left:2px; background:url('images/puceGris_droite.gif') no-repeat 0 5px; font-style:italic}
+	
+/*---------- @PAGE CLIENT ----------*/
+	.tablemenu{width:100%; padding:15px; text-align:left}
+	.tablecde_client{width:100%; height:30px}
+	.bordurecarnet{width:300px; margin:0 auto 50px auto; border:1px solid #E51551}
+	.bordureG{float:left; width:300px; margin-bottom:50px; border:1px solid #E51551}	
+	.bordureD{float:right; width:300px; margin-bottom:50px; border:1px solid #E51551}
+	.cde_td2_bis{padding:10px 0; background-color: #EAECF0; border-bottom:dashed 1px #1A1A1A; color:#E51553}
+
+/*---------- @PAGES GENERALES ----------*/
+	/*Instit*/
+	.instit{padding:0 20px}
+		.instit p{margin:0; padding:0; text-align:justify}
+	.institform{width:70%; margin:0 auto; padding:20px 0; text-align:center}
+		.nom_formu, .lib_14{font-size:14px; font-weight:bold}
+		
+	.pagedivers{margin-left:20px; padding-bottom:20px; background-color:#fff; color:#666}
+
+	/*Partenaires*/
+	.liens{padding:10px;}
+		.lienBit{float:left; width:250px; margin-bottom:5px; padding:20px; background-color:#FFF; border:1px solid #E51551}
+			#conteneur .lienBit_lib{text-decoration:underline}
+	/*Plan*/
+	.plan_g{float:left; width:442px}
+		/*rayons de la boutique*/
+		.rayonBit_niv1{float:left; width:120px; margin:0 0 10px 0}
+		.rayonBit2{margin:0 0 10px 20px}
+		.rayonBit3{float:right}
+	.plan_d{float:right; width:300px}
+		.menuplanBit, .menuplanBit_boutique{margin-bottom:50px; padding:20px; border:1px solid #E51551; text-align:left}
+		.menuplanBit_boutique{width:400px}
+			.titre_plan, .titre_planboutique{width:258px; height:28px; margin:0 auto; background-color:#E51553;  border:1px solid #E51551;text-align:center; line-height:28px; font-size:14px; font-weight:bold; color:#fff; position:relative; top:-36px}
+			.titre_planboutique{width:360px}
+			
+/*---------- @PARRAINAGE ----------*/
+.parrain_g{float:left; width:480px; margin:20px auto 0 auto; padding:10px; border:1px solid #E51551}
+.parrain_d{float:right; width:380px; margin:20px auto 0 auto; padding:10px; border:1px solid #E51551}
+
+/*---------- @DIVERS ----------*/
+.ventesflash_vide{padding:20px 0; text-align:center; font-weight:bold; color:#BB3B30}
+.flash_g{float:left; width:320px; margin:20px auto 0 auto; padding:20px; border:1px solid #E51551}
+.flash_d{float:right; width:480px; margin:20px auto 0 auto; padding:10px; border:1px solid #E51551}
+
+
+/*---------- @MAINTENANCE ICI ----------*/

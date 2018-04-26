@@ -1,0 +1,617 @@
+/*---------- @STYLES DE BASE ----------*/
+@charset "utf-8";
+/* Page */ 
+html {font-size: 100%; /* Évite un bug d'IE 6-7.*/ } 
+body { 
+	margin:0; 
+	padding:0;
+	/*background-color: #D6E9F7;*/
+	text-align:center;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 1.2em; /*À adapter au design.*/ 
+	color:#5A4C4B
+} 
+body.recommander {background:none}
+
+/* Titres */ 
+h1, h2, h3, h4, h5, h6 { 
+  margin:0; /* Rapproche le titre du texte.*/ 
+  line-height:1.2em; 
+  font-weight:normal; /* Valeur par défaut.*/ 
+  font-style:normal; 
+} 
+h1 {font-size:1.75em} 
+h2 {font-size:1.5em} 
+h3 {font-size:1em} 
+h4 {font-size: 1em} 
+ 
+/* Listes */ 
+ul, ol { 
+  margin:0; 
+  padding:0; 
+  list-style:none;
+}
+li{list-style:none;}
+
+/* Paragraphes */ 
+p { margin: .75em 0; /*Marges plus faibles que par défaut.*/} 
+address { margin: .75em 0; font-style: normal} 
+blockquote{margin:0; padding:5px}
+
+/* Liens */ 
+a {text-decoration:none; color:#5A4C4B} 
+a:link, a:visited , a:hover, a:focus, a:active {text-decoration:none; outline:none}
+#conteneur a:hover {text-decoration:underline} 
+
+/*Pas de bordure autour des images dans les liens */ 
+a img {border: none} 
+ 
+/*Divers éléments de type en-ligne*/ 
+em {font-style: italic} 
+strong {font-weight:bold} 
+ 
+/*Formulaires*/ 
+form, fieldset {margin: 0; padding: 0; border: none} 
+input, button, select {vertical-align:middle; font-size:12px; font-family:Arial, Verdana, Helvetica, sans-serif; color:#5A4C4B; line-height:1em;/* Solution pb. d'alignement.*/ }
+textarea{color:#5A4C4B}
+
+/*Tableaux*/
+table{border:0}
+
+/*---------- @DIVERS ET UTILITAIRES ----------*/
+/** Sablier **/
+.ajax-loader {background:url('images/ajax-loader.gif') no-repeat center top; height:200px}
+
+/** JQUERY VALIDATE ET FORMULAIRES**/
+label.errorForm  {color:#BB3B30;display:none;font-size:10px}
+label {cursor:pointer}
+input.errorForm, select.errorForm, textarea.errorForm {border:2px solid #BB3B30}
+input.validForm, select.validForm, textarea.validForm {border:2px solid #A8B408; background-color:#F0ECE9}
+.input_txt, .textarea_txt, .txt_cnx{width:200px; padding:4px; background-color:#F0ECE9; border:solid 2px #D4C5C2}
+.input{width:200px; padding:4px; background-color:#FFF; background-color:#F0ECE9; border:solid 2px #D4C5C2}
+.textarea{width:200px; height:80px; padding:4px; background-color:#F0ECE9; border:solid 2px #D4C5C2}
+.champform input, .champform textarea{width:240px; padding:4px; background-color:#F0ECE9; border:solid 2px #D4C5C2}
+.textarea_produit{width:240px; padding:4px; border:solid 2px #D4C5C2; background-color:#F0ECE9;  color:#5A4C4B}
+
+/*Divers*/
+.clear{clear:both}
+.etoile{color:#BB3B30}
+.erreur{text-align:center; color:#BB3B30; font-weight:bold}
+.stat{display:none}
+#contenupage .souligner, #contenupage .souligner:hover{text-decoration:underline}
+.cadre{width:70%; margin:0 auto 15px auto; padding:20px; border:solid 2px #5A4C4B; text-align:center}
+.popup_alerte{margin-top:20px; height:120px; background-color:#FFF; border:solid 2px #D4C5C2; text-align:center; font-style:italic; font-size:14px; color:#BB3B30}
+.texteperso{padding:15px 0; font-style:italic; color:#8F8784;}
+.texteperso_panier{padding:15px 0; font-style:italic; font-weight:bold}
+
+.titrebloc{font-weight:bold; color:#5A4C4B}
+.td_alt1{padding:10px; background-color:#F0ECE9}
+.td_alt2{padding:10px; background-color:#EBE7E4}
+.alt1{background-color:#F0ECE9}
+.alt2{background-color:#EBE7E4}
+	#conteneur .divers_lib{display:block; margin-bottom:10px; font-weight:bold; text-decoration:underline}
+.td_gras{text-align:right; font-weight:bold}
+
+/*Bordures et pointillés*/
+.pointille_haut{background:url('images/pointille_h.jpg') repeat-x}
+.pointille_bas{background:url('images/pointille_h.jpg') repeat-x left bottom}
+.pointille_vertical{background:url('images/pointille_v.jpg') repeat-y center top}
+.bordure{border:solid 2px #5A4C4B}
+	.bordure_h{border-top:solid 2px #5A4C4B}
+	.bordure_d{border-right:solid 2px #5A4C4B}
+	.bordure_b{border-bottom:solid 2px #5A4C4B}
+	.bordure_g{border-left:solid 2px #5A4C4B}
+	
+/*Arrondis à 5px*/
+.arrondi{-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px; border-radius:5px}
+/*arrondis du haut*/ 
+.arrondi_hgd{-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0} 
+.arrondi_hg{-moz-border-radius:5px 0 0 0;-o-border-radius:5px 0 0 0;-webkit-border-radius:5px 0 0 0; border-radius:5px 0 0 0} 
+.arrondi_hd{-moz-border-radius:0 5px 0 0;-o-border-radius:0 5px 0 0;-webkit-border-radius:0 5px 0 0; border-radius:0 5px 0 0}
+/*arrondis du bas*/
+.arrondi_bgd{-moz-border-radius:0 0 5px 5px;-o-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px} 
+.arrondi_bd{-moz-border-radius:0 0 5px 0;-o-border-radius:0 0 5px 0;-webkit-border-radius:0 0 5px 0; border-radius:0 0 5px 0} 
+.arrondi_bg{-moz-border-radius:0 0 0 5px;-o-border-radius:0 0 0 5px;-webkit-border-radius:0 0 0 5px; border-radius:0 0 0 5px} 
+ /*arrondis cote droite en haut et bas*/
+.arrondi_dhb{-moz-border-radius:0 5px 5px 0;-o-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0}
+ /*arrondis cote gauche en haut et bas*/
+.arrondi_ghb{-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;-webkit-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px}
+
+/*Arrondis à 2px*/
+.arrondi2{-moz-border-radius:2px;-o-border-radius:2px;-webkit-border-radius:2px; border-radius:2px}
+/*arrondis du haut*/ 
+.arrondi2_hgd{-moz-border-radius:2px 2px 0 0;-o-border-radius:2px 2px 0 0;-webkit-border-radius:2px 2px 0 0; border-radius:2px 2px 0 0} 
+.arrondi2_hg{-moz-border-radius:2px 0 0 0;-o-border-radius:2px 0 0 0;-webkit-border-radius:2px 0 0 0; border-radius:2px 0 0 0} 
+.arrondi2_hd{-moz-border-radius:0 2px 0 0;-o-border-radius:0 2px 0 0;-webkit-border-radius:0 2px 0 0; border-radius:0 2px 0 0}
+/*arrondis du bas*/
+.arrondi2_bgd{-moz-border-radius:0 0 2px 2px;-o-border-radius:0 0 2px 2px;-webkit-border-radius:0 0 2px 2px; border-radius:0 0 2px 2px} 
+.arrondi2_bd{-moz-border-radius:0 0 2px 0;-o-border-radius:0 0 2px 0;-webkit-border-radius:0 0 2px 0; border-radius:0 0 2px 0} 
+.arrondi2_bg{-moz-border-radius:0 0 0 2px;-o-border-radius:0 0 0 2px;-webkit-border-radius:0 0 0 2px; border-radius:0 0 0 2px} 
+ /*arrondis cote droite en haut et bas*/
+.arrondi2_dhb{-moz-border-radius:0 2px 2px 0;-o-border-radius:0 2px 2px 0;-webkit-border-radius:0 2px 2px 0; border-radius:0 2px 2px 0}
+ /*arrondis cote gauche en haut et bas*/
+.arrondi2_ghb{-moz-border-radius:2px 0 0 2px;-o-border-radius:2px 0 0 2px;-webkit-border-radius:2px 0 0 2px; border-radius:2px 0 0 2px}
+
+/*Couleurs*/
+.vert{color:#ACB50E}
+.vert_pomme{#92C63E}
+.bleu_ciel{color:#4AB3AF}
+.bleu_marine{color:#C352C8}
+.orange{color:#F7B030}
+.violet{color:#C352C8}
+.gris{color:#B7B7B7}
+.grisfonce{color:#8C878B}
+.orange{color#E8B921}
+.rouge{color:#BB3B32}
+.marron{color:#554343}
+.rose{color:#DB3A66}
+
+
+
+/*Marges extérieurs et interieures*/
+.marginBas_15{margin-bottom:15px}
+
+
+
+
+/*---------- @GROUPE STRUCTURE ----------*/
+#page{width:1550px; margin:0 auto; /*background:url('images/page_bg.jpg') no-repeat center top;*/ position:relative; z-index:0}
+	#skin{position:absolute; z-index:0; left:0; top:0; width:1550px; height:815px}
+	.facebook_twitter_FR{position:absolute; left:0; top:168px; z-index:1; width:28px; height:119px; padding:0 11px 0 0; background:url('images/facebooktwitter_FR.png') no-repeat right top; text-align:right}
+		.facebooktwitter{position:relative; width:100%; height:100%}
+			.facebook{position:absolute; right:0; top:0; width:22px; height:35px; padding-top:41px}
+			.twitter{position:absolute; right:0; top:75px; width:22px; height:22px}
+
+	html>body #skin{min-height:815px; height:auto}
+	#conteneur{width:990px; margin:0 auto; text-align:left; position:relative; z-index:1}
+		#header{width:980px; padding:0 5px; background:url('images/cadre_m.png') repeat-y;}
+		.header_index{height:140px; background:url('images/header_bg.png') no-repeat; position:relative; z-index:10}
+		#conteneur_carrousel{width:980px; height:399px; padding:0 5px}
+		#contenupage{width:990px; height:412px; background:url('images/cadre_m.png') repeat-y; position:relative; z-index:10}
+		html>body #contenupage{min-height:412px; height:auto}
+		#footer{width:980px; padding:0 5px; background:url('images/cadre_m.png') repeat-y; color:#8F8784}
+		
+
+/*---------- @HEADER ----------*/
+.phraseadmin{height:20px; padding-left:7px; line-height:20px; background-color:#EFEEEC; font-size:11px; color:#908782}
+.logo{float:left; width:360px; height:67px; padding:12px 0 0 25px; overflow:hidden}
+.menudivers{float:right; width:595px}
+	.menudivers_h{height:29px}
+		.tel_contact{float:left; width:215px; height:21px; padding-top:8px}
+		.drapeaux{float:left; width:58px; height:22px; padding-top:4px; background-color:#F1EDEC; text-align:center}
+		.contact_compte{float:left; width:148px; height:24px; padding:2px 0 0 7px; color:#E2D8D6}
+		.monpanier{float:left; width:167px; height:23px; padding-top:3px}
+			#header .monpanier a:hover{text-decoration:none}
+
+	.menudivers_b{height:40px}
+		.recherche{float:left; width:310px; height:27px; padding-top:13px}
+			.recherche table{height:27px}
+				.input_rech{width:242px; height:25px; margin:0; padding-left:30px; background:url('images/loupe.jpg') no-repeat 5px 0 #EBE7E4; border:none; line-height:25px}
+		.liens_tops{float:left; width:275px; height:25px}
+			.lien_topnouv{float:left; width:62px; height:25px; padding:0 11px 0 9px; background-color:#938882}
+			.lien_toppromo{float:left; width:62px; height:25px; margin:0 5px; padding:0 11px 0 9px; background-color:#938882}
+			.lien_cdc{float:left; width:79px; height:25px; padding:0 11px 0 9px; background-color:#938882}
+		
+/**Onglets**/
+.onglets{clear:both; width:973px; height:35px; padding-left:7px; background-color:#554343; position:relative; z-index:3000}
+	.onglet_nosambiances{position:absolute; right:82px; top:-9px; z-index:10; width:85px; height:54px}
+	.onglet_nosmarques{position:absolute; right:6px; top:-9px; z-index:10; width:76px; height:54px}
+	.onglets table{/*width:973px;*/ height:35px}
+		/*Autres onglets*/
+		td.onglet_accueil{width:25px; height:26px; padding-top:9px}
+		/*Bits*/	
+		td.ongletBit{height:35px; background:url('images/onglet_sep.jpg') no-repeat; padding:0 10px}
+			a.ongletBit_lib{font-weight:bold; text-transform:uppercase; color:#FFF}
+			img.onglet_puce{position:relative; left:0; top:-2px}
+				/*Menu déroulant*/
+				.ssmenu{position:absolute; left:0; top:35px; width:940px; height:160px; padding:10px; border:solid 10px #EBE7E4}
+					.ssmenu_g{float:left; width:702px; height:160px}
+						h1.ssmenu_lib{height:29px; margin-bottom:5px; padding-left:21px; background:url('images/puce_ssmenuLib.png') no-repeat 7px 12px; line-height:29px; color:#fff}
+							h1.ssmenu_lib a{font-size:26px; color:#fff}
+							h1.ssmenu_lib a{font-size:26px; color:#fff}
+							#header h1.ssmenu_lib a:hover{text-decoration:none}
+							.ssmenu_nbart{padding-left:5px; font-size:12px}
+						/*Sous-rayons*/
+						.ssmenu_ssrayons{float:left; width:550px; height:127px}
+							.ssmenu_ssrayons ul{height:127px}
+								li.ssmenu_ssrayonBit{float:left; width:158px; height:23px; margin-bottom:3px; padding-left:18px; background:url('images/puce_ssmenuBit.png') no-repeat 10px 9px #EBE7E4; line-height:23px}
+								li.ssmenu_ssrayonBit_2{width:160px; margin-left:10px}
+								li.ssmenu_ssrayonBit_3{float:right}
+									li.ssmenu_ssrayonBit a{font-weight:bold; color:#fff}
+							
+						/*Liens tops*/
+						.ssmenu_lienstops{float:right; width:142px; height:127px}
+							.recap_nouv, .recap_promo, .recap_cdc{height:31px; margin-bottom:3px; padding:10px 0 0 6px; background-color:#EBE7E4}
+							.recap_promo{height:30px}
+							.recap_cdc{height:30px; margin-bottom:0}
+							
+				/*Image du menu déroulant*/
+				.ssmenu_d{float:right; width:228px; height:160px}
+				
+/*---------- @BARRE DE NAVIGATION ----------*/
+.navigation{height:24px; line-height:24px; font-size:11px; color:#918881}
+	.navigation h1, .navigation h2{display:inline; font-size:11px; color:#918881}
+		.navigation a , .navigation h1 a, .navigation h2 a{color:#918881}
+
+/*---------- @FOOTER ----------*/
+.publicite{height:176px; padding:5px 25px 25px 25px}
+	.banniere_pub{float:left; width:300px; height:155px}
+	.biendanssonsalon{margin-left:15px}
+	.livraisonofferte{float:right}
+	
+/*Logos marques*/	
+.nosmarques{width:941px; height:129px; margin:0 auto}	
+	.nosmarques_entete{height:33px; background:url('images/bandeau_titre.jpg') repeat-x}	
+	.marquesLogos{width:935px; height:60px; padding:5px 2px; border:solid 1px #B7B7B7; position:relative}
+		.marquesLogos_prec{position:absolute; left:-15px; top:15px; width:6px; height:41px; cursor:pointer}
+		.marquesLogos_suiv{position:absolute; right:-15px; top:15px; width:6px; height:41px; cursor:pointer}
+		.marquesLogos_content{width:935px; height:60px; position:relative; overflow:hidden}
+			.marques_carrousel{height:60px}
+				.marques_carrousel ul{width:20000px; height:60px}
+					.marques_carrousel ul li{float:left; width:85px; height:60px; text-align:center}
+
+.bannieresInstit{width:940px; height:107px; margin:0 auto 25px auto}
+	.livraisonrapide{float:left; width:224px; height:107px; border-right:solid 1px #C5B2AC}
+	.paiementsecurise{float:left; width:225px; height:107px; padding-left:19px; border-right:solid 1px #C5B2AC}
+	/*Newsletter*/
+	.newsletter{float:left; width:226px; padding:82px 0 0 19px; background:url('images/newsletter_FR.jpg') no-repeat 19px 0; border-right:solid 1px #C5B2AC}
+		.newsletter table{height:25px}
+			.input_news{width:164px; height:25px; margin:0; padding:0 10px; background-color:#ECE8E5; border:none; line-height:25px}
+
+	.conseils{float:left; width:200px; height:107px; padding-left:19px}
+
+				
+.pages_oblig{height:36px; background-color:#554343; line-height:36px; text-align:center; color:#fff}	
+	#footer .pages_oblig a{color:#fff}	
+
+.copyright{height:36px; line-height:40px; text-align:center}	
+	.copyright a{text-decoration:underline; color:#8F8784}
+	
+.notrecatalogue{width:940px; margin:0 auto 12px auto; background:url('images/notrecatalogue_sep.jpg') repeat-y;}	
+	.notrecatalogue_entete{width:940px; height:22px; background-color:#fff}	
+	.foot_categs{float:left; width:105px; padding:0 9px}
+		.foot_categLib{height:15px; font-size:11px}
+			.foot_categLib a{text-transform:uppercase; font-weight:bold; color:#928781}
+			ul.foot_sscategs{width:105px;}
+				.foot_sscategs li {padding:0 0 3px 8px; background:url('images/puce_communcateg.jpg') no-repeat 0 3px; line-height:.95em}
+					.foot_sscategs li a{color:#928781}
+					
+.referencement{width:940px; margin:0 auto; padding-bottom:25px; text-align:center}	
+
+
+/*---------- @INDEX ----------*/
+/**Le carrousel**/
+#conteneur_carrousel{width:980px; height:405px; position:relative}
+	.carrousel_masque{width:980px; height:415px; position:absolute; left:5px; top:-6px}
+		.carrousel{width:980px; height:415px; position:relative; overflow:hidden}
+			.carrousel ul{width:20000px; height:415px}
+				/**Diapos images**/
+				li.carrouselImageBit{float:left; width:980px; height:415px}
+				/**Diapos articles **/
+				li.carrouselArticles{float:left; width:980px; height:415px}
+					.carrouselArticles_content{width:690px; height:326px; padding:58px 0 0 155px}
+						.carrouselArticleBit{float:left; width:147px; height:147px; margin:0 14px 14px 0; padding:3px 4px 5px 4px; background:url('images/carrouselArticleBit_bg.png') no-repeat; text-align:center; position:relative}
+							.carrouselArticleBit_prix{position:absolute; right:0; bottom:13px; width:102px; height:25px; padding-right:8px;  background:url('images/prix_bg.png') no-repeat; text-align:right; line-height:30px; color:#fff}
+							.carrouselArticleBit_prixold{padding-right:5px; font-size:11px; text-decoration:line-through}
+				
+	/**Boutons**/
+	.btn{position:absolute; left:0; bottom:9px; z-index:20;  width:100%; height:16px}
+		#conteneur .btn table{height:16px}
+			/**Boutons au repos**/
+			.btn_prev, .btn_next{width:19px; height:12px}
+			.btn_1 a, .btn_2 a, .btn_3 a, .btn_4 a{display:block; width:12px; height:12px; background:url('images/btn.png') no-repeat}
+			/*Hover sur les boutons*/
+			.btn_1 a:hover,.btn_2 a:hover,.btn_3 a:hover,.btn_4 a:hover{background:url('images/btn_over.png') no-repeat}
+				
+			/**Boutons à l'action par jquery**/
+			.btn_1_over a, .btn_2_over a, .btn_3_over a, .btn_4_over a,
+			.btn_1_over a:hover, .btn_2_over a:hover, .btn_3_over a:hover, .btn_4_over a:hover{display:block; width:12px; height:12px; background:url('images/btn_over.png') no-repeat}
+			
+
+/*---------- @CATEGORIE ----------*/
+/***Colonne gauche : Les facettes***/
+.gauche{float:left; width:175px; border-right:solid 1px #D3C5C2}
+	.facettes{width:156px; margin:0 auto}
+		.facettes_entete{height:64px}
+		/*Les facettes*/
+		.facette_lib{height:25px}
+		.facette_ul{padding-bottom:23px}
+			.facette_ul li{padding-bottom:4px; cursor:pointer}
+				.facette_li a{display:block; padding-left:13px; background:url('images/facetteCheck.jpg') no-repeat 0 3px; color:#5A4C4B}
+				.facette_li a:hover{text-decoration:underline}
+				/**Facette sélectionnée**/
+				a.selectFacetteCollection, a.selectFacetteTypeProduit, a.selectFacetteMarque, a.selectFacetteCaractval,
+				a.selectFacetteCaractval{background:url('images/facetteChecked.jpg') no-repeat 0 3px; font-weight:bold; color:#F04593}
+				
+		/*Prix*/
+		#prixmin, #prixmax {width:25px; background:#fff; border:none; color:#1a1a1a; text-align:right}
+			
+		/*reinitaliser*/			
+		.reinit{}
+		
+/***Colonne droite : Les details du rayon et ses articles***/
+.droite{float:left; width:804px}
+	/*Categ image*/
+	.categ_ima{height:175px}
+	
+	/*Categ lib et description*/
+	h2.categ_lib{padding-bottom:10px; font-size:12px; font-weight:bold; text-transform:uppercase}
+	.categ_desc{padding-bottom:15px; color:#8D888C}
+	
+	/*les articles*/
+	.articles_txt{float:left; width:370px; height:32px; font-weight:bold; text-transform:uppercase}
+	.parpage{float:right; width:300px; height:32px; color:#8D888C}
+		.parpage table{height:22px; border-spacing:2px}
+			.parpage table td.parPageBitEnCours{height:22px; padding:0 3px; background-color:#8D888C; font-weight:bold; color:#fff}
+				.parpage table td.parPageBitEnCours a{color:#fff}
+	
+	.articleBit{float:left; width:181px; height:315px; text-align:center}
+		.articleBit_ima{width:180px; height:230px; border-right:solid 1px #D2CDD3; position:relative; z-index:0}
+		.articleBit_4 .articleBit_ima{border:none}
+		.articleBit_ima .etiquette{left:10px; width:160px; height:235px}
+			.articleBit_ima .etiquette a{display:block; width:160px; height:235px; background:url('images/etiquette_transparent2.gif') no-repeat}/*gif transparent pour corriger bug bizarre sous IE*/
+		.articleBit_ima .etiquette_pctpromo{right:10px}
+		.articleBit_ima .zoomImage{left:20px; top:0; width:140px; height:230px}
+		h3.articleBit_lib{width:140px; height:32px; margin:0 auto; padding-top:8px; font-size:12px}
+		.articleBit_prixpromo{font-weight:bold; color:#F33B85}
+		.articleBit_prixold{padding-right:5px; text-decoration:line-through}
+	
+	/*Pagination*/
+	.pagination{width:725px; height:44px; color:#8C878B}
+		.pageprec{float:left; width:120px; height:20px}
+		.pagesuiv{float:right; width:105px; height:20px}
+		
+		.pages{float:right; width:474px; height:20px; padding-right:24px}
+			.pages a{color:#8C878B}
+			.encours{height:20px; padding:0 7px; background-color:#8D888C; color:#FFF; font-weight:bold}
+
+
+/*---------- @PRODUIT ----------*/
+.produit{padding-bottom:35px; position:relative}
+	.produit_partage{position:absolute; left:368px; top:547px; width:105px; height:16px; text-align:right; overflow:hidden}
+	.produit_g{float:left; width:480px}
+		.produit_pagenav{width:458px; height:22px; margin-bottom:17px; border-bottom:solid 1px #C6C6C6}
+			.produitprec{float:left; width:143px; height:14px; border-right:solid 1px #DCDADB}
+			.produitsuiv{float:right; width:129px; height:14px; border-left:solid 1px #DCDADB; text-align:right}
+			.produitretour{float:left; width:184px; height:14px; text-align:center}
+		#contenuPhotos{width:458px; margin-bottom:11px; border-bottom:solid 1px #C6C6C6; position:relative; z-index:100}
+			.photos{float:left; width:123px; margin-bottom:5px}
+				.photoBit{width:105px; height:152px; margin-bottom:10px; border:solid 1px #fff}
+				.photoBit_selected{width:105px; height:152px; margin-bottom:10px; border:solid 1px #C6C6C6}
+			.produit_ima{float:right; width:335px; height:493px; margin-bottom:5px; position:relative; z-index:0}
+				.produit_zoom{position:absolute; right:0; bottom:0; text-align:right}
+		
+		.produit_boutons{clear:both; height:52px; }
+			.produit_imprimer{float:left; width:75px}
+			.produit_recommander{float:left; width:147px; height:15px; border-left:solid 1px #C6C6C6; border-right:solid 1px #C6C6C6; text-align:center}
+			.produit_favoris{float:left; width:138px; height:15px; border-right:solid 1px #C6C6C6; text-align:center}
+			
+			
+	
+	.produit_d{float:right; width:437px}
+		/*Libéllé*/
+		h1.produit_lib{padding-bottom:9px; font-size:18px}
+		
+		/*Prix*/
+		.produit_prix{padding-bottom:9px}
+			.produit_prixold{padding-right:5px; font-size:14px; color:#8C878B; text-decoration:line-through}
+			.produit_prixpromo{font-size:18px; font-weight:bold; color:#BB3B30}
+		
+		/*Coloris*/
+		.produit_coloris{padding-bottom:9px}
+			.caract_lib{padding:3px 0}
+			.lescoloris a, .lescoloris a.coloris_selected{display:block; float:left; width:25px; height:25px; margin:0 5px 5px 0; border:solid 3px #E7E7E7}
+			.lescoloris a.coloris_selected{border:solid 3px #919191}
+		/*Tailles*/
+		.produit_caracts table td{padding-bottom:5px}
+			.choixBit, .choixBit_selected{float:left; width:30px; height:25px; margin:2px 5px 0 0; background-color:#8D888C; text-align:center; line-height:25px; color:#fff; cursor:pointer}
+			.choixBit_selected{background-color:#4D4D4D}
+		/*Qté*/
+		.produit_qte{padding-bottom:9px}
+			.input_qte{width:17px; height:17px; margin:0; padding-right:5px; border:solid 1px #ACAFB8; text-align:right; line-height:17px}
+	
+		/*Stock*/
+		.produit_enstock{color:#B4CE51}
+		.produit_epuise{color:#C2272F}
+			.enstock span{padding-right:20px}
+				.enstock span img{vertical-align:middle}
+		
+		/*Bouton formulaire*/
+		.boutons_formu{height:75px;}
+			.produit_btn{float:left; width:227px; height:71px; margin:10px 0 15px 0}
+			.jaime{float:left; width:65px; height:21px; margin-top:30px; overflow:hidden}
+		
+		/*Description, infos livraison et guide de tailles*/
+		.produit_desc{float:left; width:100px; height:30px; border:solid 1px #D2CDD3; border-bottom:none;  position:relative; z-index:0}
+			.produit_descBis{position:absolute; left:0; top:0; width:100px; height:31px; background-color:#FFF; text-align:center; line-height:30px}
+		.produit_pj{float:left; height:31px; margin-left:2px; padding:0 10px; background-color:#8C878B; text-align:center; line-height:31px; color:#FFF}
+			.produit_pj a{color:#FFF}
+		.produit_descTxt{clear:both; width:395px; height:100px; padding:20px; border:solid 1px #D2CDD3;}
+		html>body .produit_descTxt{min-height:100px; height:auto}
+
+/*Articles conseillés*/
+.articlesconseilles{width:920px; padding:25px 0 15px 0; background:url('images/pourcompleter.jpg') no-repeat}
+	.articleconseilBit{float:left; width:167px; height:300px; margin-left:21px; text-align:center}
+		.articleconseilBit_1{margin:0}
+		.articleconseilBit_5{float:right; margin:0}
+			.articleconseilBit_ima{width:155px; height:230px; padding:5px; border:solid 1px #D2CDD3; position:relative}
+				.articleconseilBit_ima .etiquette{left:-1px; z-index:200; width:167px; height:247px}
+					.articleconseilBit_ima .etiquette a{display:block; width:167px; height:247px; background:url('images/etiquette_transparent3.gif') no-repeat}/*gif transparent pour corriger bug bizarre sous IE*/
+			h3.articleconseilBit_lib{width:167px; height:31px; padding-top:6px}
+				h3.articleconseilBit_lib a{line-height:1em}
+			.articleconseilBit_prix{width:167px}
+				.articleconseilBit_prixpromo{font-weight:bold; color:#F33B85}
+				.articleconseilBit_prixold{padding-right:5px; text-decoration:line-through}
+
+/*---------- @ETAPES DE COMMANDE ----------*/
+.etapescommande{width:512px; height:100px; margin:0 auto}
+	.etape1{float:left; width:122px}
+	.etape2{float:left; width:160px}
+	.etape3{float:left; width:132px}
+	.etape4{float:right; width:98px}
+	
+
+/*---------- @ETAPE 1 ----------*/
+.contenu{height:300px; padding:15px 0}
+html>body .contenu{min-height:300px; height:auto}
+	.contenu_titre{padding-bottom:15px; font-size:16px; font-weight:bold}
+	.contenu_titreBis{padding-bottom:15px; text-align:center; font-size:16px; font-weight:bold}
+	.tablecde, .tablemoyen{width:920px; margin-bottom:10px}
+		.tdheadcde{height:60px; background-color:#5A4C4B; border-right:dashed 1px #fff; text-align:center; font-size:14px; font-weight:bold; color:#fff}
+		.cde_td1{padding:10px 0; border-bottom:dashed 1px #5A4C4B; border-right:dashed 1px #5A4C4B}
+		.cde_td2{padding:10px 0; border-bottom:dashed 1px #5A4C4B; border-right:dashed 1px #5A4C4B}
+		.cde_tddelete{padding:10px 0; border-bottom:dashed 1px #5A4C4B}
+			.cde_td1 a,.cde_td2 a {color:#5A4C4B; font-weight:bold}
+			.lignepanier_ima{width:50px; height:75px; padding:10px}
+			.datedelai{font-style:italic; color:#000; font-size:10px}
+			.tablecaracts {padding-left:10px}
+				.tablecaracts td{padding-bottom:5px}
+					.tablecaracts select{width:120px}
+				
+			.inputqte2 {width:25px; margin-right:5px; padding:3px; background-color:#5A4C4B; border:none; text-align:right; font:italic normal bold 12px Arial; color:#FFF}
+			
+		.erreur_stock{height:30px; padding-right:5px; border-top:dashed 1px #5A4C4B; border-left:solid 2px #5A4C4B; border-right:solid 2px #5A4C4B; color:#A11B5A; text-align:center; font-weight:bold; color:#A11B5A}
+
+		/*Ligne code cadeau*/	
+		.lignecadeau{height:30px; padding-right:10px; background-color:#1a1a1a; text-align:right; font-weight:bold; color:#fff}
+		
+		.etapescde_divers{padding:15px 0}
+			.etapescde_diversG{width:500px; float:left}
+				/*Modes de livraison*/
+				.modes_livr, .remisePro{width:400px; padding:10px; margin-bottom:6px; background-color:#FFF; border:solid 2px #5A4C4B}
+					.cde1livraison select{margin-left:15px}
+					.modelivraisonBit{padding-bottom:5px}
+						.livr_logo{width:50px; height:50px; background-color:#FFF; border:solid 1px #5A4C4B; text-align:center}
+						.livr_txt{padding-left:10px}
+						.tab_remises_pro{border:solid 1px #000; width:300px}
+							.remise_pro_bit{width:305px; float:left; font-size:14px; font-weight:bold; margin:2px}
+							.remise_pro_bit_active{width:305px; float:left; color:#A11B5A; font-weight:bold; font-size:14px; margin:2px}
+				/*Emballage et message cadeau*/		
+				.emballage_cadeau{width:400px; margin-bottom:6px; padding:10px; background-color:#FFF; border:solid 2px #5A4C4B}
+					.articlePanierBit{padding-bottom:10px}
+						.articlePanierBit_ima{float:left; width:60px}
+							.articlePanierBit_ima a{display:block; width:55px; height:55px; background-color:#FFF; border:solid 1px #5A4C4B}
+						.articlePanierBit_detailsG{float:left; width:190px}
+							.articlePanierBit_lib{font:italic normal bold 12px Arial, "Times New Roman", Times, serif;color:#A11B5A;}
+							.articlePanierBit_desc{padding:5px 0; font:italic normal normal 12px Arial, "Times New Roman", Times, serif;}
+							
+						.articlePanierBit_detailsD{float:left; width:150px}
+							.articlePanierBit_prixpromo{font-weight:bold; color:#A11B5A}
+							.articlePanierBit_prixold{padding-left:3px; text-decoration:line-through}
+				/*Message cadeau*/			
+				.message_cadeau{width:400px; padding:10px; margin-bottom:6px; background-color:#FFF; border:solid 2px #5A4C4B}
+					.message_txt{padding:10px 0 0 10px; font-style:italic; color:#536743}
+					.textarea_messagecadeau{width:378px; height:100px; margin-top:3px; padding:10px; background-color:#FFF; border:solid 1px #5A4C4B; font-style:italic; color:#536743}
+			
+			.etapescde_diversD{width:370px; float:right}
+				.totaux{margin-bottom:6px; padding:10px; background-color:#FFF; border:solid 2px #5A4C4B}
+					.tot{font-weight:bold; color:#EF4492}
+					.totttc{height:30px; padding-top:20px; border-top:dashed 1px #5A4C4B; font-size:16px; font-weight:bold; color:#5A4C4B}
+						.totbis{color:#EF4492}
+					.reduction img{vertical-align:middle}
+					
+				.cgv{margin-bottom:6px; padding:10px; background-color:#5A4C4B; text-align:left; color:#fff; font-weight:bold}
+					.cgv a{color:#fff}
+				
+		.cdeboutonsg{width:50%; float:left}
+		.cdeboutonsd{width:50%; height:22px; float:right; text-align:right}
+			.cdeboutonsd .btn_form{float:right}
+
+/*---------- @ETAPE 2 ----------*/
+.inscrit{float:left; width:40%; margin:20px auto 50px auto; padding:0; border:solid 2px #5A4C4B}
+	.titre_divers{width:252px; margin:0 auto; padding:1px; background-color:#5A4C4B; border:solid 2px #5A4C4B; text-align:center; position:relative; top:-15px; font-size:14px; color:#fff}
+	.titre_diversbis{width:302px; margin:0 auto; padding:1px; background-color:#5A4C4B; border:solid 2px #5A4C4B; text-align:center; position:relative; top:-15px; font-size:14px; color:#fff}
+	.titre_diversbis2{width:652px; margin:0 auto; padding:1px; background-color:#5A4C4B; border:solid 2px #5A4C4B; text-align:center; position:relative; top:-25px;  font-size:14px; color:#fff}
+		.titre_divers strong{display:block; width:230px; padding:5px 10px}
+		.titre_diversbis strong{display:block; width:280px; padding:5px 10px}
+		.titre_diversbis2 strong{display:block; width:630px; padding:5px 10px}
+		
+.inscription, .recoverpass{float:right; width:50%; margin:20px auto 0 auto; padding:0; border:solid 2px #5A4C4B}
+.recoverpass{height:260px}
+html>body .recoverpass{min-height:260px; height:auto}
+	a.mdp_perdu{font:normal small-caps normal 11px Arial; text-decoration:underline}
+	.mdp_info{padding-left:60px; text-align:left; color:#BB3B30; font-weight:bold; font-style:italic}
+
+.connecte{margin:30px auto 20px auto; padding:10px 0; border:solid 2px #5A4C4B}
+	.bloc_g{float:left; width:380px; padding:30px 0 0 20px}
+	.bloc_d{float:right; width:400px; padding:30px 20px 0 0}
+
+/*---------- @ETAPE 3 ----------*/
+	.btn_imprimer{padding-top:10px}
+	/*encart mode paiement*/
+	.moyen_logo{width:102px; padding:15px}
+		.moyen_logo a{display:block; width:100px; height:60px; border:solid 1px #5A4C4B; background-color:#FFF; text-align:center}
+	.moyen_details{padding:15px 10px}
+		.moyen_details ol{list-style-position:inside}
+	.moyen_bouton{padding:15px}
+		
+/*---------- @ETAPE 4 ----------*/
+.cde4_content{padding:15px 0; border:solid 2px #5A4C4B}
+	.cde4_details{float:left; width:490px; padding:20px; background:url(images/pointille_v.gif) repeat-y right 0; text-align:right}
+		.factmontant{font-weight:bold; color:#4D4D4D}
+		.cde4_details blockquote{margin:0; padding:10px 0}
+	.cde4_btn{float:left; width:250px; padding:20px; text-align:left}
+	
+/*---------- @RECHERCHER PAGE ----------*/
+.cadre_g{width:400px; margin:20px 0 0 0; float:left}
+	.bordure_cadre_g{height:250px; margin-bottom:20px; background-color:#FFF; border:solid 2px #5A4C4B}
+		.bordure_cadre_g form{height:250px}
+		html>body .bordure_cadre_g form{min-height:250px; height:auto}
+			.txt_rech{width:202px; margin:0 auto; padding:1px; background-color:#5A4C4B; text-align:center; font-size:16px; color:#fff; position:relative; top:-15px}
+				.txt_rech strong{display:block; width:180px; padding:5px 10px; background-color:#5A4C4B; border:solid 1px #5A4C4B}
+			.bordure_cadre_g td{padding:0 0 5px 10px}
+		
+.cadre_d{width:300px; margin:20px 0 20px 0; padding-bottom:1px; float:right}
+	.bordure_cadre_d{height:83px; background-color:#FFF; border:solid 2px #5A4C4B}
+	html>body .bordure_cadre_d{height:auto; min-height:83px}
+		.bordure_cadre_d ul{width:268px; padding:0 10px 10px 15px; overflow:hidden; list-style:none}
+			.bordure_cadre_d ul li a{display:block}
+
+/*Pages résultat rayons et pages instits*/
+.rechcontenubit{width:725px; height:140px; font-style:italic; font-size:14px}	
+	.blocdivers_d1, .blocdivers_d2{width:693px; height:108px; padding:10px; border:solid 2px #5A4C4B; border-left:solid 10px #5A4C4B}
+
+/*navigation des pages*/	
+.nosarticles_navigation, .nosrayons_navigation, .nospages_navigation{padding-bottom:10px; font:italic normal bold 14px Arial; color:#5A4C4B}
+	.nosarticles_navigation h2, .nosrayons_navigation h2, .nospages_navigation h2{display:inline; font:italic normal bold 12px Arial;}
+		.nosarticles_navigation h2 a, .nosrayons_navigation h2 a, .nospages_navigation h2 a{font:italic normal bold 14px Arial; color:#5A4C4B; text-decoration:none}
+		.nosarticles_navigation h2 a:hover, .nosrayons_navigation h2 a:hover, .nospages_navigation h2 a:hover{text-decoration:underline; font-size:14px}
+	.nosarticles_navigation a, .nosrayons_navigation a, .nospages_navigation a{font:italic normal bold 14px Arial; color:#5A4C4B; text-decoration:underline}
+	.nosarticles_navigation a:hover, .nosrayons_navigation a:hover, .nospages_navigation a:hover{text-decoration:none}
+	
+/*---------- @PAGE CLIENT ----------*/
+	.tablemenu{width:100%; padding:15px; text-align:left}
+	.tablecde_client{width:100%; height:30px}
+	.bordurecarnet{width:300px; margin:0 auto 50px auto; border:solid 2px #5A4C4B}
+	.bordureG{float:left; width:300px; margin-bottom:50px; border:solid 2px #5A4C4B}	
+	.bordureD{float:right; width:300px; margin-bottom:50px; border:solid 2px #5A4C4B}
+	
+	.cde_td2_bis{padding:10px 0; border-bottom:dashed 1px #5A4C4B; border-right:solid 2px #5A4C4B}
+
+	
+/*---------- @PAGES GENERALES ----------*/
+	/*Instit*/
+	.instit{padding:0 20px}
+		.instit p{margin:1.5em 0; padding:0; text-align:justify}
+		.instit table.bordure td{padding:20px}
+	.institform{width:70%; margin:0 auto 15px auto; padding-top:20px; text-align:center}
+		.nom_formu, .lib_14{font-size:14px; font-weight:bold}
+		
+	.pagedivers{margin-left:20px; padding-bottom:20px; background-color:#fff; color:#666}
+
+	/*Partenaires*/
+	.liens{padding:10px;}
+		.lienBit{float:left; width:250px; margin-bottom:5px; padding:20px; background-color:#FFF; border:solid 2px #C6C6C6}
+			#conteneur .lienBit_lib{text-decoration:underline}
+	/*Plan*/
+	.plan_g{float:left; width:300px}
+	.plan_d{float:right; width:300px}
+		.menuplanBit{margin-bottom:50px; padding:20px; border:solid 2px #5A4C4B; text-align:left}
+			.titre_plan{width:258px; margin:0 auto; padding:1px; background-color:#5A4C4B; border:solid 1px #5A4C4B; text-align:center; position:relative; top:-35px}
+				.titre_plan strong{display:block; width:246px; padding:5px; background-color:#5A4C4B; border:solid 1px #fff; color:#FFF}
+				
+				
+				
+/*---------- @MAINTENANCE ICI ----------*/
+		

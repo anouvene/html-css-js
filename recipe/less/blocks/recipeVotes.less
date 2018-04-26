@@ -1,0 +1,93 @@
+.recipe-votes{
+  padding-top: 25px;
+  border-radius: 0 0 10px 0;
+  
+  border-radius: 0;
+  text-align: center;
+  color: @orange;
+  > span{
+      display: block;
+      line-height: 16px;
+      font-size: 28px;
+      small{font-size:14px}
+    }
+    
+  a.ico{
+    margin:10px auto 0 auto;
+    &:hover{ .ico-sprite(-136px, 0, 48px, 48px); }
+  }
+}
+
+
+/* Media Queries */
+//>lg
+@media screen and (min-width: @screen-lg){
+  
+  .recipe-votes{ 
+    padding-left: 29px; 
+    text-align: left;
+    span, a{
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    a.ico{
+      margin: -10px 0 0 90px ;
+      &:hover{ .ico-sprite(-136px, 0, 48px, 48px); }
+    }
+   }
+}
+
+//< lg
+@media screen and (max-width: @screen-md-max){
+  .recipe-votes{ 
+    top: 0;
+    margin:38px 0 38px 20px;
+    padding-top: 15px;
+    .make-md-column(3);
+    .make-md-column-pull(3);
+    border-radius: 0 0 10px 10px;
+    
+    > span{
+            
+      }
+    
+    a.ico{
+      margin:10px auto 0 auto;
+      &:hover{ .ico-sprite(-136px, 0, 48px, 48px); }
+    }
+   }
+}
+
+//< md
+@media screen and (max-width: @screen-sm-max){
+  .recipe-votes{ 
+    top: 0;
+    margin:38px 0 38px 20px;
+    padding-top: 15px;
+    .make-sm-column(2);
+    .make-sm-column-pull(4);
+    height: 120px;
+    
+    border-radius: 0 0 10px 10px;
+    
+    > span{
+            
+      }
+    
+    a.ico{
+      margin:10px auto 0 auto;
+      &:hover{ .ico-sprite(-136px, 0, 48px, 48px); }
+    }
+   }
+}
+
+//< sm
+@media screen and (max-width: @screen-xs-max){
+  .recipe-votes{ 
+    top: -100px;
+    margin:38px 0 0 0;
+    .make-xs-column(4);
+    height: 120px;
+   }
+}

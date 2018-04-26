@@ -1,0 +1,11 @@
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <circle cx="31" cy="31" r="15" stroke="none" fill="#000"/>
+    <circle cx="31" cy="31" r="22" stroke="#000" fill="white" stroke-width="14"/>
+    <defs>
+        <path d="M0,31 C0,13.8791728 13.8791728,0 31,0 C48.1208272,0 62,13.8791728 62,31 C62,48.1208272 48.1208272,62 31,62 C13.8791728,62 0,48.1208272 0,31 Z M15,31.5 C15,22.3873016 22.3873016,15 31.5,15 C40.6126984,15 48,22.3873016 48,31.5 C48,40.6126984 40.6126984,48 31.5,48 C22.3873016,48 15,40.6126984 15,31.5 Z" id="path-1"></path>
+    </defs>
+    <mask id="mask-2" fill="white">
+        <use xlink:href="#path-1"></use>
+    </mask>
+    <rect id="rectangle" stroke="none" fill="#FFE7A5" fill-rule="evenodd" opacity="0.3" mask="url(#mask-2)" x="0" y="0" width="62" height="31"></rect>
+</svg>

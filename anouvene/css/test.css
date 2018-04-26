@@ -1,0 +1,16 @@
+@media only screen and (min-width : 321px) and (max-device-width : 480px) {
+  /* @HEADER */
+  #drips{ display:none}
+  #logo { width:20%; height:5em}
+    #logo svg{ width:80%; height:auto; margin:-1.5em 0 0 -0.9em; position:static }
+  .tabs { width:80%; }
+  
+  /* @FOOTER */
+  .alga-left, .fish-left, .fish-right{ display:none; }
+  .alga-left>img, .alga-right>img{ width:60%; }
+  
+  /* @CONTENT */
+  .main-content>.container{
+      padding-top:5em; 
+  }
+}

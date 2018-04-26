@@ -1,0 +1,51 @@
+.error-page{
+  padding-top: 100px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  h1{
+    margin-top: 0;
+  }
+  .section,
+  .text{
+    text-align: center;
+  }
+  .section{
+    margin-bottom: 20px;
+  }
+  .text{
+    margin-bottom: 50px;
+  }
+  .btn-main-style{
+    display: inline-block;
+    float: left;
+    width: ~"calc(50% - 10px)";
+    margin-right: 20px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: @screen-sm-max){
+  .error-page{
+    padding-top: 55px;
+    h1{
+      margin-bottom: 0;
+    }
+    .section{
+      margin-bottom: 10px;
+    }
+    .text{
+      margin-bottom: 0;
+    }
+    .btn-main-style{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-xs-max){
+
+}

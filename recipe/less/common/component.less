@@ -1,0 +1,45 @@
+/* Component : general wrapper */
+.component{
+  .container;
+  margin-top:100px;
+ }
+ 
+ /* Media Queries */
+ @media screen and (min-width:1400px){
+  .component{
+    width: 1400px; /*max size 1200px*/
+    padding: 100px;
+    margin: 0 auto;
+  }
+}
+ 
+@media screen and (min-width: @screen-lg) and (max-width: 1399px){
+  .component{
+    width: auto; /*max size 1200px*/
+    padding: 100px;
+    margin: 0 auto;
+  }
+}
+
+//< lg
+@media screen and (max-width: @screen-md-max){
+  .component{
+     margin: 100px auto; 
+  }
+}
+
+//< md
+@media screen and (max-width: @screen-sm-max){
+  .component{
+    
+  }
+}
+
+//< sm
+@media screen and (max-width: @screen-xs-max){
+  .component{
+    margin: 20px 0 0 0;
+    padding:0 20px
+  }
+}
+

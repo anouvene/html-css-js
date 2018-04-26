@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PONY RACING - SPLASH SCREEN</title>
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,300,700">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <!-- LOADER -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="row">
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+    </div>
+    
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar">
+        <div class="container-fluid">
+        
+          <div class="navbar-header">
+            <a id="welcome" class="navbar-brand" href="#"><img src="./img/navbar_logo.svg" alt="Pony racing"></a>
+          </div>
+          
+          <div id="navbar" class="navbar-collapse">
+          
+            <!-- NAV LEFT -->
+            <ul id="menu" class="nav-left">
+              <li><a href="#number-1">Welcome</a></li>
+              <li><a href="#number-2">Login</a></li>
+              <li><a href="#number-3">Sign up</a></li>
+              <li><a href="#number-4">Races</a></li>
+              <li><a href="#number-5">User</a></li>
+              <li><a href="#number-6">Help</a></li>
+              <li><a href="#number-7">Races bis</a></li>
+            </ul>
+            
+            <!-- NAV RIGHT -->
+            <ul class="nav-right">
+              <li>
+                <p class="navbar-text">
+                  <span class="ico-toggle-on"></span>
+                </p>
+              </li>
+              <li>
+                <p class="navbar-text">
+                  <a id="user" href="#" title="Account"><span class="ico-user"></span>
+                  nguyenminhtuan</a>
+                </p>
+              </li>
+              <li>
+                <p class="navbar-text">
+                  <span class="ico-star"></span>
+                  10800
+                </p>
+              </li>
+            </ul>
+            
+            <!-- TOGGLE BUTTON -->
+            <button type="button" class="navbar-toggle collapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+        </div>
+      </nav>    
+    </header>
+    
+    <!-- WELCOME PAGE -->
+    <div id="number-1" class="page">
+      <div class="container">
+        <div class="page__content">
+          <div class="welcome-logo"><a href="#">It's always a pleasure to bet on ponies</a></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- LOGIN PAGE -->
+    <div id="number-2" class="page">
+      <div class="container">
+        <div class="page__content">
+          <h2 class="page__title">LOG IN</h2>
+          <form class="log" actiion="" method="post">
+            <input type="text" class="log__user" name="username" placeholder="Login">
+            <input type="password"s class="log__pass" name="password" placeholder="Password">
+            <button>Log me in !</button>
+            <a id="signup" href="#" title="Sign up">Sign Up</a>
+            <a id="help" href="#" title="Help">Need Help?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SIGN UP PAGE -->
+    <div id="number-3" class="page">
+      <div class="container">
+        <div class="page__content">
+          <h2 class="page__title">SIGN UP</h2>
+          <form class="log" actiion="" method="post">
+            <input type="text" name="username" placeholder="Login">
+            <input type="password"s name="password" placeholder="Password">
+            <input type="password"s name="conf_password" placeholder="Confirm password">
+            <input type="text" name="birth_year" placeholder="Birth year">
+            <button>Let's go !</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- RACES PAGE -->
+    <div id="number-4" class="page">
+      <div class="container">
+        <div class="page__content">
+          <h2 class="page__title">PONNIES RACING</h2>
+          
+          <div class="race">
+            <div class="race__country"><span>IT</span></div>
+            <div class="race__timestart"><span class="ico-time"></span> In 10 mn <span class="arrow-right"></span></div>
+            <div class="race__beton">Bet on Roma</div>
+          </div>
+          <div class="race">
+            <div class="race__country"><span>US</span></div>
+            <div class="race__timestart"><span class="ico-time"></span> In 10 mn <span class="arrow-right"></span></div>
+            <div class="race__beton">Bet on San Frabcisco</div>
+          </div>
+          <div class="race">
+            <div class="race__country"><span>JP</span></div>
+            <div class="race__timestart"><span class="ico-time"></span> In 10 mn <span class="arrow-right"></span></div>
+            <div class="race__beton">Bet on Tokyo</div>
+          </div>
+          <div class="race">
+            <div class="race__country"><span>FR</span></div>
+            <div class="race__timestart"><span class="ico-time"></span> In 10 mn <span class="arrow-right"></span></div>
+            <div class="race__beton">Bet on Vincennes</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- USER PAGE -->
+    <div id="number-5" class="page">
+      <div class="container">
+        <div class="page__content">
+          <h2 class="page__title">
+            Welcome "nguyenmintuan" !<br>
+            It's always a pleasure to bet on ponnies.
+          </h2>
+          <div class="btn-races"><span class="ico-arrow-down"></span><a href="#"><img src="./img/xs_btn_races.png" alt="Pony racing"></a></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- HELP PAGE -->
+    <div id="number-6" class="page">
+      <div class="container">
+        <div class="page__content">
+          <h2 class="page__title">
+            NEED HELP ?
+          </h2>
+          <div class="page__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quae, beatae, hic quaerat natus modi maiores consectetur reiciendis voluptates rem veritatis repellendus culpa autem assumenda ipsa suscipit quod quasi ipsam?
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, deserunt unde iste sed a aperiam recusandae placeat rerum similique magni. Autem perferendis minima doloribus commodi consequatur! Facere in numquam autem.</p>
+            <p>Possimus, laboriosam, reiciendis, nobis neque et iure atque delectus beatae ipsum dolorum cum nesciunt sequi nisi? Accusamus dolores odit delectus aspernatur cumque tempore praesentium? Suscipit quam accusamus non pariatur quia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- RACES PAGE BIS-->
+    <div id="number-7" class="page">
+      <div class="container">
+        <div class="page__content">
+          <h2 class="page__title">Bet on Roma</h2>
+          
+          <div class="race-details">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, quibusdam tempora laborum eius illum quisquam recusandae enim dicta ut asperiores exercitationem perspiciatis explicabo voluptatum debitis consequuntur delectus laudantium fugit!
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, ullam culpa commodi nobis consectetur ut cupiditate id quae libero dicta eum tempore repellendus nulla ad explicabo dignissimos magni aut assumenda.
+          </div>
+
+          <div class="race">
+            <div class="race__country"><span>FR</span></div>
+            <div class="race__timestart"><span class="ico-time"></span> In 10 mn <span class="arrow-right"></span></div>
+            <div class="race__beton">Bet on Vincennes</div>
+          </div>
+          
+          <div class="race-choice">
+            <div class="btn-races"><span class="ico-arrow-down"></span><a href="#"></a><div class="race-name">Great Grass</div></div>
+            <div class="btn-races"><span class="ico-arrow-down"></span><a href="#"></a><div class="race-name">Fast fish</div></div>
+            <div class="btn-races"><span class="ico-arrow-down"></span><a href="#"></a><div class="race-name">Little Pie</div></div>
+            <div class="btn-races"><span class="ico-arrow-down"></span><a href="#"></a><div class="race-name">Fast Flower</div></div>
+            <div class="btn-races"><span class="ico-arrow-down"></span><a href="#"></a><div class="race-name">Great Flower</div></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div><span>&copy;2016</span> - <a href="#" title="About us">About us</a> - <a href="#" title="Contact">Contact</a></div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+  </body>
+</html>

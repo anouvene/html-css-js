@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link href="bootstrap/css/bs-light.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bs-select.min.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    </head>
+    <body class="body-light">
+        <div class="container">
+            <!-- Modal -->
+            <div id="loginModal-light" role="dialog" style="display: block;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./img/experbuy_white.min.png" alt="ExperBuy">
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="well">
+                                    <form action="#" method="post">
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" id="username" name="_username" value="" required="required" class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="password" name="_password" required="required" class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="language">Language</label>
+                                            <select id="language" name="_language" class="form-control selectpicker">
+                                                <option value="1">English</option>
+                                                <option value="2">French</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                            <label for="remember_me">Remember me</label>
+                                        </div>
+                                        <input type="submit" id="_submit" name="_submit" value="Login" class="btn btn-primary"/>
+                                        <a class="right icon icon-info-with-circle" href="#" title=""> Forgot password ?</a>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="bootstrap/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bs.min.js"></script>
+        <script src="bootstrap/js/tablesorter.min.js"></script>
+        <script src="bootstrap/js/bs-select.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

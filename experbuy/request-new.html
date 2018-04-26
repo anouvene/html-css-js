@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bs-light.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bs-select.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+    <title>New Request</title>
+</head>
+<body class="with-top-navbar">
+    <!--NAV BAR-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid container-fluid-spacious">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-brand-emphasized" href="#">
+                    <span class="icon iconav-brand-icon"><img src="./img/experbuy_white.min.png" alt="ExperBuy"></span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--NEW REQUEST-->
+                    <li>
+                        <a href="request-new.html" title="Single-Item Request" class="icon icon-500px icon-news warning"> New Request</a>
+                    </li>
+                    <!--REQUEST LIST-->
+                    <li>
+                        <a href="request-list.html" title="Multi-Item Request" class="icon icon-500px icon-news success"> Request List</a>
+                    </li>
+
+                    <!--SETTINGS-->
+                    <li><a href="#" title="Profil" class="icon icon-500px icon-tools danger"> Settings</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right"><li class="bg_taupe"><a href="login.html" title="Logout" class="icon icon-log-out"> Logout</a></li></ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--CONTENT-->
+    <div class="container-fluid container-fluid-spacious">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!--HEADER-->
+                <div class="dashhead">
+                    <div class="dashhead-titles">
+                        <h2 class="dashhead-title">New Request</h2>
+                        <h6 class="dashhead-subtitle">Please, express your need and send to Us your request</h6>
+                    </div>
+                </div>
+
+                <!--CONTENT-->
+                <div class="row content">
+
+                    <!--REQUES FORM-->
+                    <form class="table-full" action="#" method="post" enctype="multipart/form-data">
+                        <div class="col-md-8 col-md-push-2">
+                            <!--Country-->
+                            <div class="input-group">
+                                <label for="country" class="input-group-addon">Ship to country *</label>
+                                <input id="country" type="text" class="form-control" name="country" required>
+                            </div>
+
+                            <!--Adresse-->
+                            <div class="input-group">
+                                <label for="address" class="input-group-addon">Address *</label>
+                                <input id="address" type="text" class="form-control" name="address" required>
+                            </div>
+
+                            <!--Adresse2-->
+                            <div class="input-group">
+                                <label for="address2" class="input-group-addon">Address2</label>
+                                <input id="address2" type="text" class="form-control" name="address2">
+                            </div>
+
+                            <!--Zip code-->
+                            <div class="input-group">
+                                <label for="zipcode" class="input-group-addon">Zip Code *</label>
+                                <input id="zipcode" type="text" class="form-control" name="zipcode" required>
+                            </div>
+
+                            <!--City-->
+                            <div class="input-group">
+                                <label for="city" class="input-group-addon">Ship to city *</label>
+                                <input id="city" type="text" class="form-control" name="city" required>
+                            </div>
+
+                            <!--Email-->
+                            <div class="input-group">
+                                <label for="email" class="input-group-addon">Requestor email *</label>
+                                <input id="email" type="email" class="form-control" name="email" required>
+                            </div>
+
+                            <!--Phone-->
+                            <div class="input-group">
+                                <label for="phone" class="input-group-addon">Phone</label>
+                                <input id="phone" type="text" class="form-control" name="phone">
+                            </div>
+
+                            <!--New delivery address-->
+                            <div class="input-group">
+                                <div class="checkbox custom-control custom-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="new_delivery_address">
+                                        <span class="custom-control-indicator"></span>
+                                        <strong>New delivery address</strong>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!--Proposal deadline-->
+                            <div class="input-group">
+                                <label for="proposal_date" class="input-group-addon">Proposal deadline</label>
+                                <input id="proposal_date" type="text" name="proposal_date" class="form-control" data-provide="datepicker">
+                            <span class="input-group-addon">
+                                <span class="icon icon-calendar"></span>
+                            </span>
+                            </div>
+
+                            <!--Expected delivery date-->
+                            <div class="input-group">
+                                <label for="expected_delivery_date" class="input-group-addon">Expected delivery date *</label>
+                                <input id="expected_delivery_date" type="text" name="expected_delivery_date" class="form-control" data-provide="datepicker" required>
+                                <span class="input-group-addon">
+                                    <span class="icon icon-calendar"></span>
+                                </span>
+                            </div>
+
+                            <!--Currency code-->
+                            <div class="input-group">
+                                <label for="currency_code" class="input-group-addon">Currency Code *</label>
+                                <select id="currency_code" class="form-control selectpicker" required>
+                                    <optgroup label="France">
+                                        <option>EUR</option>
+                                        <option>USD</option>
+                                    </optgroup>
+                                    <optgroup label="Suède">
+                                        <option>DKK</option>
+                                        <option>NOK</option>
+                                        <option>SEK</option>
+                                        <option>EUR</option>
+                                        <option>GBP</option>
+                                        <option>USD</option>
+                                    </optgroup>
+                                    <optgroup label="Allemagne">
+                                        <option>EUR</option>
+                                        <option>CZK</option>
+                                        <option>CHF</option>
+                                        <option>PLN</option>
+                                        <option>USD</option>
+                                    </optgroup>
+                                    <optgroup label="Roumanie">
+                                        <option>RON</option>
+                                        <option>EUR</option>
+                                        <option>USD</option>
+                                    </optgroup>
+                                    <optgroup label="USA">
+                                        <option>USD</option>
+                                        <option>CAD</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <!--File-->
+                            <div class="input-group">
+                                <label class="input-group-btn">
+                                <span class="btn btn-taupe">
+                                    Browse… <input type="file" style="display: none;">
+                                </span>
+                                </label>
+                                <input type="text" class="form-control" readonly=""  placeholder="File(Max. file size 5MB)">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="hr-divider">
+                                <h3 class="hr-divider-content hr-divider-heading">Article details</h3>
+                                <div class="dashhead-btn-add">
+                                    <button type="button" class="btn btn-warning icon icon-add-to-list"></button>
+                                </div>
+                            </div>
+                            <div class="table-responsive mcs-horizontal">
+                                <table id="articles" class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Article Description *</th>
+                                        <th>Quantity *</th>
+                                        <th>Unit of measure *</th>
+                                        <th>Unit price</th>
+                                        <th>Customer Reference</th>
+                                        <th>Supplier Reference</th>
+                                        <th>Customer classification code</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!--Article 1--->
+                                    <tr class="article1">
+                                        <td>
+                                            <details>
+                                                <summary>Logitech M570 Trackball Mouse</summary>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusamus alias commodi dicta eos excepturi, expedita,
+                                                    facilis harum maiores natus obcaecati odio odit provident
+                                                    quis recusandae totam. Debitis ducimus impedit vero!</p>
+                                            </details>
+                                        </td>
+                                        <td>12</td>
+                                        <td>TU</td>
+                                        <td>836,00 EUR</td>
+                                        <td>LO0562</td>
+                                        <td>INMAC WSTORE</td>
+                                        <td>4568J</td>
+                                        <td nowrap="nowrap"><a href="#" title="Edit" class="edit icon icon-edit"></a> <a href="#" title="Edit" class="icon icon-trash danger"></a></td>
+                                    </tr>
+                                    <tr class="article1-edit article-edit">
+                                        <td><input type="text" name="article_desc" class="form-control" placeholder="Article Description"></td>
+                                        <td><input type="text" name="quantity" class="form-control"></td>
+                                        <td>
+                                            <select name="unit_measure" class="custom-select">
+                                                <option value="1">TU</option>
+                                                <option value="2">TO</option>
+                                                <option value="3">SH</option>
+                                                <option value="4">SE</option>
+                                                <option value="5">SC</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" name="unit_price" class="form-control" placeholder="Unit price"></td>
+                                        <td><input type="text" name="customer_ref" class="form-control" placeholder="Customer Reference"></td>
+                                        <td><input type="text" name="supplier_ref" class="form-control" placeholder="Supplier Reference"></td>
+                                        <td><input type="text" name="customer_classification" class="form-control" value="M57055" placeholder="Customer classification code"></td>
+                                        <td nowrap="nowrap"><a href="#" title="Edit" class="icon icon-check success"></a> <a href="#" title="Edit" class="icon icon-cross danger"></a></td>
+                                    </tr>
+
+                                    <!--Article 2--->
+                                    <tr class="article2">
+                                        <td>
+                                            <details>
+                                                <summary>Mouse wireless</summary>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Accusamus alias commodi dicta eos ....</p>
+                                            </details>
+                                        </td>
+                                        <td>30</td>
+                                        <td>PK</td>
+                                        <td>1200,00 EUR</td>
+                                        <td>MO0215</td>
+                                        <td>INMAC WSTORE</td>
+                                        <td>456M8J</td>
+                                        <td nowrap="nowrap"><a href="#" title="Edit" class="edit icon icon-edit"></a> <a href="#" title="Edit" class="icon icon-trash danger"></a></td>
+                                    </tr>
+                                    <tr class="article2-edit article-edit">
+                                        <td><input type="text" name="article_desc" class="form-control" placeholder="Article Description"></td>
+                                        <td><input type="text" name="quantity" class="form-control"></td>
+                                        <td>
+                                            <select name="unit_measure" class="custom-select">
+                                                <option value="1">TU</option>
+                                                <option value="2">TO</option>
+                                                <option value="3">SH</option>
+                                                <option value="4">SE</option>
+                                                <option value="5">SC</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" name="unit_price" class="form-control" placeholder="Unit price"></td>
+                                        <td><input type="text" name="customer_ref" class="form-control" placeholder="Customer Reference"></td>
+                                        <td><input type="text" name="supplier_ref" class="form-control" placeholder="Supplier Reference"></td>
+                                        <td><input type="text" name="customer_classification" class="form-control" value="M57055" placeholder="Customer classification code"></td>
+                                        <td nowrap="nowrap"><a href="#" title="Edit" class="icon icon-check success"></a> <a href="#" title="Edit" class="icon icon-cross danger"></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--SEND-->
+                            <div class="flextable table-actions">
+                                <div class="flextable-item">
+                                    <div class="btn-group">
+                                        <input type="submit" class="btn btn-warning" value="Send Request">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--PAGINATION-->
+                    <div class="col-md-12">
+                        <div class="margin-top-20 text-center">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--FOOTER-->
+                <footer>
+                    <div class="hr-divider">
+                        <h3 class="hr-divider-content hr-divider-heading">mentions légales</h3>
+                    </div>
+                    <ul class="nav nav-bordered">
+                        <li>
+                            <a href="#">@Copyright 2017</a>
+                        </li>
+                        <li>
+                            <a href="#">Qui sommes nous ?</a>
+                        </li>
+                        <li>
+                            <a href="#">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#">Politique de confidentialité</a>
+                        </li>
+                        <li>
+                            <a href="#">Conditions d'utilisation</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="bootstrap/js/jquery.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bs.min.js"></script>
+    <script src="bootstrap/js/tablesorter.min.js"></script>
+    <script src="bootstrap/js/bs-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/script.js"></script></body>
+    <script>
+        $(function(){
+            // Scrollbar horizontal
+            $(".mcs-horizontal").mCustomScrollbar({
+                axis:"x",
+                theme:"dark-3"
+            });
+        });
+</script>
+</html>

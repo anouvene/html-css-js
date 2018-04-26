@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="21px" viewBox="0 0 35 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>wave-indicator</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="General-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-slices" transform="translate(-671.000000, -524.000000)" fill="#CC6055">
+            <g id="Input-recherche" transform="translate(13.000000, 524.074872)">
+                <path d="M1.63458188e-14,19.1349117 C1.63458188e-14,19.1349117 73.8876145,19.1349115 94.8225077,19.1349115 C115.757401,19.1349115 560.156569,19.1349113 596.178798,19.1349114 C601.57202,19.1349114 607.513511,0.366487227 613.075117,0.366487242 C619.030802,0.366487257 624.614484,19.1349115 630.618444,19.1349115 C640.184199,19.1349115 649.71618,19.1349116 658.911523,19.1349116 C664.864901,19.1349116 669.598825,0.366487229 675.187793,0.366487242 C680.674631,0.366487254 687.024598,19.1349116 692.003237,19.1349117 C717.276636,19.1349117 735,19.1349117 735,19.1349117 L735,114.961447 L1.63458188e-14,114.961447 L1.63458188e-14,19.1349117 Z" id="wave-top"></path>
+            </g>
+        </g>
+    </g>
+</svg>

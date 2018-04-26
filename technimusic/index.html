@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="$langue">
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="Description" content="$metas[metadesc]">
+		<meta name="identifier-url" content="http://$host">
+		<meta http-equiv="content-language" content="$langue">
+		<meta name="LANGUAGE" CONTENT="$langue">
+		<meta name="author" content="${$title}">
+		<meta name="COPYRIGHT" CONTENT="$host">
+		<meta name="robots" content="INDEX, FOLLOW, ALL">
+		<meta http-equiv="PRAGMA" content="NO-CACHE">
+		<!--[if IE]>
+        <meta http-equiv="imagetoolbar" content="no">
+    <![endif]-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css_V2.css" rel="stylesheet" type="text/css">
+		<title>Accueil</title>
+		<script src="javascripts/jquery-1.7.2.min.js"></script>
+		<script src="javascripts/modernizr.custom.js"></script>
+		<script src="javascripts/yepnope.1.5.4-min.js"></script>
+		<!--<script src="javascripts/jquery.textshadow.js"></script>-->
+		<!-- [if (It IE 9)]>
+			<link rel="stylesheet" href="css_V2.css" media="screen"> 
+			<script type="text/javascript" scr="respond.min.js"></script>
+		<![endif]-->
+
+		<script src="javascripts/superfish_1.5.13.js"></script>
+		<script src="javascripts/hoverIntent.js"></script>
+		<script src="javascripts/flowplayer-3.2.6.min.js" type="text/javascript"></script>
+		<script src="javascripts/jquery.oiplayer.js" type="text/javascript"></script>
+		<!-- <script type="text/javascript" src="javascripts/activateActiveX.js"></script> -->
+		<!-- <link href="oiplayer.css" rel="stylesheet" type="text/css" /> -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('body').oiplayer({
+					server : 'http://www.openimages.eu', /* msie (or java) has issues with just a dir */
+					jar : '/oiplayer/plugins/cortado-ovt-stripped-0.6.0.jar',
+					flash : '/oiplayer/plugins/flowplayer-3.2.7.swf',
+					controls : 'top'
+				});
+			});
+		</script>
+		<!-- '$Id$' -->
+		<script type="text/javascript" src="javascripts/jquery.eislideshow.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.easing.1.3.js"></script>
+		<SCRIPT SRC="javascripts/jCarou.js"></SCRIPT>
+		<script src="javascripts/jquery.uniform.js"></script>
+		<script src='javascripts/jquery.scrollTo.min.js'></script>
+		<SCRIPT SRC="javascripts/fonctions_V2.js"></SCRIPT>
+
+		<!--[if gte IE 9]>
+      <style type="text/css">
+        .degrade {filter: none;}
+      </style>
+    <![endif]-->
+		</head>
+  <body>
+    <header class="header_page">
+     <div class="header_content">
+      <div class="logo"><a href="./" title="Accueil"><img src="images/logo_FR.jpg" alt=""></a></div>
+      <a class="conseildevis">Un conseil ? Une demande de devis ?<img src="images/tel1.jpg" alt=""></a>
+      <div class="contact_compte_panier"> <a class="contact" href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Nous cotacter">Contact</a> <a class="compte" href="client.htm" title="Mon compte">Mon compte</a> <a class="panier" href="client.htm" title="Mon compte"><span id="contenuPanierCommun">12</span>Mon panier</a> </div>
+      <div class="rech">
+        <form action="rechercher.htm" method="post">
+          <input name="action" value="search" type="hidden">
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td valign="top"><input class="inputrech" type="text" name="qm"></td>
+              <td valign="top"><input class="okrech" type="image" src="images/btn_go.jpg"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <ul class="recapTops">
+        <li><a href="marques.htm" title="Marques">Marques</a></li>
+        <li><a href="$regleurlrewriteTemp[top]-nouveautes-2.htm" title="Nouveautés">Nouveautés</a></li>
+        <li><a href="$regleurlrewriteTemp[top]-promotions-3.htm" title="Promotions">Promotions</a></li>
+        <li><a href="$regleurlrewriteTemp[top]-tops-ventes-1.htm" title="Tops Ventes">Tops Ventes</a></li>
+        <li><a href="$regleurlrewriteTemp[top]-ventes-flash-5.htm" title="Ventes flash">Ventes flash</a></li>
+      </ul>
+      <nav class="menu">
+        <ul class="menu_niv0">
+          <li class="home"><a href="./" title="Accueil"><img src="images/ico_home.jpg" alt=""></a></li>
+          <li class="menubit_niv0"> <a class="menubit_niv0_lib" href="#" title="#">Sonorisation</a>
+            <ul class="ssmenu" style="display:none">
+              <li class="ssmenuG">
+                <div class="ssmenu_niv0"><a class="ssmenu_niv0_lib" href="#" title="#">Sonorisation</a><span>(200 articles)</span></div>
+                <ul class="ssmenu_niv1">
+                <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum, cataliptus Lorem</a></li>
+                <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum, cataliptus</a></li>
+                <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum, cataliptus Lo</a></li>
+                <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum</a></li>
+                <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum</a></li>
+              </ul>
+          </li>
+          <li class="ssmenuD">
+            <div class="ssmenu_ima"><a href="" title=""><img src="images_bis/menuArticleBit_ima.jpg" alt=""></a></div>
+          </li>
+          <li class="menuArticles">
+            <div class="menuArticleBit">
+              <div class="menuArticleBit_ima">105*105</div>
+              <div class="menuArticleBit_details">
+                <h3 class="bit_lib"><a href="" title="">Spot led s350 inox lumiére douce</a></h3>
+                <div class="bit_libmarque">Chauvet</div>
+                <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+              </div>
+            </div>
+            <div class="menuArticleBit">
+              <div class="menuArticleBit_ima">105*105</div>
+              <div class="menuArticleBit_details">
+                <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                <div class="bit_libmarque">Chauvet</div>
+                <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+              </div>
+            </div>
+            <div class="menuArticleBit">
+              <div class="menuArticleBit_ima">105*105</div>
+              <div class="menuArticleBit_details">
+                <h3 class="bit_lib"><a href="" title="">Spot led s350 inox lumiére douce</a></h3>
+                <div class="bit_libmarque">Chauvet</div>
+                <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+          </li>
+          <li class="menubit_niv0">
+            <a class="menubit_niv0_lib" href="#" title="#">La lumiére</a>
+            <ul class="ssmenu" style="display:none">
+              <li class="ssmenuG">
+                <div class="ssmenu_niv0"><a class="ssmenu_niv0_lib" href="#" title="#">La lumiére</a><span>(250 articles)</span></div>
+                <ul class="ssmenu_niv1">
+                  <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum, cataliptus Lorem</a></li>
+                  <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum, cataliptus</a></li>
+                  <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum, cataliptus Lo</a></li>
+                  <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum</a></li>
+                  <li><a class="ssmenubit_niv1_lib" href="" title="">&bull; Lorem ipsum</a></li>
+                </ul>
+              </li>
+              <li class="ssmenuD">
+                <div class="ssmenu_ima"><a href="" title=""><img src="images_bis/menuArticleBit_ima.jpg" alt=""></a></div>
+              </li>
+              <li class="menuArticles">
+                <div class="menuArticleBit">
+                  <div class="menuArticleBit_ima">105*105</div>
+                    <div class="menuArticleBit_details">
+                      <h3 class="bit_lib"><a href="" title="">Spot led s350 inox lumiére douce</a></h3>
+                      <div class="bit_libmarque">Chauvet</div>
+                      <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                  </div>
+                </div>
+                <div class="menuArticleBit">
+                  <div class="menuArticleBit_ima">105*105</div>
+                    <div class="menuArticleBit_details">
+                    <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                    <div class="bit_libmarque">Chauvet</div>
+                    <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <section id="contenupage"> 
+      <script>
+        $(function(){
+          $('#contenupage').indexUtilities();
+        });
+      </script>
+      <section id="slider" class="wrapper sl-slider-wrapper">
+        <div id="ei-slider" class="ei-slider">
+          <ul class="ei-slider-large">
+            <li>
+              <figure><img src="images_bis/skin_accueil1.jpg" alt=""></figure>
+              <div class="slider_content">
+                <div class="carrouselArticles">
+                  <figcaption class="ei-title">
+                    <h2 class="text_shadow">La sélection du moment</h2>
+                  </figcaption>
+                  <article class="carrouselArticleBit">
+                    <div class="carrouselArticleBit_content arrondi_ombre">
+                      <div class="carrouselArticleBit_ima">105*105</div>
+                      <div class="carrouselArticleBit_details">
+                        <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                        <div class="bit_libmarque">Chauvet</div>
+                        <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </li>
+            <li>
+              <figure><img src="images_bis/skin_accueil2_2.jpg" alt=""></figure>
+              <div class="slider_content">
+                <figcaption class="ei-title">
+                  <h2 class="text_shadow">Titre de la diapositive</h2>
+                  <h3 class="text_shadow txt_28">Un sous titre</h3>
+                </figcaption>
+              </div>
+            </li>
+            <li>
+              <figure><img src="images_bis/1.jpg" alt=""></figure>
+              <div class="slider_content">
+                <div class="carrouselArticles">
+                  <figcaption class="ei-title">
+                  <h  2 class="text_shadow">La sélection du moment</h2>
+                  </figcaption>
+                  <article class="carrouselArticleBit">
+                    <div class="carrouselArticleBit_content arrondi_ombre">
+                      <div class="carrouselArticleBit_ima">105*105</div>
+                      <div class="carrouselArticleBit_details">
+                      <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                      <div class="bit_libmarque">Chauvet</div>
+                      <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </li>
+            <li>
+              <figure><img src="images_bis/2.jpg" alt=""></figure>
+              <div class="slider_content">
+                <figcaption class="ei-title">
+                  <h2 class="text_shadow">Titre de la diapositive</h2>
+                  <h3 class="text_shadow txt_28">Un sous titre</h3>
+                </figcaption>
+              </div>
+            </li>
+            <li>
+              <figure><img src="images_bis/3.jpg" alt=""></figure>
+              <div class="slider_content">
+                <figcaption class="ei-title">
+                  <h2 class="text_shadow">Titre de la diapositive</h2>
+                  <h3 class="text_shadow txt_28">Un sous titre</h3>
+                </figcaption>
+              </div>
+            </li>
+          </ul>
+          <ul class="ei-slider-thumbs">
+            <li class="ei-slider-element">Current</li>
+            <li><a href="#">Slide 1</a></li>
+            <li><a href="#">Slide 2</a></li>
+            <li><a href="#">Slide 3</a></li>
+            <li><a href="#">Slide 4</a></li>
+            <li><a href="#">Slide 5</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="contenu">
+        <section class="flash"> 
+          <!-- BEGIN IndexVentesflash -->
+          <input id="nbart_flash" type="hidden" value="6">
+          <div class="flash_crochet"><img src="images/flash_crochet.png" alt=""></div>
+          <div class="voir_topflash">
+            <font class="txt_35">Ventes</font><br>
+            <font class="txt_44">Flash</font>
+          </div>
+          <div class="flash_prev"><a href="#" title="Pr&eacute;c&eacute;dent"></a></div>
+          <div class="flash_next"><a href="#" title="Suivant"></a></div>
+          <div class="flash_masque">
+            <div class="flash_carrousel">
+            <ul>
+              <!-- BEGIN IndexVentesflashBit -->
+              <li>
+                <article class="flashBit">
+                  <div class="flashBit_ima">105 * 105 
+                    <!-- BEGIN IndexVentesflashBitPctPromo -->
+                    <div class="flashBit_pctpromo">-20%</div>
+                    <!-- END IndexVentesflashBitPctPromo --> 
+                  </div>
+                  <div class="flash_compteur">Il vous reste : 1j,12:03:09</div>
+                  <h3 class="bit_lib"><a href="" title="">Spot led s350, lumiére intense et chaude</a></h3>
+                  <div class="bit_libmarque">Chauvet</div>
+                  <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                </article>
+              </li>
+              <li>
+                <article class="flashBit">
+                  <div class="flashBit_ima">105 * 105 
+                    <!-- BEGIN IndexVentesflashBitPctPromo -->
+                    <div class="flashBit_pctpromo">-20%</div>
+                    <!-- END IndexVentesflashBitPctPromo --> 
+                  </div>
+                  <div class="flash_compteur">Il vous reste : 1j,12:03:09</div>
+                  <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                  <div class="bit_libmarque">Chauvet</div>
+                  <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                </article>
+              </li>
+              <li>
+                <article class="flashBit">
+                  <div class="flashBit_ima">105 * 105 
+                    <!-- BEGIN IndexVentesflashBitPctPromo -->
+                    <div class="flashBit_pctpromo">-20%</div>
+                    <!-- END IndexVentesflashBitPctPromo --> 
+                  </div>
+                  <div class="flash_compteur">Il vous reste : 1j,12:03:09</div>
+                  <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                  <div class="bit_libmarque">Chauvet</div>
+                  <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                </article>
+              </li>
+              <li>
+                <article class="flashBit">
+                  <div class="flashBit_ima">105 * 105 
+                    <!-- BEGIN IndexVentesflashBitPctPromo -->
+                    <div class="flashBit_pctpromo">-20%</div>
+                    <!-- END IndexVentesflashBitPctPromo --> 
+                  </div>
+                  <div class="flash_compteur">Il vous reste : 1j,12:03:09</div>
+                  <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                  <div class="bit_libmarque">Chauvet</div>
+                  <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                </article>
+              </li>
+              <li>
+                <article class="flashBit">
+                  <div class="flashBit_ima">105 * 105 
+                    <!-- BEGIN IndexVentesflashBitPctPromo -->
+                    <div class="flashBit_pctpromo">-20%</div>
+                    <!-- END IndexVentesflashBitPctPromo --> 
+                  </div>
+                  <div class="flash_compteur">Il vous reste : 1j,12:03:09</div>
+                  <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                  <div class="bit_libmarque">Chauvet</div>
+                  <div class="bit_prix"> <span class="bit_prixold">130,00 &euro;</span> <span class="bit_prixpromo">120,00 &euro;</span> </div>
+                </article>
+              </li>
+              <!-- END IndexVentesflashBit -->
+            </ul>
+            </div>
+          </div>
+          <!-- END IndexVentesflash --> 
+        </section>
+        <section class="videodumoment_actu">
+              <aside class="videodumoment"> 
+            <!-- div#clientcaps is needed for Java detection in MSIE -->
+            <div id="clientcaps"> </div>
+            <div class="video_entete">La vidéo du moment</div>
+            <!-- video embed tag copied from http://www.openimages.eu/media/9728#share with added width and height attributes -->
+            <div xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="oip_media" about="http://www.openimages.eu/files/09/88068.9730.WEEKNUMMER364-HRE0000D9C6.webm">
+                  <video id="video" width="573" height="429" poster="http://www.openimages.eu/images/599192/WEEKNUMMER364-HRE0000D9C6.png" controls>
+                <source type="video/webm; codecs=vp8" src="http://www.openimages.eu/files/09/88068.9730.WEEKNUMMER364-HRE0000D9C6.webm" />
+                <source type="video/ogg; codecs=theora" src="http://www.openimages.eu/files/09/9734.9730.WEEKNUMMER364-HRE0000D9C6.ogv" />
+                <source type="video/ogg; codecs=theora" src="http://www.openimages.eu/files/09/88071.9730.WEEKNUMMER364-HRE0000D9C6.ogv" />
+                <source type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" src="http://www.openimages.eu/files/09/9740.9730.WEEKNUMMER364-HRE0000D9C6.mp4" />
+                <source type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" src="http://www.openimages.eu/files/09/88065.9730.WEEKNUMMER364-HRE0000D9C6.mp4" />
+                <source type="application/x-mpegurl" src="http://www.openimages.eu/files/09/35026.9730.WEEKNUMMER364-HRE0000D9C6.m3u8" />
+                <object type="application/x-shockwave-flash" width="573" height="429" data="http://www.youtube.com/v/HVMoJqg41Bw">
+                      <param name="movie" value="http://www.youtube.com/v/HVMoJqg41Bw">
+                      <param name="wmode">
+                      <!--[if lte IE 6 ]>
+                                            <embed src="http://www.youtube.com/v/HVMoJqg41Bw" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="573" height="322"></embed>
+                                        <![endif]-->
+                      <p>Vous n'avez pas de navigateur moderne, ni flash d'installé sur Internet Explorer... suivez les liens ci-dessous pour télécharger les vidéos.</p>
+                    </object>
+              </video>
+                </div>
+          </aside>
+              <aside class="actu">
+            <div class="actu_entete"><span>L'actualité</span><a href="actualites.htm" title="Voir toute l'actualité">&gt; Voir toute l'actualité</a></div>
+            <article class="actuBit">
+                  <div class="actuBit_ima">150 * 85</div>
+                  <div class="actuBit_details">
+                <div class="actuBit_lib">FiveO : les nouveautés du Messe 2013</div>
+                <div class="actuBit_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</div>
+              </div>
+                </article>
+            <article class="actuBit">
+                  <div class="actuBit_ima">150 * 85</div>
+                  <div class="actuBit_details">
+                <div class="actuBit_lib">FiveO : les nouveautés du Messe 2013</div>
+                <div class="actuBit_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</div>
+              </div>
+                </article>
+          </aside>
+            </section>
+        <section class="promo">
+              <input id="nbart_artpromo" type="hidden" value="10">
+              <div class="promo_entete"><span>Promotions</span><a href="$regleurlrewriteTemp[top]-promotions-3.htm" title="Voir toutes les promotions">&gt; Voir toutes</a></div>
+              <div class="promo_prev"><a href="#" title="Promotion précédente"></a></div>
+              <div class="promo_next"><a href="#" title="Promotion suivante"></a></div>
+              <div class="promo_masque">
+            <div class="promo_carrousel">
+                  <ul>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+                <li class="promoBit">
+                      <div class="promoBit_content">
+                    <div class="promoBit_ima">105*105
+                          <div class="promo_pct">-20%</div>
+                        </div>
+                    <div class="promoBit_details">
+                          <h3 class="bit_lib"><a href="" title="">Spot led s350</a></h3>
+                          <div class="bit_libmarque">Chauvet</div>
+                          <div class="bit_prix"><span class="bit_prixold">130,00 &euro;</span><span class="bit_prixpromo">120,00 &euro;</span></div>
+                        </div>
+                  </div>
+                    </li>
+              </ul>
+                </div>
+          </div>
+            </section>
+        <div class="clear"></div>
+      </section>
+    </section>
+
+    <footer>
+      <section class="prefoot"> 
+        <!-- BEGIN CommunMarques -->
+        <input id="tot_marques" type="hidden" value="10">
+        <SCRIPT type="text/javascript" language="javascript">
+            $(document).ready(function() {
+                var nb_marques = $("#tot_marques").val();
+                if(nb_marques>9){
+                    $(".marque_carrousel").jCarouselLite({
+                        btnPrev: ".marque_prev",
+                        btnNext: ".marque_next",
+                        auto:500,
+                        visible: 10,
+                        speed:1000,
+                        hoverPause: true
+                    });
+                }else{
+                    $(".topMarqueBit_prev, .topMarqueBit_next").hide();
+                }
+                //Affichage des libelles si logo inactive ou absent
+                $(".marqueBit").each(function(){
+                    if($.trim($(this).find('span>a').html())==""){
+                        $(this).find('span').remove();
+                        $(this).find('table').css("display","block");
+                    }
+                });
+            });
+        </SCRIPT>
+        <section class="marque">
+          <div class="marque_prev"><a href="#" title="Marque précédente"></a></div>
+          <div class="marque_masque">
+            <div class="marque_carrousel">
+              <ul>
+                <!-- BEGIN CommunMarquesBit -->
+                <li class="marqueBit">
+                  <span><a href="" title=""><img src="images_bis/marqueBit_ima.jpg" alt=""></a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Chauyet</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit"> <span><a href="" title=""> </a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Osram</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit"> <span><a href="" title=""><img src="images_bis/marqueBit_ima.jpg" alt=""></a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Chauyet</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit"> <span><a href="" title=""> </a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Osram</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit"> <span><a href="" title=""><img src="images_bis/marqueBit_ima.jpg" alt=""></a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Chauyet</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit"> <span><a href="" title=""> </a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Osram</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit"> 
+                  <span><a href="" title=""><img src="images_bis/marqueBit_ima.jpg" alt=""></a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                    <td class="marqueBit_lib">Chauyet</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit">
+                  <span><a href="" title=""> </a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Osram</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit">
+                  <span><a href="" title=""><img src="images_bis/marqueBit_ima.jpg" alt=""></a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Chauyet</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="marqueBit">
+                  <span><a href="" title=""> </a></span>
+                  <table cellpadding="0" cellspacing="0" style="display:none">
+                    <tr>
+                      <td class="marqueBit_lib">Osram</td>
+                    </tr>
+                  </table>
+                </li>
+                <!-- END CommunMarquesBit -->
+              </ul>
+            </div>
+          </div>
+          <div class="marque_next"><a href="#" title="Marque suivante"></a></div>
+        </section>
+        <!-- END CommunMarques -->
+    
+        <section class="livr_paie_conseil">
+          <section class="livr">
+            <div class="livr_txt">
+            <header>Livraison offerte</header>
+            <p>A partir de 120 &euro; d'achats<br>
+            avec <font class="orange">Colissimo suivi</font></p>
+            </div>
+            <div class="livr_logo"><a href="#" title="Livraison offerte"><img src="images/colissimo.jpg" alt=""></a></div>
+            </section>
+            <section class="paie">
+              <div class="paie_txt">
+                <header>Paiement sécurisé</header>
+                <p>Réglez vos achats en <font class="violet txt_18">3X</font><br>
+                <font class="violet">sans frais</font> ou en 5x, 10x, 20x</p>
+              </div>
+              <div class="paie_logo"><a href="#" title="Livraison offerte"><img src="images/kwixo.jpg" alt=""></a></div>
+            </section>
+            <section class="conseil">
+              <div class="conseil_txt">
+              <header>Espace conseils</header>
+              <p>Pour vous aidez à choisir<br>
+              votre matériel</p>
+              </div>
+              <div class="conseil_logo"><a href="#" title="Livraison offerte"><img src="images/espaceconseil.jpg" alt=""></a></div>
+            </section>
+        </section>
+      </section>
+      <section class="foot">
+        <section class="foot_content">
+          <section class="foot_menuH">
+            <div class="arrondi_g"><img src="images/bandeau_g.jpg" alt=""></div>
+            <div class="foot_menuContent">
+              <form class="newsletter" action="newsletter.htm" method="post">
+                <input name="action" value="enregistrer" type="hidden">
+                <input name="choixnewsletter" value="1" type="hidden">
+                <table height="28" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="inputNews" valign="top"><input type="text" name="adressenewsletter" value="La newsletter" onClick="Javascript:$(this).val('');"></td>
+                    <td valign="top"><input type="image" src="images/btn_oknews_FR.jpg"></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="foot_infodivers"> 
+                <a class="paiement_securise" href="$regleurlrewriteTemp[institutionnel]-paiement-securise-#.htm" title="Paiement sécurisé">Paiement<br>
+              sécurisé</a> <a class="retrait" href="$regleurlrewriteTemp[institutionnel]-retrait-locaux-#.htm" title="Retrait locaux">Retrait<br>
+              locaux</a> <a class="livraison_offerte" href="$regleurlrewriteTemp[institutionnel]-livraison-offerte-#.htm" title="Livraison offerte">Livraison<br>
+              offerte</a> <a class="garantie" href="$regleurlrewriteTemp[institutionnel]-garantie-qualite-#.htm" title="Garantie qualité">Garantie<br>
+              qualité</a> <a class="lanews" href="newsletter.htm" title="La newsletter">La<br>
+              newsletter</a> <a class="espacepro" href="$regleurlrewriteTemp[institutionnel]-espace-professionnel-#.htm" title="Espace professionnel">Espace<br>
+              professionnel</a>
+              </div>
+            </div>
+            <div class="arrondi_d"><img src="images/bandeau_d.jpg" alt=""></div>
+          </section>
+          <address class="adresse_boutique">
+            <header class="foot_entete">Nos locaux</header>
+            <p class="horaires">
+              Vous pouvez nous rendre visite dans nos locaux du<br>
+              lundi au vendredi de 9h à 12h30 et de 15h à 19h et le<br>
+              samedi de 9h à 12H30. &gt;
+              <a href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Plan d'accès">Plan d'accès</a>
+            </p>
+            <a class="contact_tel" href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Nous contacter"><img src="images/tel2.jpg" alt=""></a> <a class="contact_fax" href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Nous contacter"><img src="images/fax.jpg" alt=""></a>
+            <div class="devenirfan"><a class="text_shadow" href="$regleurlrewriteTemp[institutionnel]-nous-contacter-1.htm" title="Nous contacter">Devenir fan : </a></div>
+            <div class="facebook_twitter"><span class="text_shadow">Retrouvez-nous sur : </span><a href="#" title="Facebook"><img src="images/facebook.jpg" alt=""></a> <a href="#" title="Twitter"><img src="images/Twitter.jpg" alt=""></a></div>
+          </address>
+          <aside class="infos">
+            <header class="foot_entete">Informations</header>
+            <ul class="commun_menu">
+              <li><a href="plan_site.php" title="Plan du site" $nofollow>Plan du site</a></li>
+              <li><a href="$regleurlrewriteTemp[institutionnel]-xxxxx-#.htm" title="xxxx" $nofollow>Mentions l&eacute;gales</a></li>
+              <li><a href="$regleurlrewriteTemp[institutionnel]-xxxxx-#.htm" title="xxxx" $nofollow>Protection des donn&eacute;es</a></li>
+              <li><a href="$regleurlrewriteTemp[institutionnel]-xxxxx-#.htm" title="xxxx" $nofollow>Conditions g&eacute;n&eacute;rales de vente</a></li>
+            </ul>
+          </aside>
+          <aside class="nosconseils">
+            <header class="foot_entete">Nos conseils</header>
+            <ul class="commun_menu">
+              <li><a href="#" title="#" $nofollow>Lorem ipsum</a></li>
+              <li><a href="#" title="#" $nofollow>Lorem ipsum</a></li>
+            </ul>
+          </aside>
+          <aside class="garanties">
+            <header class="foot_entete">Garanties</header>
+            <ul class="commun_menu">
+              <li><a href="#" title="#" $nofollow>Lorem ipsum</a></li>
+              <li><a href="#" title="#" $nofollow>Lorem ipsum</a></li>
+            </ul>
+          </aside>
+          <aside class="referencement"> 
+            <script type="text/javascript" language="javascript">
+              $(document).ready(function(){
+                $('.referencement_txt').find('div:gt(1)').hide();
+                $('.voirplus').toggle(function(){
+                    
+                    $('.referencement_txt').find('div:gt(1)').slideDown( 'fast',function(){ $(document).scrollTo('#info_complet',800); } );
+                    $(this).css('background','url("images/btn_voirmoins.jpg") no-repeat');
+                  },function(){
+                    $('.referencement_txt').find('div:gt(1)').slideUp( 'fast',function(){ $(document).scrollTo('#info_incomplet',800); } );
+                    $(this).css('background','url("images/btn_voirplus.jpg") no-repeat');
+                  }
+                );
+              });
+            </script>
+            <div class="referencement_txt">
+              <div id="info_incomplet"></div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</div>
+              <div>Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</div>
+              <div>Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</div>
+              <div>Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</div>
+            </div>
+            <div id="info_complet" class="voirplus"></div>
+          </aside>
+        </section>
+      </section>
+      <section class="copyright">
+        <div class="copyright_content">
+          <div class="foot_logo"><a href="./" title="Technimusic"><img src="images/foot_logo.jpg" alt=""></a></div>
+          <div class="copyright_txt">Copyright 2013 www.technimusic.fr &copy; - All Right Reserved - Tous droits réservés<br>
+          Site réalisé par <a target="_blank" title="Solution e-commerce" href="http://www.arobases.fr">Arobases</a></div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

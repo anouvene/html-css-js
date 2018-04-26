@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Twitter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="HelveticaNeueLT-Light, HelveticaNeue LT 45 Light" font-size="8.9474" font-weight="normal" letter-spacing="1.27819997" fill="#FFFFFF">
+            <tspan x="8.93994872" y="41.5483146">Twitter</tspan>
+        </text>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="General-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer-slices" transform="translate(-526.000000, -26.000000)">
+            <g id="footer" transform="translate(0.000000, 12.000000)">
+                <g id="Twitter" transform="translate(512.461878, 0.957303)">
+                    <ellipse id="twitter-content" fill="#000000" cx="43.4226081" cy="43.3977528" rx="26.1812784" ry="26.1662921"></ellipse>
+                    <ellipse id="border" stroke="#FFFFFF" stroke-width="3.1955" opacity="0.3" transform="translate(43.741892, 43.716854) rotate(-76.000000) translate(-43.741892, -43.716854) " cx="43.741892" cy="43.7168539" rx="28.4162656" ry="28.4"></ellipse>
+                    <polygon id="+" fill="#717F8E" points="45.1597469 37.0157303 45.1597469 41.9603604 49.8082857 41.9603604 49.8082857 44.8142377 45.1597469 44.8142377 45.1597469 49.7797753 42.324037 49.7797753 42.324037 44.8142377 37.6754982 44.8142377 37.6754982 41.9603604 42.324037 41.9603604 42.324037 37.0157303"></polygon>
+                    <g id="label" transform="translate(44.067173, 43.647803) rotate(-152.000000) translate(-44.067173, -43.647803) translate(11.819501, 11.418590)">
+                        <path d="M53.0199716,21.6587482 C47.1759788,10.1958317 33.1406346,5.63808233 21.6711529,11.47873 C19.5119956,12.5782459 17.5976905,13.9678885 15.9515557,15.5759326 C8.85339345,22.5098475 6.74145702,33.5046094 11.4853042,42.8096045 C17.3292971,54.272521 31.3646412,58.8302704 42.8341229,52.9896227 C54.3036046,47.1489751 58.8639644,33.1216647 53.0199716,21.6587482 L53.0199716,21.6587482 Z" id="path" stroke="#B6D7FE" stroke-width="0.6391" opacity="0.232217817" transform="translate(32.252638, 32.234176) rotate(-29.000000) translate(-32.252638, -32.234176) "></path>
+                        <g id="twitter" fill-opacity="1" fill="#FFFFFF">
+                            <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                            <use xlink:href="#text-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
